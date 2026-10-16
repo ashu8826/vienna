@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danube Rail Guide</title>
+<style>
+:root{--ink:#14213d;--danube:#1f4e79;--mist:#e8eef4;--paper:#fbf8f1;--cream:#f3ecdc;--gold:#b8892b;--wine:#7a1f2b;--moss:#3d6b4f;--slate:#4a5568;--line:#d9cfb9;--ok:#2f6d45;--warn:#9a5b00;--bad:#a4262c;--card:#fffdf8;--alertbg:#fbeee0;
+--serif:Georgia,"Iowan Old Style","Palatino Linotype",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e9e4d8;--danube:#8fb8de;--mist:#1d2a38;--paper:#12171f;--cream:#1b222c;--gold:#d9b45a;--wine:#e08a95;--moss:#8cc29f;--slate:#a9b3c1;--line:#334052;--ok:#8cc29f;--warn:#e7b25c;--bad:#f08b8f;--card:#171e28;--alertbg:#2a2116}}
+:root[data-theme="dark"]{--ink:#e9e4d8;--danube:#8fb8de;--mist:#1d2a38;--paper:#12171f;--cream:#1b222c;--gold:#d9b45a;--wine:#e08a95;--moss:#8cc29f;--slate:#a9b3c1;--line:#334052;--ok:#8cc29f;--warn:#e7b25c;--bad:#f08b8f;--card:#171e28;--alertbg:#2a2116}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+.wrap{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0}
+h1{font-size:clamp(28px,5vw,42px)}
+h2{font-size:24px;margin:44px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:18px;margin:0 0 8px}
+p{margin:0 0 10px}
+a{color:var(--danube)}
+.kicker{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.lede{color:var(--slate);margin-top:10px;max-width:62ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chip{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.alert{margin-top:24px;background:var(--alertbg);border:1px solid var(--warn);border-left:5px solid var(--warn);border-radius:10px;padding:16px 18px}
+.alert h3{color:var(--warn)}
+.alert ul{margin:6px 0 0;padding-left:20px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.trip .when{font-size:13px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em}
+.leg{display:grid;grid-template-columns:76px 1fr;gap:4px 12px;margin:12px 0}
+.t{font:600 20px/1.2 var(--serif);font-variant-numeric:tabular-nums}
+.t s{color:var(--slate);font-size:14px;font-weight:400}
+.st{font-weight:600}
+.sub{font-size:13px;color:var(--slate)}
+.line{border-left:2px dashed var(--line);margin-left:30px;padding:4px 0 4px 44px;font-size:13px;color:var(--slate)}
+.price{font:600 22px/1 var(--serif);color:var(--moss);margin:4px 0 8px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;margin-right:4px}
+.tag.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.tag.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.tag.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--slate);font-weight:600}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.pick td{background:color-mix(in srgb,var(--gold) 12%,transparent)}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 14px 44px}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--danube);color:var(--paper);display:grid;place-items:center;font:600 14px var(--sans)}
+ul.tight{margin:6px 0 0;padding-left:20px}
+ul.tight li{margin-bottom:4px}
+.rec{border-left:4px solid var(--gold);padding:10px 14px;background:var(--cream);border-radius:0 8px 8px 0;margin:12px 0}
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:8px 0;border-bottom:1px dotted var(--line)}
+.timeline .tm{font:600 15px var(--serif);font-variant-numeric:tabular-nums}
+.check li{list-style:none;margin-left:-20px}
+.check li::before{content:"☐ ";color:var(--gold)}
+.foot{margin-top:40px;font-size:13px;color:var(--slate)}
+.foot li{margin-bottom:3px}
+@media print{body{background:#fff;color:#000}.card,.tbl{break-inside:avoid}h2{break-after:avoid}a{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="kicker">The Mittal Family · Rail companion</div>
+<h1>Vienna, Salzburg &amp; Budapest by train</h1>
+<p class="lede">Every train of the trip on one page: the Wolfgangsee day trip and both Vienna ⇄ Budapest journeys, with the chosen trains and fares, exactly what to book, the best side to sit, the stations, and what to do if something goes wrong. Updated 17 October 2026.</p>
+<div class="chips">
+  <span class="chip">Sun 29 Nov · WESTbahn 06:38 / 17:52 · Wolfgangsee</span>
+  <span class="chip">Tue 1 Dec · 11:40 Railjet · €141.00</span>
+  <span class="chip">Fri 4 Dec · 08:30 EuroCity → Airport · €101.60</span>
+  <span class="chip">4 adults + 1 toddler (free)</span>
+  <span class="chip">5 large bags + stroller</span>
+</div>
+
+<div class="alert">
+  <h3>⚠ Budapest rail works change the usual times</h3>
+  <p>MÁV is rebuilding the line between Budapest-Kelenföld and Keleti from <b>21 Sep to 12 Dec 2026</b>, which covers both your train days. Vienna trains still use Keleti, but:</p>
+  <ul>
+    <li><b>Arriving in Budapest:</b> trains wait 10–13 min at Kelenföld, so your 11:40 reaches Keleti at about <b>14:35</b> instead of 14:19.</li>
+    <li><b>Leaving Budapest:</b> trains depart Keleti at <b>:30</b>. Your <b>08:30</b> still reaches Wien Hbf at about 11:20.</li>
+  </ul>
+  <p class="sub" style="margin-top:8px">Source: MÁV “Déli körvasút” notice (updated 21 Sep 2026). The times on your ÖBB ticket are the ones that count.</p>
+</div>
+
+<h2>All three rail days at a glance</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Day</th><th>Train</th><th>Times</th><th>Family price</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td><b>Sun 29 Nov</b></td><td>WESTbahn, Wien Westbahnhof ⇄ Salzburg Hbf</td><td class="num">06:38 → 09:08<br>17:52 → 20:22</td><td class="num">€251.92 <span class="sub">(€13.99 out + €48.99 back, × 4)</span></td><td><span class="tag warn">Book now</span></td></tr>
+    <tr><td><b>Tue 1 Dec</b></td><td>Railjet xpress, Wien Hbf → Budapest-Keleti</td><td class="num">11:40 → ~14:35</td><td class="num">€141.00</td><td><span class="tag warn">Book 18 Oct</span></td></tr>
+    <tr><td><b>Fri 4 Dec</b></td><td>EuroCity, Budapest-Keleti → Flughafen Wien</td><td class="num">08:30 → ~11:50</td><td class="num">€101.60</td><td><span class="tag warn">Book 18 Oct</span></td></tr>
+  </tbody>
+</table></div>
+<p class="sub" style="margin-top:10px">Toddler: free on every train. On WESTbahn, a seat of their own costs €3 per journey.</p>
+
+<h2>Day trip · Sun 29 Nov · Wolfgangsee Advent</h2>
+<p>A loop with no luggage: <b>WESTbahn</b> Vienna → Salzburg, <b>bus 150</b> to St. Gilgen, the <b>Advent boat</b> to St. Wolfgang, an unhurried afternoon there, the boat back to St. Gilgen, then <b>bus 150X</b> and <b>WESTbahn</b> home. It’s the first Sunday of Advent, so children ride the boat free. The SchafbergBahn Advent train is an <b>optional extra</b>, left out to keep the day calm.</p>
+
+<div class="grid2">
+  <div class="card trip">
+    <div class="when">Sunday 29 November 2026 · outbound</div>
+    <h3>WESTbahn, Vienna → Salzburg</h3>
+    <div class="price">€13.99 <span class="sub">per adult, WESTbahn quote 17 Oct</span></div>
+    <div class="leg"><div class="t">06:38</div><div><div class="st">Wien Westbahnhof</div><div class="sub">Train 902 · usually ready ~30 min before departure</div></div></div>
+    <div class="line">Hütteldorf · St. Pölten · Amstetten · Linz · Wels · Attnang-Puchheim · Vöcklabruck</div>
+    <div class="leg"><div class="t">09:08</div><div><div class="st">Salzburg Hbf</div><div class="sub">Bus 150 from bay F, ~09:15</div></div></div>
+    <p><b>Seats:</b> upper deck, <b>left side</b> (scenic), in or next to coach 14.</p>
+    <p><span class="tag warn">Book now</span><span class="tag ok">Seat reservation free</span></p>
+  </div>
+  <div class="card trip">
+    <div class="when">Sunday 29 November 2026 · return</div>
+    <h3>WESTbahn, Salzburg → Vienna</h3>
+    <div class="price">€48.99 <span class="sub">per adult, WESTbahn quote 17 Oct</span></div>
+    <div class="leg"><div class="t">17:52</div><div><div class="st">Salzburg Hbf</div><div class="sub">Bus 150X arrives 17:16 (~35 min buffer)</div></div></div>
+    <div class="line">Vöcklabruck · Attnang-Puchheim · Wels · Linz · Amstetten · St. Pölten · Hütteldorf</div>
+    <div class="leg"><div class="t">20:22</div><div><div class="st">Wien Westbahnhof</div><div class="sub">Taxi home (~€15–20), or U3 + tram O; ~20:50</div></div></div>
+    <p><b>Seats:</b> <b>lower deck, coach 14</b> (family compartment, changing table, no stairs).</p>
+    <p><span class="tag warn">Book now</span><span class="tag ok">Toddler free on a lap</span></p>
+  </div>
+</div>
+
+<h3 style="margin-top:22px">Why the 06:38 (and the 17:52)</h3>
+<div class="tbl"><table>
+  <thead><tr><th>Option</th><th>Price per adult</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr class="pick"><td class="num"><b>06:38 → 09:08</b></td><td class="num"><b>€13.99</b></td><td><b>Chosen.</b> Saves ~€100 for four over the 07:08. Earlier, emptier bus; St. Gilgen market right at its 10:00 opening. Cost: a ~05:30 wake-up.</td></tr>
+    <tr><td class="num">07:08 → 09:38</td><td class="num">€39</td><td>Half an hour more sleep, but €25 more per adult</td></tr>
+    <tr class="pick"><td class="num"><b>17:52 → 20:22</b></td><td class="num"><b>€48.99</b></td><td><b>Chosen.</b> ~35 min buffer after the 150X (17:16)</td></tr>
+    <tr><td class="num">17:22 → 19:52</td><td class="num">–</td><td>Too tight after the bus</td></tr>
+    <tr><td class="num">18:22 → 20:52</td><td class="num">check</td><td>A full hour of buffer, but home ~21:15. Only if it isn’t dearer.</td></tr>
+  </tbody>
+</table></div>
+
+<h3 style="margin-top:22px">WESTbahn or ÖBB?</h3>
+<div class="tbl"><table>
+  <thead><tr><th></th><th>WESTbahn (chosen)</th><th>ÖBB Railjet (alternative)</th></tr></thead>
+  <tbody>
+    <tr><td>Vienna station</td><td>Westbahnhof: tram O from Hintere Zollamtsstraße, 2 stops to Landstraße/Wien Mitte, then U3 direct. ~25 min door to door, <b>one change</b></td><td>Hauptbahnhof: <b>tram O direct</b> from Hintere Zollamtsstraße, ~15 min ride. ~20 min door to door, <b>no change</b></td></tr>
+    <tr><td>How often</td><td>Every 30 min</td><td>Hourly or two-hourly, thinner until 12 Dec (German line closure)</td></tr>
+    <tr><td>For the toddler</td><td>Family compartment in coach 14: wider aisle, accessible WC with changing table</td><td>Family zone with kids’ cinema, pram space, changing table</td></tr>
+    <tr><td>Seats</td><td>Reservation free; upper deck has the best views</td><td>~€3 per seat</td></tr>
+    <tr><td>Toddler</td><td>Free on a lap · €3 per journey for a seat of their own</td><td>Free</td></tr>
+    <tr><td>Changing your plans</td><td>Cancel online until the day before for 25% (min €4.99); for a fee, switch to another train the same day; tickets not in anyone’s name</td><td>Sparschiene: only valid on that train, no refund</td></tr>
+  </tbody>
+</table></div>
+
+<h3 style="margin-top:22px">Booking WESTbahn, step by step</h3>
+<ol class="steps">
+  <li><b>Search</b> on <a href="https://westbahn.at/en/ticket-shop/buy-tickets/">westbahn.at</a> or in the app: Wien Westbahnhof → Salzburg Hbf, Sun 29 Nov, <b>06:38</b>; return Salzburg Hbf → Wien Westbahnhof, <b>17:52</b>.</li>
+  <li><b>Passengers:</b> 4 adults and 1 child under 6. The child is free on a lap; add a <b>€3 accompanied-child ticket</b> per journey for a seat of their own (recommended for the nap).</li>
+  <li><b>Fare:</b> WestSuperpreis, €13.99 out and €48.99 back. Before paying, check the 18:22 return in case it’s cheaper.</li>
+  <li><b>Seats:</b> outbound, upper deck, left side, as a table of four in or next to coach 14. Return: lower deck of coach 14.</li>
+  <li><b>Pay and save</b> the tickets to two phones. Bring photo ID.</li>
+</ol>
+
+<h3 style="margin-top:22px">The other legs (no booking needed except the trains)</h3>
+<div class="grid2">
+  <div class="card">
+    <h3>Bus 150 / 150X · Salzburg ⇄ St. Gilgen</h3>
+    <p class="sub">Pay the driver or use the Salzburg Verkehr app</p>
+    <ul class="tight">
+      <li><b>Out:</b> the first <b>bus 150</b> after 09:08 from <i>Salzburg Hauptbahnhof, bay F (Südtiroler Platz)</i>, 3 min from the platforms. About every 30 min on Sundays, ~49 min to St. Gilgen Busbahnhof.</li>
+      <li><b>Back:</b> <b>150X express, St. Gilgen 16:36 → Salzburg Hbf 17:16</b>. Be at the stop by 16:25. Extra buses run on Advent weekends; if it’s full, take the next 150 or a reinforcement bus.</li>
+      <li>~€6–9 per adult each way; under-6s free. Fold the stroller; the toddler rides on a lap.</li>
+      <li>Check the Sunday times in the <a href="https://salzburg-verkehr.at/">Salzburg Verkehr</a> app a week before (the 150X times are from April 2025).</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Advent boat · St. Gilgen ⇄ St. Wolfgang</h3>
+    <p class="sub">Buy at the pier · <span class="tag ok">Kids free on Advent Sundays</span></p>
+    <ul class="tight">
+      <li><b>Out 11:30 → 12:05</b> to the SchafbergBahn pier (backup 12:00). <b>Back 15:35 → 16:10</b> (if that’s Saturday-only, take the 15:05).</li>
+      <li><b>€11.80</b> per adult each way, so <b>€94.40</b> for four, both ways. Children up to 14 free with an adult on Advent Sundays.</li>
+      <li>Some weekend sailings run on Saturdays only: confirm the Sunday times on the pier board.</li>
+      <li>No reservation under 20 people. Online fares: <a href="https://ticketing.5schaetze.at/de/Products/Tickets/Category?cID=2003">5schaetze.at</a>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>SchafbergBahn Advent train · <span class="tag warn">Optional</span></h3>
+    <p class="sub">Not in the plan · add it only if everyone feels up to it on the day</p>
+    <ul class="tight">
+      <li>Cog railway from the St. Wolfgang valley station (right by the pier) to the <b>Schafbergalm (1,364 m)</b>, 25 min each way, carriages lit with fairy lights.</li>
+      <li><b>Sunday trains up:</b> 09:20 · 10:30 · 11:50 · <b>13:10</b> · 14:30 · 15:50, plus on-demand extras. <b>Down from the Alm:</b> 11:15 · 12:35 · <b>13:55</b> · <b>14:15</b> (on-demand) · 15:15 · 16:35.</li>
+      <li><b>How it fits:</b> up 13:10 → 13:35, Advent on the Alm (music from 13:45), down 14:15 → 14:40 (or 13:55 → 14:20). Not the 15:15: it misses the 15:35 boat. It replaces the slow hour and most of the market time.</li>
+      <li>€50 per adult return (+€200 for the family); children free on Advent Sundays. Buy at the valley station.</li>
+      <li>The Alm is ~5 °C colder (often snowy): toddler snowsuit, carrier. It may stop in snow or wind. <a href="https://schafbergalm.panomax.com/">Webcam</a>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Stations for this day</h3>
+    <ul class="tight">
+      <li><b>Wien Westbahnhof:</b> taxi at 06:05, or tram O (Hintere Zollamtsstraße → Landstraße/Wien Mitte) + U3 direct. WESTbahn trains are low-floor, step-free.</li>
+      <li><b>Salzburg Hbf:</b> modern station with lifts. Bus bay F is on Südtiroler Platz, right outside.</li>
+      <li>The 7-day Vienna transport ticket covers the U3 and tram O.</li>
+    </ul>
+  </div>
+</div>
+
+<h3 style="margin-top:22px">Timeline · Sun 29 Nov</h3>
+<div class="card">
+  <ul class="timeline">
+    <li><span class="tm">05:30</span><span>Wake. Packed breakfast and lunch ready from the night before.</span></li>
+    <li><span class="tm">06:05</span><span>Taxi (~15 min), or tram O + U3, to Westbahnhof. Board by ~06:25: upper deck, left side.</span></li>
+    <li><span class="tm">06:38</span><span><b>WESTbahn departs.</b> The toddler naps; the Alps appear on the left after Linz.</span></li>
+    <li><span class="tm">09:08</span><span><b>Salzburg Hbf.</b> Walk 3 min to bus bay F.</span></li>
+    <li><span class="tm">~09:15</span><span><b>Bus 150</b> → St. Gilgen (~49 min).</span></li>
+    <li><span class="tm">~10:05</span><span>St. Gilgen market at opening; walk to the pier.</span></li>
+    <li><span class="tm">11:30</span><span><b>Boat</b> → St. Wolfgang, SchafbergBahn pier (12:05).</span></li>
+    <li><span class="tm">12:10</span><span>Warm lunch at Café EQ (ErlebnisQuartier, by the pier): indoor Advent market, cookie decorating.</span></li>
+    <li><span class="tm">13:00</span><span>Slow hour: toddler nap, grandparents warm in the café, or the lakeside promenade.</span></li>
+    <li><span class="tm">13:45</span><span>St. Wolfgang market lanes and church at an easy pace; back to the pier by 15:20.</span></li>
+    <li><span class="tm">15:35</span><span><b>Boat back</b> to St. Gilgen (16:10) as the lights come on.</span></li>
+    <li><span class="tm">16:36</span><span><b>Bus 150X</b> → Salzburg Hbf (17:16).</span></li>
+    <li><span class="tm">17:52</span><span><b>WESTbahn home</b>, lower deck coach 14. Supper on board.</span></li>
+    <li><span class="tm">20:22</span><span>Westbahnhof → taxi home (~20:50).</span></li>
+  </ul>
+</div>
+
+<h3 style="margin-top:22px">If something goes wrong on 29 Nov</h3>
+<div class="tbl"><table>
+  <thead><tr><th>Problem</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>Family too tired (decide Sat night)</td><td>Cancel WESTbahn online by Sat (25% fee, min €4.99 per ticket). Stay in Vienna: tram O direct to Quartier Belvedere, then Spittelberg.</td></tr>
+    <tr><td>Late for the 06:38</td><td>Pay WESTbahn’s change fee for the 07:08 (or the next one). The rest of the day simply shifts by 30 min, and the 11:30 boat is still reachable.</td></tr>
+    <tr><td>Bus 150 full</td><td>The next 150 is ~30 min later, or take the 150X at 10:25 (→ St. Gilgen 11:09). Both still make the 11:30/12:00 boat.</td></tr>
+    <tr><td>Boat cancelled (fog or ice)</td><td>Bus 150 to Strobl, then the local bus to St. Wolfgang; or stay in St. Gilgen and take the Zwölferhorn cable car instead.</td></tr>
+    <tr><td>Toddler restless in St. Wolfgang</td><td>Boat to Strobl (15 min) and back for its family-Sunday programme, or take the 15:05 boat back early.</td></tr>
+    <tr><td>Bus back running late</td><td>Next trains 18:22 and 18:52. Change your ticket (fee) in the app or ask the crew on board. WESTbahn +43 1 899 00 (weekends 09:00–15:00).</td></tr>
+    <tr><td>Snow or road warning</td><td>Take the 15:05 boat back and an earlier bus.</td></tr>
+  </tbody>
+</table></div>
+
+<h3 style="margin-top:22px">Day cost · Sun 29 Nov (whole family)</h3>
+<div class="tbl"><table>
+  <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>WESTbahn, 4 adults: €13.99 out + €48.99 back</td><td class="num">€251.92</td></tr>
+    <tr><td>Toddler seat on both trains (optional)</td><td class="num">€6</td></tr>
+    <tr><td>Buses 150 / 150X, 4 adults × 2 (toddler free)</td><td class="num">~€50–70</td></tr>
+    <tr><td>Advent boat both ways, 4 adults (toddler free)</td><td class="num">€94.40</td></tr>
+    <tr><td><b>Total</b></td><td class="num"><b>~€400–425</b></td></tr>
+    <tr><td><i>Optional:</i> SchafbergBahn, 4 adults (toddler free)</td><td class="num">+€200</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Vienna ⇄ Budapest · your two trains</h2>
+<div class="grid2">
+  <div class="card trip">
+    <div class="when">Tuesday 1 December 2026 · outbound</div>
+    <h3>Railjet xpress, Vienna → Budapest</h3>
+    <div class="price">€141.00 <span class="sub">family total, ÖBB quote 17 Oct</span></div>
+    <div class="leg"><div class="t">11:40</div><div><div class="st">Wien Hauptbahnhof</div><div class="sub">Upper-level platforms 3–12; check the board</div></div></div>
+    <div class="line">Bruck/Leitha · Hegyeshalom (border) · Győr · Tatabánya · Kelenföld (10–13 min wait)</div>
+    <div class="leg"><div class="t">~14:35</div><div><div class="st">Budapest-Keleti</div><div class="sub">Terminus · taxi 10–15 min to Síp utca 7</div></div></div>
+    <p><b>Seats:</b> coach 21 (family zone). Table seats <b>51, 52, 53, 58</b>, plus <b>54</b> across the aisle (better than 63).</p>
+    <p><span class="tag warn">Book 18 Oct</span><span class="tag ok">Toddler free</span></p>
+  </div>
+  <div class="card trip">
+    <div class="when">Friday 4 December 2026 · flight day</div>
+    <h3>EuroCity to Wien Hbf, then the airport train</h3>
+    <div class="price">€101.60 <span class="sub">family total, ÖBB quote 17 Oct</span></div>
+    <div class="leg"><div class="t">08:30</div><div><div class="st">Budapest-Keleti</div><div class="sub">Be at the train by 08:05</div></div></div>
+    <div class="line">Kelenföld · Győr · Hegyeshalom · Bruck/Leitha</div>
+    <div class="leg"><div class="t">~11:20</div><div><div class="st">Wien Hauptbahnhof</div><div class="sub">Change to the airport Railjet: every ~30 min, ~16 min ride</div></div></div>
+    <div class="leg"><div class="t">~11:50</div><div><div class="st">Flughafen Wien (VIE)</div><div class="sub">Terminal 3 · EK128 departs 14:55 (~3 h buffer)</div></div></div>
+    <p><b>Seats:</b> a 6-seat compartment near a car end, if the seat map offers one.</p>
+    <p><span class="tag warn">Book 18 Oct</span><span class="tag bad">Critical day</span></p>
+  </div>
+</div>
+
+<h2>Why these two Budapest trains</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Fri 4 Dec option</th><th>Price (family)</th><th>At VIE</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td class="num">06:40 Railjet</td><td class="num">€101</td><td class="num">~09:50</td><td>Same price, but a 04:45 alarm and ~2 h waiting before bag drop</td></tr>
+    <tr><td class="num">07:30 Railjet</td><td class="num">€239</td><td class="num">~10:50</td><td>Best timing, but €138 more</td></tr>
+    <tr class="pick"><td class="num"><b>08:30 EuroCity</b></td><td class="num"><b>€101.60</b></td><td class="num"><b>~11:50</b></td><td><b>Chosen.</b> Calm 06:30 start, arrives about when check-in opens, ~3 h before the flight</td></tr>
+    <tr><td class="num">09:30</td><td class="num">–</td><td class="num">~12:50</td><td>Emergency fallback only</td></tr>
+  </tbody>
+</table></div>
+<p class="sub" style="margin-top:10px">On 1 Dec, the 11:40 Railjet keeps the morning relaxed: Rochusmarkt breakfast and a 10:00 check-out. You arrive just before the 15:00 apartment check-in, so there's no long wait with the bags.</p>
+
+<h2>Booking the Budapest trains (18 Oct): step by step</h2>
+<div class="rec"><b>Book both on <a href="https://shop.oebbtickets.at/en/">shop.oebbtickets.at</a></b> or in the ÖBB app, where you got these quotes. Sparschiene prices only rise, so book first thing. If either price has gone up a lot, check the same train on <a href="https://jegy.mav.hu">jegy.mav.hu</a> before paying.</div>
+<ol class="steps">
+  <li><b>1 Dec search:</b> <i>Wien Hbf</i> → <i>Budapest-Keleti pu</i>, Tue 1 Dec, 11:40 Railjet xpress.</li>
+  <li><b>4 Dec search:</b> <i>Budapest-Keleti pu</i> → <i>Flughafen Wien</i>, Fri 4 Dec, 08:30. One ticket covers the airport train from Hbf too. If the result ends at <i>Wien Hbf</i>, change the destination.</li>
+  <li><b>Passengers:</b> 4 adults with their real ages, plus 1 child aged 1 (€0).</li>
+  <li><b>Seats on 1 Dec:</b> coach 21, seats <b>51, 52, 53, 58 and 54</b>. Put grandparents in 52 and 58 if they prefer facing forward. 51 and 52 are left-side windows, which is the scenic side for this direction (see below).</li>
+  <li><b>Seats on 4 Dec:</b> choose a <b>compartment</b> (“Abteil”) near the end of a car if offered; otherwise a table of four plus the seat across the aisle.</li>
+  <li><b>Before paying, check:</b> the total still matches (€141.00 / €101.60) and includes the seat reservations; the stations say <b>Budapest-Keleti</b> and <b>Flughafen Wien</b>; the dates are 1 Dec and 4 Dec.</li>
+  <li><b>After paying:</b> save the PDFs to two phones, print one copy, and tell me so I can mark them booked in the guidebook.</li>
+</ol>
+<p class="sub">Both are Sparschiene fares: valid only on the train you book, with no refunds or changes. If the railway cancels or badly delays the train, you’ll be moved to the next one.</p>
+
+<h2>Which side to sit for the views</h2>
+<p>“Left” and “right” mean as you face the direction of travel. On the seat map, find the arrow or “facing forward” marker. On your coach 21 map the train moves to the right, so the <b>top row of seats is the left side</b>.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Ticket</th><th>Best side</th><th>What you’ll see</th></tr></thead>
+  <tbody>
+    <tr class="pick"><td><b>Sun 29 Nov</b><br>WESTbahn 06:38 Wien → Salzburg</td><td><b>LEFT</b> (south)<br>upper deck</td><td>The Alpine foothills and the first snowy peaks from Linz to Salzburg, in daylight from about 07:45 (sunrise ~07:30). Melk Abbey passes in the dark, so don’t switch sides for it.</td></tr>
+    <tr><td><b>Sun 29 Nov</b><br>WESTbahn 17:52 Salzburg → Wien</td><td><b>Either</b></td><td>It’s dark after 16:20. Choose comfort instead: the lower deck of <b>coach 14</b> (family compartment, changing table), with no stairs.</td></tr>
+    <tr class="pick"><td><b>Tue 1 Dec</b><br>Railjet 11:40 Wien Hbf → Budapest</td><td><b>LEFT</b> (north)</td><td>Flat farmland and wind farms on both sides. Then Danube glimpses near Komárom, and the best moment: crossing the Danube into Pest just before Keleti, with the city towards the left. <b>Your seats 51 and 52 are left-side windows.</b></td></tr>
+    <tr class="pick"><td><b>Fri 4 Dec</b><br>EuroCity 08:30 Budapest → Wien</td><td><b>RIGHT</b> (north)</td><td>The Danube crossing about 10 minutes after leaving Keleti, looking back towards the city, then Danube glimpses near Komárom. Full daylight (sunrise ~07:15).</td></tr>
+  </tbody>
+</table></div>
+<p class="sub" style="margin-top:10px">Honest note: these are pleasant views, not spectacular ones. The Vienna–Budapest line is mostly flat, and a road bridge partly blocks the Danube view in Budapest. If the EuroCity booking shows no seat map, just ask for a window seat. In compartment cars you can also look out from the corridor windows on the other side.</p>
+
+<h2>The Budapest-trip stations</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Wien Hauptbahnhof</h3>
+    <p class="sub">1 Dec departure · 4 Dec change</p>
+    <ul class="tight">
+      <li>Long-distance trains use the raised platforms 3–12. Every platform has <b>lifts</b>.</li>
+      <li>Railjets are long. The screen on the platform shows sectors A–F; wait in the sector for <b>coach 21</b>.</li>
+      <li>ÖBB ticket office (Reisezentrum) in the main hall, 24 h lockers, and BahnhofCity shops with supermarkets, bakeries and a drugstore for nappies and wipes.</li>
+      <li><b>From the flat:</b> taxi or Uber XL at 10:15, about 10 min, ~€15–25. With 5 bags, take the taxi. With light bags, tram O from Hintere Zollamtsstraße goes direct (~15 min).</li>
+      <li><b>4 Dec change:</b> stay on the platform level and follow the ✈ “Flughafen” signs on the board. Use lifts only.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Budapest-Keleti</h3>
+    <p class="sub">1 Dec arrival · 4 Dec departure</p>
+    <ul class="tight">
+      <li>A terminus: walk straight off the platform into the great hall, with no stairs.</li>
+      <li>The lower level (lift behind platforms 6–9) has toilets (small fee; carry HUF coins), lockers and the metro.</li>
+      <li><b>Taxis:</b> official rank, or book a <b>Főtaxi</b> (+36 1 222 2222) or <b>Bolt</b>. Ignore anyone offering a taxi inside the station. To Síp utca 7: 10–15 min, ~HUF 3,000–4,000 per car.</li>
+      <li>Skip the M2 metro with luggage: it isn’t step-free.</li>
+      <li><b>4 Dec:</b> the board shows <i>Wien / München</i> and the platform about 20–30 min ahead. Parts of the station are being rebuilt in 2026, so allow for detours.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Budapest-Kelenföld (fallback)</h3>
+    <ul class="tight">
+      <li>Every Vienna train stops here.</li>
+      <li>The <b>M4 metro is step-free</b>: Kelenföld → Kálvin tér ~10 min, then a ~12 min walk to Síp utca. Taxi: 20–25 min.</li>
+      <li>Use it only if your train is held or cut short, or the 08:30 is listed as starting here.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Flughafen Wien (VIE)</h3>
+    <ul class="tight">
+      <li>The station is underground in front of the terminals. Lifts go up to Departures; Emirates uses <b>Terminal 3</b>.</li>
+      <li>First get the <b>tax-free customs stamp</b> (goods and passports ready), then the Emirates bag drop.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>On board the Budapest trains</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>1 Dec · Railjet xpress</h3>
+    <ul class="tight">
+      <li>Modern Austrian train. Family zone in <b>coach 21</b>: kids’ cinema (“Kino”), pram parking, and the WC with baby-changing at the car end.</li>
+      <li>Free Wi-Fi and a socket at every seat, plus a restaurant car.</li>
+      <li>A luggage rack is just behind seat 61, next to your table.</li>
+      <li>Step-free boarding at Wien Hbf.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>4 Dec · EuroCity</h3>
+    <ul class="tight">
+      <li>Older, refurbished Hungarian carriages: some open-plan, some <b>6-seat compartments</b>, which is ideal for the five of you.</li>
+      <li><b>A few steps up</b> into the train. The two younger adults lift the bags; one adult looks after only the toddler and stroller.</li>
+      <li>Big cases go at the car ends; smaller ones on the overhead racks.</li>
+      <li>Likely <b>no restaurant car</b>: bring a packed egg-free breakfast and water.</li>
+      <li>Toilets on board, but no guaranteed baby-changing, so change the toddler at Keleti first.</li>
+    </ul>
+  </div>
+</div>
+<p class="sub" style="margin-top:10px"><b>Border:</b> Austria still makes spot checks at Hegyeshalom/Nickelsdorf. Keep passports with Schengen visas in a hand bag on both days.</p>
+
+<h2>Day-of timelines · 1 &amp; 4 Dec</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Tue 1 Dec · Vienna → Budapest</h3>
+    <ul class="timeline">
+      <li><span class="tm">08:00</span><span>Walk ~15 min (about 1 km) to Rochusmarkt: breakfast at the Gradwohl bakery and stalls; buy the train picnic. Head back ~09:15.</span></li>
+      <li><span class="tm">09:30</span><span>Pack; check out by 10:00.</span></li>
+      <li><span class="tm">10:15</span><span>Taxi or Uber XL to Wien Hbf (~10 min).</span></li>
+      <li><span class="tm">10:30</span><span>At the station: coffee, WC, then find the platform and sector for coach 21 by 11:15.</span></li>
+      <li><span class="tm">11:40</span><span><b>Railjet departs.</b> Seats 51, 52, 53, 58, 54.</span></li>
+      <li><span class="tm">~14:35</span><span><b>Arrive Budapest-Keleti.</b> Taxi rank or Bolt.</span></li>
+      <li><span class="tm">~15:15</span><span>Check in at Fusion Apartments, Síp utca 7. Rest.</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Fri 4 Dec · Budapest → VIE</h3>
+    <ul class="timeline">
+      <li><span class="tm">Thu 20:00</span><span>Check the 08:30 in the ÖBB app and on MÁVINFORM. Pre-book a Főtaxi/Bolt XL for <b>07:40</b>. Pack the train breakfast.</span></li>
+      <li><span class="tm">06:30</span><span>Wake, dress warm, eat. Leave the keys as instructed.</span></li>
+      <li><span class="tm">07:40</span><span>Taxi to Keleti (10–15 min).</span></li>
+      <li><span class="tm">08:00</span><span>Find the platform; change the toddler in the station WC; walk to your car.</span></li>
+      <li><span class="tm">08:30</span><span><b>EuroCity departs Keleti.</b></span></li>
+      <li><span class="tm">~11:20</span><span>Wien Hbf: follow the ✈ sign to the next airport Railjet.</span></li>
+      <li><span class="tm">~11:50</span><span>VIE: tax-free stamp, then the Emirates bag drop (T3).</span></li>
+      <li><span class="tm">14:55</span><span>EK128 to Dubai.</span></li>
+    </ul>
+  </div>
+</div>
+
+<h2>If something goes wrong · 1 &amp; 4 Dec</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Problem</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>A price has jumped by tomorrow</td><td>Check the same train on jegy.mav.hu. For 4 Dec, also try MÁV’s “Austria TripTicket”: search as a return trip and use only the outward half. It’s valid on any train that day.</td></tr>
+    <tr><td>1 Dec: you miss the 11:40</td><td>The Sparschiene ticket is only valid on that train. At the Hbf Reisezentrum, buy a ticket for the 12:40 EuroCity or the 13:40 Railjet (walk-up fare ~€52.70 per adult).</td></tr>
+    <tr><td>1 Dec: train held outside Budapest</td><td>Get off at Kelenföld, then take a taxi (20–25 min) or the step-free M4 to Kálvin tér.</td></tr>
+    <tr><td>3 Dec evening: the 08:30 is cancelled, or listed as starting at Kelenföld</td><td>If it starts at Kelenföld, take a taxi there from the flat at 07:30 (~20 min). If it’s cancelled, the railway will move you to the 09:30 (VIE ~12:50); to be safer, buy a ticket for the 07:30 Railjet.</td></tr>
+    <tr><td>4 Dec: taxi not there at 07:50</td><td>Order a Bolt on the spot. It’s a 10–15 min ride and you have time.</td></tr>
+    <tr><td>4 Dec: 08:30 cancelled on the day</td><td>Staff will put you on the 09:30. You reach VIE ~12:50, about 2 h before the flight. Call Emirates if you’ll arrive after 12:45.</td></tr>
+    <tr><td>Missed the airport train at Hbf</td><td>The next one is in ~30 min. Your through ticket stays valid.</td></tr>
+    <tr><td>Rail strike</td><td>Last resort: van or taxi Budapest → VIE, ~2 h 30, €300+. Decide by 07:30.</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Checklist</h2>
+<ul class="check">
+  <li><b>Now:</b> book WESTbahn 06:38 (€13.99) / 17:52 (€48.99) (4 adults + €3 toddler seats). Outbound: upper deck, left side. Return: lower deck, coach 14.</li>
+  <li><b>Week before:</b> install the Salzburg Verkehr app and check the Sunday bus 150 times (~09:15 out) and the 150X (16:36 back)</li>
+  <li><b>Sat 28 Nov:</b> go/no-go for Wolfgangsee (check weather and snow); decide whether to add the optional SchafbergBahn</li>
+  <li><b>18 Oct:</b> book the 1 Dec 11:40 (€141.00), coach 21 seats 51, 52, 53, 58, 54</li>
+  <li><b>18 Oct:</b> book the 4 Dec 08:30 Budapest-Keleti → Flughafen Wien (€101.60), compartment near a car end</li>
+  <li>Save the PDFs to two phones, plus one printout</li>
+  <li>Tell Fusion Apartments you’ll arrive ~15:15 (the booking says 10:00–11:00)</li>
+  <li><b>3 Dec:</b> pre-book the 07:40 taxi to Keleti; check the 08:30 at 20:00</li>
+  <li>Install the ÖBB app and MÁVPlusz for live platforms and delays</li>
+</ul>
+
+<div class="foot">
+  <p><b>Sources</b></p>
+  <ul>
+    <li><a href="https://www.mavcsoport.hu/delikorvasut">MÁV · Déli körvasút timetable changes, 21 Sep – 12 Dec 2026</a></li>
+    <li><a href="https://www.mavcsoport.hu/mav-szemelyszallitas/belfoldi-utazas/vaganyzar">MÁV · current track-work notices</a></li>
+    <li><a href="https://www.seat61.com/trains-and-routes/vienna-to-budapest-by-train.htm">Seat61 · Vienna to Budapest by train</a> · <a href="https://www.seat61.com/stations/budapest-keleti.htm">Budapest Keleti</a> · <a href="https://seat61.com/stations/vienna-hauptbahnhof.htm">Wien Hbf</a></li>
+    <li><a href="https://www.oebb.at/de/tickets-kundenkarten/oesterreich-europa/sparschiene">ÖBB · Sparschiene conditions</a> · <a href="https://www.oebb.at/en/reiseplanung-services/vor-ihrer-reise/mit-kindern-unterwegs">ÖBB · travelling with children</a></li>
+    <li><a href="https://westbahn.at/resource/download/3161/2026-05-04,westbahn-fahrplan-14062026-12122026,pdf">WESTbahn · timetable 14 Jun – 12 Dec 2026</a> · <a href="https://westbahn.at/en/fares/westsuperpreis/">WestSuperpreis terms</a> · <a href="https://westbahn.at/en/news/family-train-tickets/">family tickets</a> · <a href="https://westbahn.at/en/fares/westseniorenpreis/">senior fare</a></li>
+    <li><a href="https://www.wolfgangseer-advent.at/de/attraktionen/wolfgangsee_schifffahrt">Wolfgangsee Advent boat</a> · <a href="https://www.wolfgangseer-advent.at/salzburg-Ag/2026_Fahrplan_WolfgangseeSchifffahrt_Advent.pdf">2026 boat timetable</a> · <a href="https://ticketing.5schaetze.at/de/Products/Tickets/Category?cID=2003">boat fares</a></li>
+    <li><a href="https://www.wolfgangseer-advent.at/de/attraktionen/schafbergbahn">SchafbergBahn in Advent</a> · <a href="https://www.wolfgangseer-advent.at/salzburg-Ag/2026_Fahrplan_SchafbergBahn_Advent.pdf">2026 Advent timetable</a></li>
+    <li><a href="https://salzburg-verkehr.at/">Salzburg Verkehr · bus 150/150X</a> · <a href="https://www.salzburg24.at/news/salzburg/flachgau/bis-zu-10000-fahrgaeste-am-wochenende-linie-150-faehrt-ab-september-bis-zu-vier-mal-pro-stunde-art-336855">Salzburg24 · line 150 extra buses</a></li>
+    <li><a href="https://www.oebb.at/de/fahrplan/baustelleninformation/bauarbeiten-deutsche-bahn">ÖBB · German line closure, Jun – Dec 2026</a></li>
+    <li>Fares: your ÖBB search on 17 Oct 2026 (€141.00 and €101.60) and WESTbahn search (06:38 €13.99, 17:52 €48.99). Coach 21 seat map: your screenshot.</li>
+  </ul>
+  <p>Nothing on this page has been booked or paid.</p>
+</div>
+
+</div>
+</body>
+</html>
