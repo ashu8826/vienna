@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'sha256-6uqXVQ5cIASHG3WYu49FPCZ3WEh3j4c6aIEXEHgpCC0=' 'sha256-UMW4J8EbB8yhvoklXh7xl0IFA+t8GmUS7QEDQVKlAA0='; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'sha256-F/jRp4GBncjioNZplgX6n0w2NkaGTHlBgntNbV/pr8c=' 'sha256-UMW4J8EbB8yhvoklXh7xl0IFA+t8GmUS7QEDQVKlAA0='; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee" media="(prefers-color-scheme: light)">
@@ -723,7 +723,7 @@ footer{padding:2rem 0;font-size:.9rem;color:var(--muted)}
 <h2 id="h-stays">Your two apartments</h2>
 <p class="small">No hotel changes in Vienna: one base for all five nights, including both day trips. Booking references stay in your Booking.com app, not in this book.</p>
 <div class="grid g2">
-<div class="card gold"><div class="kicker">Vienna · 26 Nov – 1 Dec · 5 nights</div><h3>“Spacious apartment in prime location” <span class="lbl v">Booked</span></h3><p class="small"><strong>Kolonitzgasse, 1030 Wien (Landstraße)</strong> · host +43 1 4240034<br>Check-in Thu 26 Nov 15:00–23:00 · check-out Tue 1 Dec by 10:00<br>One-bedroom apartment: kitchen, oven, dishwasher, washing machine, sofa bed. Booked for 4 adults + 1 child.<br><strong>€1,376.50 (≈ ₹1,49,502)</strong> incl. VAT, cleaning and city tax · <strong>non-refundable</strong>, dates can’t be changed.</p>
+<div class="card gold"><div class="kicker">Vienna · 26 Nov – 1 Dec · 5 nights</div><h3>“Spacious apartment in prime location” <span class="lbl v">Booked</span></h3><p class="small"><strong>Kolonitzgasse, 1030 Wien (Landstraße)</strong> · host +43 1 4240034<br>Check-in Thu 26 Nov 15:00–23:00 · check-out Tue 1 Dec by 10:00<br>One-bedroom apartment: kitchen, oven, dishwasher, washing machine, sofa bed. Booked for 4 adults + 1 child.<br><strong>€1,376.50 (≈ ₹1,49,502)</strong> incl. VAT, cleaning and city tax; Booking.com paid €138.63 of it, so <strong>you paid €1,237.87</strong> · <strong>non-refundable</strong>, dates can’t be changed.</p>
 <p class="small"><strong>Why it works:</strong> the nearest stop, <strong>Hintere Zollamtsstraße</strong>, has trams 1 (Ring, Rathaus, Opera) and O (Prater, Hauptbahnhof). The U3/U4 at Landstraße/Wien Mitte are ~8 min on foot or 2 tram stops. Hundertwasserhaus is nearby and Rochusmarkt is ~15 min on foot, and the Weißgerber Advent market is held on Kolonitzplatz, at your door. Wien Mitte (The Mall, supermarkets, Max &amp; Benito) is ~8 min away, Indus (Indian) ~300 m.</p>
 <p class="small"><strong>Message the host now:</strong> sleeping for 5 with 1 bedroom + sofa bed (ask for an extra mattress or rollaway); a travel cot; lift/floor; self check-in or key box for ~20:15; heating; whether the sofa bed is made up.</p></div>
 <div class="card gold"><div class="kicker">Budapest · 1 – 4 Dec · 3 nights</div><h3>Fusion Apartments in Downtown Budapest <span class="lbl v">Booked</span> <span class="lbl p">Add toddler</span></h3><p class="small"><strong>Síp utca 7, 1075 Budapest</strong> (Jewish Quarter, beside the Dohány Synagogue) · +36 20 448 8187<br>Check-in Tue 1 Dec 15:00–00:00 · check-out Fri 4 Dec by 10:00<br>Two-bedroom apartment: kitchen, washer and dryer, AC, a <strong>children’s high chair</strong>. Photo ID and credit card required at check-in.<br><strong>€348.55 (≈ ₹38,259)</strong> incl. VAT, cleaning and city tax · <strong>free cancellation until 25 Nov 23:59</strong>, then €277.</p>
@@ -841,31 +841,39 @@ footer{padding:2rem 0;font-size:.9rem;color:var(--muted)}
 </section>
 
 <section class="page budget" id="budget" aria-labelledby="h-bud">
-<div class="kicker">Whole family · planning allowances, not quotes</div>
+<div class="kicker">Whole family · paid items from your tickets, the rest are planning allowances</div>
 <h2 id="h-bud">Budget</h2>
-<p class="small">Family totals, not per person. Flights are shown separately as already paid. The two apartments are now actual booking totals. Leave <em>Actual</em> blank until you know it; a typed <strong>0</strong> counts as zero.</p>
+<p class="small">Family totals, not per person. <strong>Already paid</strong> lists the flights, both apartments and all four train journeys at the exact amounts on the booking confirmations and tickets; they are fixed and get no contingency. <strong>Still to spend</strong> is the plan for everything else. Leave <em>Actual</em> blank until you know it; a typed <strong>0</strong> counts as zero.</p>
 <div class="grid g3 noprint-no">
 <div class="card"><label class="nl" for="rate-eur">1 EUR = INR</label><input type="text" inputmode="decimal" id="rate-eur" data-rate="eur" value="108.8205"><div class="small muted">ECB reference 30 Sep 2026</div></div>
 <div class="card"><label class="nl" for="rate-huf">1 EUR = HUF</label><input type="text" inputmode="decimal" id="rate-huf" data-rate="huf" value="366.2"><div class="small muted">ECB reference 30 Sep 2026 → 1 HUF ≈ INR <span id="huf-inr">0.2972</span></div></div>
 <div class="card"><label class="nl" for="rate-cont">Contingency %</label><input type="text" inputmode="decimal" id="rate-cont" data-rate="cont" value="10"><div class="small muted">Covers FX moves &amp; card fees</div></div>
 </div>
 <p class="msg" id="rate-msg" role="alert"></p>
-<div class="tablewrap" style="margin-top:.8rem"><table><thead><tr><th>Item</th><th>Cur.</th><th>Plan</th><th>Plan INR</th><th>Actual</th></tr></thead><tbody id="budget-rows">
-<tr data-bid="h-vie-final" data-cur="EUR"><td>Vienna apartment, 5 nights (booked, non-refundable)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna apartment" value="1376.50"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna apartment" value=""></td></tr>
-<tr data-bid="h-bud-final" data-cur="EUR"><td>Budapest apartment, 3 nights (booked)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Budapest apartment" value="348.55"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Budapest apartment" value=""></td></tr>
+<h3 style="margin-top:1rem">Already paid</h3>
+<div class="tablewrap"><table><thead><tr><th>Item</th><th>Cur.</th><th>Amount</th><th>INR</th><th>Status</th></tr></thead><tbody id="paid-rows">
+<tr data-cur="INR" data-amt="262801"><td>Emirates flights, EK511/125 out and EK128/510 back (all 5 travellers)</td><td class="cur">INR</td><td class="inr">INR 2,62,801</td><td class="inr">INR 2,62,801</td><td><span class="lbl v">Paid</span></td></tr>
+<tr data-cur="EUR" data-amt="1237.87"><td>Vienna apartment, Kolonitzgasse, 26 Nov – 1 Dec, 5 nights. €1,376.50 incl. VAT, cleaning and city tax, minus €138.63 paid by Booking.com (Booking.com showed ₹1,49,502 − ₹15,057). Non-refundable</td><td class="cur">EUR</td><td class="inr">€1,237.87</td><td class="inr">INR 1,34,706</td><td><span class="lbl v">Paid</span></td></tr>
+<tr data-cur="EUR" data-amt="348.55"><td>Budapest apartment, Síp utca 7, 1 – 4 Dec, 3 nights, incl. VAT, cleaning and city tax (Booking.com showed ≈ ₹38,259)</td><td class="cur">EUR</td><td class="inr">€348.55</td><td class="inr">INR 37,929</td><td><span class="lbl v">Paid</span></td></tr>
+<tr data-cur="EUR" data-amt="272.92"><td>WESTbahn Wien Westbf ↔ Salzburg Hbf, Sun 29 Nov. Out, train 902: €13.99 + 3 × €18.99 + toddler €3.00 = €73.96. Back, train 927: 4 × €48.99 + toddler €3.00 = €198.96</td><td class="cur">EUR</td><td class="inr">€272.92</td><td class="inr">INR 29,699</td><td><span class="lbl v">Paid 17 Oct</span></td></tr>
+<tr data-cur="EUR" data-amt="141.0"><td>ÖBB RJX 61 Wien Hbf → Budapest-Keleti, Tue 1 Dec: 4 × €31.50 Sparschiene + €15.00 family-zone seat reservation (5 seats)</td><td class="cur">EUR</td><td class="inr">€141.00</td><td class="inr">INR 15,344</td><td><span class="lbl v">Paid 17 Oct</span></td></tr>
+<tr data-cur="EUR" data-amt="101.6"><td>ÖBB EC 140 + RJX 19981 Budapest-Keleti → Vienna Airport, Fri 4 Dec: 4 × €25.40 Sparschiene Komfort; seat reservations free</td><td class="cur">EUR</td><td class="inr">€101.60</td><td class="inr">INR 11,056</td><td><span class="lbl v">Paid 17 Oct</span></td></tr>
+<tr><td><strong>Total already paid</strong> (land: €2,101.94 + flights)</td><td></td><td></td><td class="inr"><strong id="t-paid-row">INR 4,91,535</strong></td><td></td></tr>
+</tbody></table></div>
+<p class="small muted">INR for euro items uses the rate above; your card statement will show the rate on the day you paid, plus any card fee.</p>
+<h3 style="margin-top:1rem">Still to spend</h3>
+<div class="tablewrap"><table><thead><tr><th>Item</th><th>Cur.</th><th>Plan</th><th>Plan INR</th><th>Actual</th></tr></thead><tbody id="budget-rows">
 <tr data-bid="f-vie-v2" data-cur="EUR"><td>Vienna food incl. classic cafés (6 days)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna food" value="1000"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna food" value=""></td></tr>
 <tr data-bid="f-bud-v2" data-cur="HUF"><td>Budapest food incl. New York Café</td><td class="cur">HUF</td><td><input class="num" aria-label="Plan: Budapest food" value="160000"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Budapest food" value=""></td></tr>
 <tr data-bid="s-vie-v2" data-cur="EUR"><td>Vienna sights (KHM 88, State Hall 47, cathedral 32, zoo 116, Riesenrad 58)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna sights" value="341"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna sights" value=""></td></tr>
 <tr data-bid="parndorf" data-cur="EUR"><td>Parndorf shuttle × 4 adults</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Parndorf shuttle" value="104"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Parndorf shuttle" value=""></td></tr>
 <tr data-bid="schafberg" data-cur="EUR"><td>Schafbergbahn Advent train, optional, not planned (4 adults €200 if added)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Schafbergbahn" value="0"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Schafbergbahn" value=""></td></tr>
-<tr data-bid="wolf-trip-bus" data-cur="EUR"><td>Wolfgangsee: WESTbahn (€272.92 paid), buses 150/150X, boat both ways</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Wolfgangsee day" value="427"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Wolfgangsee day" value=""></td></tr>
+<tr data-bid="wolf-local" data-cur="EUR"><td>Wolfgangsee on the day: buses 150/150X, 4 adults × 2 legs (≈ €50–70) + Advent boat both ways, 8 × €11.80 = €94.40 (toddler free). WESTbahn is in Already paid</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Wolfgangsee buses and boat" value="155"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Wolfgangsee buses and boat" value=""></td></tr>
 <tr data-bid="s-bud-v2" data-cur="HUF"><td>Budapest sights (synagogue, Parliament: optional)</td><td class="cur">HUF</td><td><input class="num" aria-label="Plan: Budapest sights" value="60000"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Budapest sights" value=""></td></tr>
 <tr data-bid="cruise" data-cur="EUR"><td>Danube Legend cruise</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: cruise" value="100"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: cruise" value=""></td></tr>
 <tr data-bid="van-arr" data-cur="EUR"><td>Arrival van VIE → apartment</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: arrival van" value="95"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: arrival van" value=""></td></tr>
 <tr data-bid="van-hbf" data-cur="EUR"><td>Apartment → Wien Hbf</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna station taxi" value="35"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna station taxi" value=""></td></tr>
 <tr data-bid="van-kel" data-cur="HUF"><td>Keleti → Budapest apartment</td><td class="cur">HUF</td><td><input class="num" aria-label="Plan: Budapest station taxi" value="10000"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Budapest station taxi" value=""></td></tr>
-<tr data-bid="rail-v2" data-cur="EUR"><td>Railjet Vienna → Budapest (4 adults + seats, paid)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: train" value="141"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: train" value=""></td></tr>
-<tr data-bid="rail-vie" data-cur="EUR"><td>Train Budapest-Keleti → Vienna Airport (4 adults + seats, paid)</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: airport train" value="101.6"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: airport train" value=""></td></tr>
 <tr data-bid="pass-vie" data-cur="EUR"><td>Vienna 7 Tage WIEN × 4</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna passes" value="100.8"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna passes" value=""></td></tr>
 <tr data-bid="pass-bud" data-cur="HUF"><td>Budapest 72 h cards × 4</td><td class="cur">HUF</td><td><input class="num" aria-label="Plan: Budapest passes" value="23000"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Budapest passes" value=""></td></tr>
 <tr data-bid="taxi-vie" data-cur="EUR"><td>Comfort taxis, Vienna</td><td class="cur">EUR</td><td><input class="num" aria-label="Plan: Vienna taxis" value="45"></td><td class="inr"></td><td><input class="num" data-actual aria-label="Actual: Vienna taxis" value=""></td></tr>
@@ -876,14 +884,15 @@ footer{padding:2rem 0;font-size:.9rem;color:var(--muted)}
 </tbody></table></div>
 <p class="msg" id="budget-msg" role="alert"></p>
 <div class="totals">
-<div class="card"><span class="small muted">Land plan subtotal</span><span class="big" id="t-sub">—</span></div>
-<div class="card"><span class="small muted">+ Contingency</span><span class="big" id="t-cont">—</span></div>
+<div class="card"><span class="small muted">Already paid (flights, stays, trains)</span><span class="big" id="t-paid">—</span></div>
+<div class="card"><span class="small muted">Still to spend: plan subtotal</span><span class="big" id="t-sub">—</span></div>
+<div class="card"><span class="small muted">+ Contingency (on still-to-spend only)</span><span class="big" id="t-cont">—</span></div>
 <div class="card dark"><span class="small">Remaining to spend (plan)</span><span class="big" id="t-rem">—</span></div>
-<div class="card"><span class="small muted">Incl. flights paid INR 2,62,801</span><span class="big" id="t-all">—</span></div>
-<div class="card"><span class="small muted">Actuals entered</span><span class="big" id="t-act">—</span><span class="small muted" id="t-act-n">0 items recorded</span></div>
-<div class="card"><span class="small muted">Per adult (÷4, plan incl. flights)</span><span class="big" id="t-pp">—</span></div>
+<div class="card"><span class="small muted">Whole trip (paid + remaining)</span><span class="big" id="t-all">—</span></div>
+<div class="card"><span class="small muted">Per adult (÷4, whole trip)</span><span class="big" id="t-pp">—</span></div>
+<div class="card"><span class="small muted">Actuals entered (still-to-spend items)</span><span class="big" id="t-act">—</span><span class="small muted" id="t-act-n">0 items recorded</span></div>
 </div>
-<p class="small muted">Not included: insurance premium, the Széchenyi Baths. The apartment figures are booking totals; Booking.com showed the Vienna price as ₹1,49,502.</p>
+<p class="small muted">Not included: insurance premium, the Széchenyi Baths, the optional Schafbergbahn. If the Budapest booking is cancelled before 25 Nov 23:59 it is refunded in full; after that €277 is kept.</p>
 </section>
 
 <section class="page" id="emergency" aria-labelledby="h-em">
@@ -940,7 +949,6 @@ var APP="mittal-danube-opus", KEY="mittal-danube-opus-v1";
 var ST=["pending","requested","confirmed","done","na"];
 var LBL={pending:"Pending",requested:"Requested",confirmed:"Confirmed",done:"Done",na:"N/A"};
 var DEF_RATES={eur:108.8205,huf:366.2,cont:10};
-var FLIGHTS_INR=262801;
 var docEl=document.documentElement; docEl.classList.add("js");
 var bar=document.getElementById("appbar"), sEl=document.getElementById("savestate");
 var storageOK=true, problems=[], timer=null, lastSaved=null, source="fresh";
@@ -1016,7 +1024,9 @@ function calc(){
   var rm=[], eur=rate("eur",50,250,rm), huf=rate("huf",200,700,rm), cont=rate("cont",0,50,rm);
   var hufInr=eur/huf; document.getElementById("huf-inr").textContent=hufInr.toFixed(4);
   document.getElementById("rate-msg").textContent=rm.join(" ");
-  var toInr={EUR:eur,HUF:hufInr,INR:1}, sub=0, act=0, nAct=0, bad=0, rows=$$("#budget-rows tr");
+  var toInr={EUR:eur,HUF:hufInr,INR:1}, sub=0, act=0, nAct=0, bad=0, paid=0, rows=$$("#budget-rows tr");
+  $$("#paid-rows tr[data-amt]").forEach(function(tr){ var v=parseFloat(tr.getAttribute("data-amt"))*toInr[tr.getAttribute("data-cur")]; paid+=v; tr.querySelectorAll("td.inr")[1].textContent=inr(v); });
+  document.getElementById("t-paid-row").textContent=inr(paid);
   rows.forEach(function(tr){ var c=tr.getAttribute("data-cur"), i=tr.querySelectorAll("input"), cell=tr.querySelector("td.inr");
     var p=num(i[0].value), a=num(i[1].value);
     if(p===null||isNaN(p)){ i[0].setAttribute("aria-invalid","true"); bad++; cell.textContent="check"; }
@@ -1029,8 +1039,9 @@ function calc(){
   document.getElementById("t-sub").textContent=inr(sub);
   document.getElementById("t-cont").textContent=inr(c)+" ("+cont+"%)";
   document.getElementById("t-rem").textContent=inr(rem);
-  document.getElementById("t-all").textContent=inr(rem+FLIGHTS_INR);
-  document.getElementById("t-pp").textContent=inr((rem+FLIGHTS_INR)/4);
+  document.getElementById("t-paid").textContent=inr(paid);
+  document.getElementById("t-all").textContent=inr(paid+rem);
+  document.getElementById("t-pp").textContent=inr((paid+rem)/4);
   document.getElementById("t-act").textContent=nAct?inr(act):"—";
   document.getElementById("t-act-n").textContent=nAct+" of "+rows.length+" items recorded"+(nAct&&nAct<rows.length?" (blanks are not counted as spent)":"");
 }
