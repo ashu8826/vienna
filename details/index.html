@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf8f5">
+<title>Vienna &amp; Budapest · Detailed travel guide</title>
+<style>
+:root{color-scheme:light;--paper:#faf8f5;--card:#fff;--ink:#1b1b1d;--muted:#65625e;--line:#e7e2da;--soft:#f2eee8;--vienna:#a3413a;--vienna-soft:#f7e9e6;--budapest:#2d6a53;--budapest-soft:#e4f0ea;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}.page{max-width:780px;margin:auto;padding:56px 24px 80px}h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}p{margin:0}a{color:inherit;text-underline-offset:3px}a:focus-visible{outline:3px solid var(--vienna);outline-offset:3px}.label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}.cover h1{font-size:clamp(44px,9vw,72px);line-height:1;letter-spacing:-.015em;margin:14px 0 18px}.cover h1 em{color:var(--muted)}.lede{font-size:18px;color:var(--muted);max-width:34em}.meta{display:flex;flex-wrap:wrap;gap:20px 44px;margin:36px 0 0;padding-top:20px;border-top:1px solid var(--line)}.meta dd{margin:2px 0 0;font-weight:600}.route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin:56px 0 24px}.stop strong{display:block;font:400 26px/1.1 var(--serif)}.stop span,.leg{font-size:13px;color:var(--muted)}.stop.v strong{color:var(--vienna)}.stop.b{text-align:right}.stop.b strong{color:var(--budapest)}.leg{text-align:center;border-bottom:1.5px dashed var(--line);padding-bottom:10px}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;background:var(--card)}.stats div{padding:16px 18px;border-left:1px solid var(--line)}.stats div:first-child{border:0}.stats b{display:block;font:400 29px/1.1 var(--serif)}.stats span{font-size:13px;color:var(--muted)}
+.block{margin-top:72px}.block-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}.block-head h2{font-size:30px;line-height:1.15}.intro{color:var(--muted);margin-bottom:18px}.callout{background:var(--soft);border-radius:10px;padding:15px 18px;margin:18px 0;font-size:14.5px}.callout p+p{margin-top:8px}.daynav{display:flex;flex-wrap:wrap;gap:8px}.daynav a{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--card)}.daynav i{width:8px;height:8px;border-radius:50%;background:var(--c)}[data-city="vienna"]{--c:var(--vienna);--c-soft:var(--vienna-soft)}[data-city="budapest"]{--c:var(--budapest);--c-soft:var(--budapest-soft)}
+.day{padding:36px 0 8px;border-top:1px solid var(--line);margin-top:36px}.day-head{display:grid;grid-template-columns:72px 1fr;gap:16px;margin-bottom:20px}.day-num{font:400 52px/.9 var(--serif);color:var(--c)}.day-date{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:var(--muted)}.tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--c);background:var(--c-soft);border-radius:999px;padding:2px 10px}.day h3{font-size:26px;line-height:1.2;margin-top:4px}.timeline{list-style:none;margin:0;padding:0 0 0 88px}.timeline li{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.timeline li:last-child{border:0}.timeline time,.timeline .time{font-variant-numeric:tabular-nums;font-weight:600;font-size:14px}.timeline strong{font-weight:600}.timeline p{font-size:14.5px;color:var(--muted);margin-top:2px}.day-foot{margin:16px 0 0 88px;padding:12px 16px;background:var(--soft);border-radius:10px;font-size:14px}.day-foot b{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.bookings{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--card)}.bookings li{display:grid;grid-template-columns:80px 1fr auto;gap:14px;align-items:start;padding:14px 18px;border-top:1px solid var(--line)}.bookings li:first-child{border:0}.what{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}.detail b{display:block}.detail span,.status{font-size:14px;color:var(--muted)}.status{text-align:right}.simple-list{padding-left:20px;margin:0}.simple-list li{padding:5px 0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px}.card h3{font-size:21px;margin-bottom:8px}.card p,.card li{font-size:14.5px}.card p+p{margin-top:8px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip{font-size:13px;background:var(--soft);border-radius:999px;padding:4px 12px}.muted{color:var(--muted)}footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media(max-width:600px){.page{padding:32px 16px 56px}.route{grid-template-columns:1fr;gap:10px;margin-top:44px}.stop.b{text-align:left}.leg{text-align:left;border-bottom:0;border-left:1.5px dashed var(--line);padding:0 0 0 15px}.stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}.day-head{grid-template-columns:52px 1fr;gap:12px}.day-num{font-size:40px}.timeline{padding-left:0}.timeline li{grid-template-columns:65px 1fr}.day-foot{margin-left:0}.bookings li{grid-template-columns:1fr;gap:2px}.status{text-align:left}.two-col{grid-template-columns:1fr}}
+@page{margin:16mm}@media print{:root{color-scheme:light;--paper:#fff;--card:#fff;--ink:#111;--muted:#555;--line:#ccc;--soft:#f3f3f3;--vienna:#82332c;--budapest:#245d47}.page{max-width:none;padding:0}.daynav{display:none}.day,.bookings li,.card{break-inside:avoid}.block{margin-top:40px}a{color:inherit}}
+
+.book-tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:22px 0}
+.book-tools p{flex:1 1 220px;font-size:13px;color:var(--muted)}
+.btn,button.st{font:600 14px var(--sans);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer;min-height:44px}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--vienna);outline-offset:3px}
+.small{font-size:14px;line-height:1.65}.block>p{margin:14px 0}.block>h3{margin:24px 0 12px;font-size:24px}
+.lbl{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.lbl.v,button.st[data-status="done"],button.st[data-status="confirmed"]{color:var(--budapest);background:var(--budapest-soft)}
+.lbl.p,button.st[data-status="pending"]{color:var(--vienna);background:var(--vienna-soft)}
+.lbl.e,button.st[data-status="requested"]{background:var(--soft);color:var(--ink)}
+.tablewrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted);background:var(--soft)}
+tbody tr:last-child td{border-bottom:0}
+th button.sort{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:4px 0;min-height:36px}
+th button.sort::after{content:" ↕"}th[aria-sort="ascending"] button.sort::after{content:" ↑"}th[aria-sort="descending"] button.sort::after{content:" ↓"}
+#trk-table td:first-child{min-width:100px}#trk-table td:nth-child(3){width:100%}
+input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 10px;max-width:100%}
+input.num{width:100px;text-align:right;font-variant-numeric:tabular-nums;min-height:44px}
+textarea{display:block;width:100%;min-height:100px;resize:vertical}
+.nl{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+[aria-invalid="true"]{border:2px solid var(--vienna)}.msg{font-size:14px;color:var(--vienna)}
+.grid,.totals{display:grid;gap:14px;margin:16px 0}.g2,.g3,.totals{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid>*{min-width:0}.grid input:not(.num){width:100%}.totals .big{display:block;font:400 26px/1.2 var(--serif);margin:8px 0;font-variant-numeric:tabular-nums}
+.detail-page .block{margin-top:64px}.detail-page .block h2{font-size:30px;margin-bottom:20px}
+.detail-page .day{margin-top:36px}.detail-page .day h2{font-size:26px;margin-bottom:0}
+.detail-page .dayhead{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;margin-bottom:24px}
+.detail-page .daynum{font:400 48px/1 var(--serif);color:var(--c)}.daynum small{display:block;font:600 10px var(--sans);letter-spacing:.1em;margin-top:6px}
+.detail-page .dt{font-size:13px;color:var(--muted);margin-bottom:6px}.detail-page .chip{padding:3px 10px;font-size:12px}
+.detail-page .daygrid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+ol.tl{list-style:none;margin:0;padding:0}ol.tl li{padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}ol.tl li:last-child{border-bottom:0}
+ol.tl .t{display:block;font-size:13px;font-weight:600;color:var(--c,var(--vienna));margin-bottom:4px}
+ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
+.facts dl{margin:0;font-size:14px}.facts dt{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;margin-top:14px}.facts dt:first-child{margin-top:0}.facts dd{margin:4px 0 0}
+.planb{background:var(--soft);border-radius:10px;padding:15px 18px;margin:18px 0 0;font-size:14px}
+.detail-page a,.detail-page td{overflow-wrap:anywhere}.detail-page .card h3{font-size:21px}
+.detail-page .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px}
+.back-link{display:inline-block;margin-bottom:32px;font-size:14px}.detail-nav{margin:24px 0}
+@media(max-width:600px){
+  .g2,.g3,.totals{grid-template-columns:minmax(0,1fr)}
+  .detail-page .dayhead{grid-template-columns:52px minmax(0,1fr);gap:12px}.detail-page .daynum{font-size:36px}
+  #trk-table thead,#trk-table thead tr{display:block}
+  #trk-table thead tr{display:flex;flex-wrap:wrap;gap:8px;padding:8px}
+  #trk-table thead th{display:block;border:0;padding:0 4px}
+  #trk-table tbody,#trk-table tbody tr,#trk-table tbody td{display:block;width:100%}
+  #trk-table tbody tr{padding:16px;border-bottom:1px solid var(--line)}
+  #trk-table tbody tr:last-child{border:0}#trk-table tbody td{padding:4px 0;border:0}
+  #trk-table tbody td:first-child{font-weight:600}
+  #budget table thead{display:none}#budget table tbody{display:block}
+  #budget table tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:16px;border-bottom:1px solid var(--line)}
+  #budget table tr:last-child{border:0}#budget table td{display:block;min-width:0;border:0;padding:0}
+  #budget table td:first-child{grid-column:1/-1;font-weight:600;margin-bottom:4px}
+  #budget table td[data-label]::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  #budget table td:empty{display:none}#budget input.num{width:100%}
+}
+@media print{
+  .book-tools,.detail-nav,.back-link,.noprint{display:none!important}
+  .daynav{display:none}.detail-page .day{break-inside:auto}h2,h3{break-after:avoid}
+  .tablewrap{overflow:visible;border:0}table{font-size:9pt;table-layout:fixed}td,th{padding:6px;overflow-wrap:anywhere}
+  #trk-table td:first-child{min-width:0}#trk-table td:nth-child(3){width:auto}
+  #trk-table th:nth-child(1){width:15%}#trk-table th:nth-child(2){width:13%}#trk-table th:nth-child(3){width:55%}#trk-table th:nth-child(4){width:17%}
+  input.num{width:100%;font-size:9pt;padding:4px}button.st{min-width:0;padding:4px;font-size:9pt}
+  tr,ol.tl li{break-inside:avoid}.totals{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body class="detail-page"><main class="page">
+<a class="back-link" href="../">← Back to the main travel book</a>
+<header class="cover"><p class="label">The Mittal family · Winter 2026</p><h1>The finer <em>details</em></h1>
+<p class="lede">The full day plans and practical notes, here when you need them.</p></header>
+<div class="callout"><strong>Planning reference:</strong> this preserves the detailed guide’s October research. Prices, menus, market dates and non-booked connections need reconfirming. Booked train times are from your tickets, not a live running guarantee.</div>
+<nav class="daynav detail-nav" aria-label="Detailed guide sections"><a href="#d1">Day by day</a><a href="#baths">Budapest thermal bath</a><a href="#transport">Transport</a><a href="#food">Food, cafés &amp; phrases</a><a href="#money">Money, SIM &amp; tax-free</a><a href="#weather">Weather &amp; packing</a></nav>
+<nav class="daynav" aria-label="Detailed days"><a href="#d1">Day 1</a><a href="#d2">Day 2</a><a href="#d3">Day 3</a><a href="#d4">Day 4</a><a href="#d5">Day 5</a><a href="#d6">Day 6</a><a href="#d7">Day 7</a><a href="#d8">Day 8</a><a href="#d9">Day 9</a><a href="#d10">Day 10</a></nav>
+<div class="book-tools" id="appbar"><p id="savestate" role="status" aria-live="polite">Edits need JavaScript. The guide is still readable without it.</p><button type="button" class="btn" id="btn-export">Save copy</button><button type="button" class="btn" id="btn-print">Print</button></div>
+<section class="day block" id="d1" aria-labelledby="h-d1" data-city="vienna">
+
+<div class="dayhead"><div class="daynum">1<small>DAY</small></div><div><div class="dt">Thursday 26 November · Delhi → Dubai → Vienna · overnight Vienna</div><h2 id="h-d1">Arrival by lamplight</h2>
+<div class="chips"><span class="chip city-v">Vienna</span><span class="chip">Walking &lt; 1 km</span><span class="chip">Sunset 16:00</span><span class="chip">No paid sights</span></div></div></div>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">06:35</span><b>Delhi T3 check-in</b> (printed time). Stroller to the gate if Emirates allows; carrier in the cabin bag.</li>
+<li><span class="t">10:35 → 13:00</span><b>EK511 to Dubai.</b> Feed the toddler on take-off and landing for ear pressure.</li>
+<li><span class="t">15:40 → 18:50</span><b>EK125 to Vienna T3.</b> Request an egg-free meal (vegan-type / Indian vegetarian code) on every passenger and confirm it in Manage Booking. <span class="lbl p">Check meal code</span></li>
+<li><span class="t">~19:40</span><b>Bags, then the pre-booked van</b> with a toddler seat: about 20–25 min to Kolonitzgasse.</li>
+<li class="rest"><span class="t">~20:15</span><b>Check in</b> (the apartment accepts arrivals until 23:00). Simple dinner: <strong>Indus</strong>, Radetzkystraße 20, about 300 m away (North Indian; dinner served until ~22:30, hours <span class="lbl e">unverified</span>), takeaway dal, paneer and rice, or theplas from home.</li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Transit</dt><dd>Van recommended at night with 5 big bags. Budget alternative: <strong>CAT bus</strong> (S7 replacement), 21 min non-stop to Marxergasse 1b, €14.90 per adult, under-15 free. It stops about 600 m from the flat. <span class="lbl v">16 Oct</span></dd>
+<dt>Family cost</dt><dd>Van ≈ €70–95 <span class="lbl e">Estimate</span> · CAT 4 × €14.90 = €59.60</dd>
+<dt>Bookings</dt><dd>Airport van <span class="lbl p">Pending</span> · Host: key/self check-in for ~20:15 in writing <span class="lbl p">Pending</span></dd>
+<dt>Child &amp; warmth</dt><dd>Outer layers in the cabin bag: around 0–4 °C at 19:00. Nappies for 14 h door-to-door. Ask the host for a travel cot.</dd>
+</dl>
+<div class="planb"><strong>If delayed:</strong> message the driver and host with the new ETA (check-in closes 23:00 — ask for a key-box code as backup). <strong>Van falls through:</strong> taxi rank at arrivals (ask for a large car + child seat) or the CAT bus.</div></div></div>
+<label class="nl" for="n-d1">Notes for Day 1</label><textarea id="n-d1" data-note="d1" placeholder="Driver name, meal requests, how the little one slept…"></textarea>
+</section>
+<section class="day block" id="d2" aria-labelledby="h-d2" data-city="vienna">
+
+<div class="dayhead"><div class="daynum">2<small>DAY</small></div><div><div class="dt">Friday 27 November · Vienna day 1 · overnight Vienna</div><h2 id="h-d2">The imperial heart on foot</h2>
+<div class="chips"><span class="chip city-v">Vienna</span><span class="chip">Walking ≈ 4.5 km</span><span class="chip">Sunset 16:00</span><span class="chip">Loop A</span><span class="chip">4 markets</span></div></div></div>
+
+<p class="small"><strong>Why this day:</strong> it packs most of your must-see list into one compact, flat arc. The two places with day restrictions (the State Hall is closed on Mondays, and KHM needs a timed slot) both fall on today.</p>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">08:00</span><b>Activate four “7 Tage WIEN” digital tickets</b> in WienMobil (named; carry passports). They cover today through Thursday. Tram 1 from Hintere Zollamtsstraße → Salztorbrücke (3 stops, ~6 min), then ~7 min on foot over the bridge to the Karmelitermarkt.</li>
+<li><span class="t">08:20</span><b>Karmelitermarkt</b>: Friday is a farmers’ day. Breakfast at <strong>Harvest</strong> (vegan, Karmeliterplatz 1) or <strong>Zimmer 37</strong> (vegetarian). <span class="lbl e">Check hours</span></li>
+<li><span class="t">09:30</span><b>Walk to St. Stephen’s</b> via Schwedenplatz and Rotenturmstraße (15–18 min).</li>
+<li><span class="t">09:50</span><b>St. Stephen’s Cathedral</b>: tourist hours start at 09:00. Interior €8 adult; the <strong>North Tower lift</strong> to the Pummerin bell is €8 and stroller-friendly (skip the 343-step South Tower). English tour Mon–Fri 10:30. <span class="lbl v">Verified</span></li>
+<li><span class="t">10:40</span><b>Graben &amp; Plague Column → Peterskirche</b>, a gem of baroque gold, open from 08:00, free.</li>
+<li><span class="t">11:05</span><b>Demel</b>, Kohlmarkt 14 (opens 10:00, <em>no reservations</em>). Hot chocolate or Melange; the apple strudel’s egg content isn’t stated, so ask. Buy candied violets as gifts. Every cake contains egg. <span class="lbl v">Hours</span></li>
+<li><span class="t">11:40</span><b>Michaelerplatz</b>: Roman ruins, Looshaus, the Michaelertor dome. Then through the Hofburg to Josefsplatz.</li>
+<li><span class="t">11:55</span><b>State Hall, Austrian National Library</b> (Fri 09–18; €12 adult, senior €10.50, under-19 free; lift). 45 min. <span class="lbl v">Verified</span></li>
+<li><span class="t">12:50</span><b>Heldenplatz → Burgtor → Maria-Theresien-Platz Christmas village.</b></li>
+<li><span class="t">13:15</span><b>KHM: lunch in the cupola café</b> (kitchen 11:00–16:30; museum ticket required; reserve), then 60–75 min of highlights: the Bruegel room, Kunstkammer, Vermeer. <span class="lbl p">Timed slot + table</span></li>
+<li class="rest"><span class="t">15:30 – 17:15</span><b>Home to rest</b>: tram 1 from Burgring (outside the KHM) direct to Hintere Zollamtsstraße, ~20 min with no stairs. Or U3 Volkstheater → Landstraße (4 stops) plus the walk.</li>
+<li><span class="t">17:30</span><b>Tram 1 from Hintere Zollamtsstraße → Rathausplatz/Burgtheater</b> (direct, ~15 min). <b>Christkindlmarkt</b> as the lights come on. Agree a meeting point at the big tree. Free Advent singing in the Rathaus hall Fri–Sun from 27 Nov, 15:30–19:00 <span class="lbl e">3rd-party</span>.</li>
+<li><span class="t">19:00</span><b>Dinner, Café Landtmann</b>, Universitätsring 4. Egg-free: warm apple strudel (A|G), vegan mango cake, vegan pumpkin and sweet-potato soup, beetroot tartare, winter salad. Tram 1 from Rathausplatz/Burgtheater direct to Hintere Zollamtsstraße, home ~20:30. <span class="lbl p">Reserve</span></li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Family cost</dt><dd>Passes 4 × €25.20 · cathedral/tower ~€32 · State Hall ~€47 · KHM 4 × €22 = €88 (under-19 free) · Demel ~€40 · KHM lunch ~€90 · Landtmann ~€120</dd>
+<dt>Bookings</dt><dd>KHM timed ticket ~13:00 + café table <span class="lbl p">Pending</span> · Landtmann 19:00 <span class="lbl p">Pending</span> · State Hall online optional</dd>
+<dt>Child, WC &amp; warmth</dt><dd>WCs: Demel, the library, KHM (baby change). The cathedral is cold inside. KHM cloakroom for coats and stroller.</dd>
+</dl>
+<div class="planb"><strong>Slow start:</strong> skip Karmelitermarkt and take U3 Landstraße → Stephansplatz (2 stops). Karmelitermarkt can go on Tuesday morning instead of Rochusmarkt. <strong>Low energy:</strong> keep the KHM café but skip the galleries. <strong>Rain:</strong> the loop is mostly short hops between indoor stops.</div></div></div>
+<label class="nl" for="n-d2">Notes for Day 2</label><textarea id="n-d2" data-note="d2"></textarea>
+</section>
+<section class="day block" id="d3" aria-labelledby="h-d3" data-city="vienna">
+
+<div class="dayhead"><div class="daynum">3<small>DAY</small></div><div><div class="dt">Saturday 28 November · Parndorf day trip · overnight Vienna</div><h2 id="h-d3">Designer Outlet, then Sacher</h2>
+<div class="chips"><span class="chip city-v">Vienna</span><span class="chip">Bus 40 min each way</span><span class="chip">Black Friday weekend</span><span class="chip">Tax-free</span></div></div></div>
+<p class="small"><strong>Why today:</strong> Parndorf is closed on Sundays, and Saturday is the only free day that keeps Sunday for the lake. It falls the day after Black Friday, so expect deep discounts and big crowds. Arrive at opening and do the luxury stores first.</p>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">08:45</span><b>Leave the flat.</b> Walk ~8 min (or tram O 2 stops) to Landstraße/Wien Mitte, then U4 direct to Karlsplatz (2 stops); exit Oper. ~15–20 min. Step-free alternative: tram 1 from Hintere Zollamtsstraße direct to Oper/Karlsplatz, the long way round the Ring (~25 min).</li>
+<li><span class="t">09:30</span><b>Blaguss shopping shuttle</b> from Opernring 3, opposite the State Opera. About 40 min. Return fare €26 adult, €13 child 3–6, under-3 free (older info). <strong>Non-refundable; times fixed.</strong> <span class="lbl v">Timetable</span> <span class="lbl p">Book</span></li>
+<li><span class="t">10:10 – 14:15</span><b>McArthurGlen Designer Outlet Parndorf</b> (Sat 09–18): Prada, Gucci, Burberry, BOSS, Michael Kors, Polo Ralph Lauren, Moncler/Armani (check the current directory). Then the <em>Parndorf Fashion Outlet</em> next door for mid-market brands and its “Christmas Home”. Stroller and Kiddie Cab at Guest Services; bag drop €5.</li>
+<li><span class="t">12:30</span><b>Lunch on site</b>: Amici Napoli (margherita and marinara pizza dough is normally egg-free, but ask), Green District bowls, wagamama vegan menu (avoid egg noodles). Sacher Café on site for coffee.</li>
+<li><span class="t">14:30</span><b>Shuttle back</b> (or 16:00 if shopping is the priority) → Opera ~15:10.</li>
+<li><span class="t">15:15</span><b>Café Sacher</b>, Philharmoniker Str. 4. Egg-free options: the vegan white-chocolate and blueberry tartlet, vegan schnitzel, wild-mushroom gnocchi (vegan option), burrata. The Original Sacher-Torte contains egg. <span class="lbl p">Reserve (Aleno)</span></li>
+<li><span class="t">16:30</span><b>Choose:</b> home to rest and drop the bags, <em>or</em> U1 Karlsplatz → Praterstern (direct, 8 min) for the <b>Prater Wintermarkt and a night ride on the Riesenrad</b> (open all year; under-3 free), then tram O from Praterstern → Hintere Zollamtsstraße (3 stops), home ~19:00.</li>
+<li><span class="t">Evening</span><b>Cook a packed lunch for tomorrow</b> in the apartment kitchen (parathas, theplas, fruit) and fill a flask.</li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Tax-free</dt><dd>Spend ≥ €75.01 in one store on one day and show your passport for a refund form. You can take a cash refund at Guest Services, but <strong>every form still needs the customs stamp at Vienna airport before check-in on 4 Dec</strong>, with the goods unused and to hand.</dd>
+<dt>Family cost</dt><dd>Shuttle 4 × €26 = €104 · lunch ~€70 · Sacher ~€90 · Riesenrad ~€58 (optional)</dd>
+<dt>Bookings</dt><dd>Blaguss shuttle 09:30 / 14:30 <span class="lbl p">Pending</span> · Sacher 15:15 <span class="lbl p">Pending</span></dd>
+<dt>Child, WC</dt><dd>Baby change in most outlet restrooms; two covered playgrounds (Dinoland is for ages 3+). Agree a café meeting point for the grandparents.</dd>
+</dl>
+<div class="planb"><strong>Shuttle sold out:</strong> train Wien Hbf → Parndorf Ort (~35 min, every 30 min; tram O to Hbf), then bus B10 at xx:21/xx:51 or a local taxi. Door-to-door Uber XL/van ≈ €70–110 each way. <strong>Crowds too much:</strong> take the 12:30 shuttle back. <strong>Prater skipped?</strong> It’s 10 min from the flat on any spare evening.</div></div></div>
+<label class="nl" for="n-d3">Notes for Day 3</label><textarea id="n-d3" data-note="d3"></textarea>
+</section>
+<section class="day block" id="d4" aria-labelledby="h-d4" data-city="vienna">
+
+<div class="dayhead"><div class="daynum">4<small>DAY</small></div><div><div class="dt">Sunday 29 November · 1st Advent · Wolfgangsee day trip · overnight Vienna</div><h2 id="h-d4">Lake, boat and Advent lights</h2>
+<div class="chips"><span class="chip city-v">Salzkammergut</span><span class="chip">~4 h travel each way</span><span class="chip">Sunset ≈ 16:20</span><span class="chip">Top 5 · #1</span><span class="chip">SchafbergBahn optional</span></div></div></div>
+<p class="small"><strong>Why this day works, and the honest cost:</strong> the Wolfgangseer Advent is open this weekend, and on Advent Sundays children ride the boats and the Schafbergbahn for free. It is still about 8 hours of travel in a 14-hour day, so the plan uses the fast train, then the regional bus with no luggage to carry, and loops the lake by boat (St. Gilgen → St. Wolfgang and back) so the bus leaves from where it dropped you.</p>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">06:05</span><b>Leave the flat.</b> At this hour a <strong>taxi</strong> is easiest (~15 min, ~€15–20). Or take tram O from Hintere Zollamtsstraße, 2 stops to Landstraße/Wien Mitte, then the U3 direct to Westbahnhof (~25 min; check the first tram O in WienMobil). The train is usually ready ~30 min before departure, so board by ~06:25. Packed breakfast.</li>
+<li><span class="t">06:38 → 09:08</span><b>WESTbahn Wien Westbahnhof → Salzburg Hbf</b> (train 902). <strong>Booked 17 Oct:</strong> coach <strong>15, upper deck</strong>, seats 524A, 524B, 525A, 525B, 525C (toddler has their own seat). €73.96 (WestSuperpreis €13.99 + 3 × €18.99, toddler €3). Cancellable online until the day before (25%, minimum €4.99 per adult ticket). The family compartment with the changing table is downstairs in coach 14. <span class="lbl v">Booked</span> <strong>Scenic side: LEFT</strong> (south) for the Alpine foothills from Linz to Salzburg (light from ~07:45).</li>
+<li><span class="t">09:15</span><b>Bus to St. Gilgen</b> from the stop right outside the station: <em>Salzburg Hauptbahnhof, bay F (Südtiroler Platz)</em>, 3 min walk. Take the first <strong>bus 150</strong> after you arrive (about every 30 min on Sundays, ~49 min). The early start beats the late-morning crowds, and Hbf is the first stop, so you’ll get seats. Fold the stroller. Tickets from the driver or the Salzburg Verkehr app, ~€6–9 per adult, under-6s free. <span class="lbl e">Fare estimate</span></li>
+<li><span class="t">~10:05 – 11:25</span><b>St. Gilgen</b>: a short walk (~8 min) from the Busbahnhof to the pier through the village. The market opens at 10:00, so you’ll have it almost to yourselves: the 11 m Advent candle on the lake shore, the nativity, coffee and a warm-up before the boat. You’ll pass through again at dusk.</li>
+<li><span class="t">11:30 → 12:05</span><b>Advent boat St. Gilgen → St. Wolfgang</b> (35 min), docking at the <em>Schafbergbahn pier</em>, right beside the mountain-railway station. €11.80 per adult one way; <strong>children up to 14 free on Advent Sundays</strong>. Buy at the St. Gilgen pier. Some weekend boats run on Saturdays only, so confirm the Sunday times at the pier; the 12:00 (→ 12:35) is the backup. <span class="lbl v">2026 timetable</span></li>
+<li><span class="t">12:10 – 13:00</span><b>Warm lunch indoors</b> at Café EQ in the ErlebnisQuartier (the SchafbergBahn valley station, beside the pier): indoor Advent market and cookie decorating, plus your packed food. WC and nappy change.</li>
+<li class="rest"><span class="t">13:00 – 13:45</span><b>Slow hour</b>: toddler nap in the stroller or carrier while the grandparents stay warm in the café, or a gentle walk along the lakeside promenade past the floating 16 m Friedenslicht lantern.</li>
+<li><span class="t">13:45 – 15:20</span><b>St. Wolfgang market lanes</b> (about a 10-min walk) and the pilgrimage church (Pacher altar), at an easy pace with a hot-drink stop, then back to the SchafbergBahn pier.</li>
+<li><span class="t">15:35 → 16:10</span><b>Boat back to St. Gilgen</b> as the lake lights come on, your second crossing. If the 15:35 is a Saturday-only sailing, take the <strong>15:05</strong> (→ 15:40). Don’t plan on the 16:10: it arrives too late for the bus.</li>
+<li><span class="t">16:10 – 16:25</span><b>St. Gilgen market at dusk</b> on the way to the bus station.</li>
+<li><span class="t">16:36 → 17:16</span><b>Express bus 150X</b> St. Gilgen Busbahnhof → Salzburg Hbf (40 min). Be at the stop by 16:25. Line 150 carries up to 10,000 people on busy weekends, so extra buses run on Advent weekends; if the 150X is full, take the next 150 or a reinforcement bus. That leaves ~35 min of buffer for the 17:52. <span class="lbl e">Timetable from Apr 2025; recheck in the app</span></li>
+<li><span class="t">17:52 → 20:22</span><b>WESTbahn 927 back to Westbahnhof</b>; supper on board. <strong>Booked:</strong> coach <strong>15, upper deck</strong>, seats 524B, 524C, 524D, 525C, 525D. €198.96. Mind the stairs with a sleepy toddler; if coach 14’s lower deck has free seats, ask the crew whether you can move. Taxi home (~€15–20), or U3 → Landstraße + tram O, home ~20:50. <span class="lbl v">Booked</span></li>
+</ol>
+<div class="planb"><strong>Optional, not in the plan: SchafbergBahn Advent train.</strong> Removed to keep the day calm. Add it only if everyone feels up to it on the day. <strong>Tickets:</strong> at the valley station on arrival (~12:10): €50 per adult return to the Schafbergalm, children free on Advent Sundays, under-4s free without a seat (or <a href="https://ticketing.5schaetze.at/de/Products/Tickets/Category?cID=2009">online</a> if the Advent fare is offered). Family +€200. <strong>Sunday trains up</strong> (25 min): 09:20 · 10:30 · 11:50 · <strong>13:10</strong> · 14:30 · 15:50, plus on-demand extras. <strong>Down from the Alm:</strong> 11:15 · 12:35 · <strong>13:55</strong> · <strong>14:15</strong> (on-demand) · 15:15 · 16:35. <strong>How it fits:</strong> up 13:10 → 13:35; Advent on the Alm (live music and programme from 13:45, viewpoint over the lake, the Gasthof Schafberg-Alpe, the Christkind post box); down 14:15 → 14:40, or 13:55 → 14:20 if the extra isn’t running. Not the 15:15: it misses the 15:35 boat back. It replaces the slow hour and most of the market time. <strong>The ride:</strong> Austria’s steepest cog railway, its carriages lit with fairy lights, climbs ~820 m to 1,364 m; sit facing downhill for the lake view. Fold the stroller and use the carrier. The Alm is ~5 °C colder than the lake (typically −5 to +1 °C, often snowy), so bring the toddler snowsuit. Check the <a href="https://schafbergalm.panomax.com/">webcam</a>. Trains can be cancelled in snow or wind. <span class="lbl v">2026 timetable</span></div>
+</div>
+<div class="facts card"><dl>
+<dt>Family cost</dt><dd>WESTbahn €272.92 for 4 adults + toddler seats (€73.96 out + €198.96 back) <span class="lbl v">Paid 17 Oct</span> · buses 4 adults × 2 legs ≈ €50–70 (toddler free) <span class="lbl e">Estimate</span> · boat both ways 8 × €11.80 = €94.40 (toddler free) · <em>optional</em> SchafbergBahn +€200 (not in the plan)</dd>
+<dt>Optional ride</dt><dd>A cog railway from the St. Wolfgang valley station (542 m) to the middle station Schafbergalm (1,364 m), 25 min each way. In Advent it doesn’t go to the summit. The carriages are enclosed but dress as if they’re unheated. Trains can be cancelled in snowfall or bad weather. Live webcam: <a href="https://schafbergalm.panomax.com/">schafbergalm.panomax.com</a>.</dd>
+<dt>Bookings</dt><dd>WESTbahn 06:38 / 17:52 <span class="lbl v">Booked</span> (PDF on two phones is enough) · buses: no booking; install the <a href="https://salzburg-verkehr.at/">Salzburg Verkehr</a> app and check the 150/150X Sunday times a week before · boat: buy at the pier on the day · SchafbergBahn: optional, decide on the day</dd>
+<dt>Why the bus works</dt><dd>No luggage, the toddler rides free, and it saves ~€150–250 over a van. The trade-offs: buses can be crowded on Advent Sundays (possibly standing in the morning), a fixed boat back at 15:35, and the toddler on a lap instead of in a car seat.</dd>
+<dt>Food</dt><dd>Market stalls lean on egg dough (Kasnocken, Krapfen). Bring your own lunch; buy chestnuts, baked potatoes and Kinderpunsch on site.</dd>
+<dt>Child &amp; warmth</dt><dd><strong>Lake (540 m):</strong> typically 1–6 °C by day, windy on the boat. <strong>Schafbergalm (1,364 m, only if you add the optional train):</strong> about 5 °C colder, so typically −5 to +1 °C, often with snow on the ground and wind chill. On a fog-inversion day it can be <em>sunnier and milder above the clouds</em> than at the lake. <span class="lbl e">Climate estimate</span> For the Alm: toddler snowsuit plus a blanket in the carrier, thermal layers and waterproof boots for everyone, hats and gloves. Check the webcam and forecast that morning. Toddler naps on the trains.</dd>
+</dl>
+<div class="planb"><strong>Too much for the family?</strong> Decide on Saturday night. If needed, stay in Vienna (only the WESTbahn tickets need cancelling, online by Saturday: 25% per adult ticket, min €4.99; toddler tickets free): tram O from Hintere Zollamtsstraße direct to Quartier Belvedere for the <em>Upper Belvedere</em> (Klimt’s <em>The Kiss</em> + K&amp;K market), then Spittelberg at dusk. <strong>Snow or road warning:</strong> buses still run but slower, so take the 15:05 boat back and an earlier bus; ask the boat operator about ice. <strong>Bus running late on the way back:</strong> the next WESTbahn trains leave at 18:22 and 18:52; board and pay the crew the difference to WestFlexpreis. <strong>Premium option:</strong> a private van for the whole day from Vienna (€800–1,300) gives door-to-door comfort for the grandparents. <strong>Feeling energetic:</strong> add the optional SchafbergBahn (see above); if only some of you go, the others stay in the warm ErlebnisQuartier café. <strong>Toddler doing great:</strong> add Strobl by boat (15 min).</div></div></div>
+<label class="nl" for="n-d4">Notes for Day 4</label><textarea id="n-d4" data-note="d4"></textarea>
+</section>
+<section class="day block" id="d5" aria-labelledby="h-d5" data-city="vienna">
+
+<div class="dayhead"><div class="daynum">5<small>DAY</small></div><div><div class="dt">Monday 30 November · Vienna day 4 · overnight Vienna</div><h2 id="h-d5">Cafés, pandas and the Freyung at dusk</h2>
+<div class="chips"><span class="chip city-v">Vienna</span><span class="chip">Walking ≈ 5 km</span><span class="chip">Sunset 16:00</span><span class="chip">Loop B</span><span class="chip">3 markets</span></div></div></div>
+<p class="small"><strong>Why this order:</strong> after yesterday, the day starts slowly with a café breakfast, gives the toddler the zoo at peak energy, rests in the afternoon, and saves the prettiest lit squares (Freyung and Am Hof) for the evening.</p>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">08:35</span><b>Walk or tram O to Landstraße/Wien Mitte, then U3 → Zieglergasse</b> (direct, 6 stops, ~11 min).</li>
+<li><span class="t">09:00</span><b>Café Jelinek</b>, Otto-Bauer-Gasse 5 (daily 09–22): a cosy, unpolished classic. Its <strong>vegan breakfast</strong> (€17.50) and vegan cheese toast are reliably egg-free. Phone ahead for a table: 01 597 41 13. <span class="lbl v">Menu</span></li>
+<li><span class="t">10:00</span><b>Taxi to Schönbrunn Zoo</b> (~15 min), or U3 → U6 → U4 Hietzing (~30 min).</li>
+<li><span class="t">10:20 – 12:45</span><b>Tiergarten Schönbrunn</b> (09:00–16:30): giant pandas, the Polarium, polar bears, the rainforest house. €29 adult; <strong>under-6 free</strong>. Flat paths, baby change. <span class="lbl v">Verified</span></li>
+<li><span class="t">13:00</span><b>Through the park to the Schönbrunn Christmas market</b> (10–21) in the palace forecourt. Light lunch and Kinderpunsch.</li>
+<li><span class="t">14:00</span><b>U4 Schönbrunn → Kettenbrückengasse</b> (direct), 7 min walk → <b>Café Sperl</b>, Gumpendorfer Str. 11 (Mon–Sat 07–22): billiard tables, a children’s corner, 1880s interior. Coffee and hot chocolate; ask about egg before ordering food.</li>
+<li class="rest"><span class="t">15:00 – 17:00</span><b>Rest</b>: U4 Kettenbrückengasse → Landstraße (direct), then ~8 min walk or tram O 2 stops to Hintere Zollamtsstraße.</li>
+<li><span class="t">17:10</span><b>Walk or tram O to Landstraße/Wien Mitte, then U3 → Herrengasse</b> (direct, 3 stops). <b>Loop B:</b> Palais Ferstel’s arcade (Café Central is inside, if it has reopened) → <b>Freyung</b>: Altwiener Christkindlmarkt with Advent music from 16:00, and the Palais Daun-Kinsky façade → <b>Am Hof</b> market.</li>
+<li><span class="t">Optional</span><b>Peterskirche</b>: church music at 19:00, donation.</li>
+<li><span class="t">19:00</span><b>Dinner, Figlmüller Bäckerstraße 6</b>: the vegan “Planted” Wiener Schnitzel (egg-free; <em>only at this branch</em>), spinach salad, fries. Skip the dumplings and desserts (egg). Home: U3 Stubentor → Landstraße (1 stop), then walk or tram O; or a taxi. <span class="lbl v">Menu</span> <span class="lbl p">Reserve</span></li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Café Central</dt><dd>Closed for renovation since 16 Mar 2026; reopening “winter 2026”. Check <a href="https://cafecentral.wien/en/">cafecentral.wien</a> around 15 Nov. If it reopens, book a table here for 17:30. If not, use <strong>DECENTRAL</strong>, Freyung 3 (daily 07:30–22). <span class="lbl p">Watch</span></dd>
+<dt>Family cost</dt><dd>Jelinek ~€80 · zoo 4 × €29 = €116 · market lunch ~€40 · Sperl ~€35 · Figlmüller ~€110 · taxi ~€20</dd>
+<dt>Bookings</dt><dd>Figlmüller Bäckerstraße 19:00 <span class="lbl p">Pending</span> · zoo tickets online (optional) · Jelinek by phone</dd>
+<dt>Child, WC</dt><dd>Zoo: plenty of WCs and indoor houses (they close at 16:00). Sperl’s children’s corner gives the toddler room to move.</dd>
+</dl>
+<div class="planb"><strong>Rain:</strong> at the zoo, stick to the indoor houses, or swap the zoo for the Haus des Meeres aquarium (6th district, near Sperl) <span class="lbl e">Not checked</span>. <strong>Tired:</strong> drop Sperl and go straight home from Schönbrunn. <strong>Figlmüller full:</strong> Swing Kitchen Schwedenplatz (100 % vegan) or Max &amp; Benito, Rotenturmstraße 27.</div></div></div>
+<label class="nl" for="n-d5">Notes for Day 5</label><textarea id="n-d5" data-note="d5"></textarea>
+</section>
+<section class="day block" id="d6" aria-labelledby="h-d6" data-city="budapest">
+
+<div class="dayhead"><div class="daynum">6<small>DAY</small></div><div><div class="dt">Tuesday 1 December · Vienna → Budapest · overnight Budapest</div><h2 id="h-d6">Market breakfast, then down the Danube by rail</h2>
+<div class="chips"><span class="chip city-v">Vienna</span><span class="chip city-b">Budapest</span><span class="chip">Walking ≈ 3 km</span><span class="chip">Sunset 15:50</span><span class="chip">Transfer day</span></div></div></div>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">08:00</span><b>Walk to Rochusmarkt</b>: about 1 km, <strong>~15 min</strong> with the stroller, flat all the way via Wien Mitte and Landstraßer Hauptstraße (Mon–Fri 06–19:30). By transit it’s no faster: tram O 2 stops + U3 1 stop to Rochusgasse. Head back by ~09:15 to pack. Breakfast at the <strong>Gradwohl</strong> organic bakery and the market stalls. <strong>Zuckergoscherl</strong> (many vegan dishes) opens only at 09:00, so it works only if you pack the night before and check out straight from breakfast. Buy the train picnic. Hundertwasserhaus is a 5-min detour. <span class="lbl e">Café hours 3rd-party</span></li>
+<li><span class="t">09:30</span><b>Pack and check out</b> by 10:00 (apartment rule).</li>
+<li><span class="t">10:15</span><b>Taxi/van to Wien Hauptbahnhof</b> (~10–15 min). With light bags, tram O from Hintere Zollamtsstraße runs direct to the Hauptbahnhof (~15 min).</li>
+<li><span class="t">11:40 → 14:35</span><b>Railjet xpress RJX 61 Wien Hbf → Budapest-Keleti.</b> <strong>Booked 17 Oct, €141.00</strong> (4 adults, toddler free with a seat). <strong>Family zone, coach 21</strong>, at a table: windows 21 and 22, aisle 18, 23, 28. Sparschiene: no refund or exchange. Arrival is ~15 min later than usual because of Budapest track works (the train waits 10–13 min at Kelenföld). Bring the <strong>printed tickets</strong> and passports. <span class="lbl v">Booked</span> <strong>Scenic side: LEFT</strong> (north): Danube glimpses near Komárom, then the city view as the train crosses the Danube into Pest just before Keleti.</li>
+<li><span class="t">14:45</span><b>Keleti → Síp utca 7</b> by Főtaxi/Bolt XL (10–15 min, ~HUF 3,000–4,000 per car; two cars if no XL). Check that the ticket says Keleti, not Kelenföld.</li>
+<li class="rest"><span class="t">15:15</span><b>Check in</b> at Fusion Apartments (photo ID and credit card needed). Rest.</li>
+<li><span class="t">16:45</span><b>Neighbourhood stroll</b>: Dohány Street Synagogue exterior (200 m), Gozsdu udvar passage.</li>
+<li><span class="t">18:00</span><b>New York Café</b>, Erzsébet krt. 9–11 (10 min walk). Bookings are taken <em>only for dinner after 18:00</em> via the official form. Egg-free: vegetable curry with mustard-seed rice, campanelle arrabbiata, hummus with falafel, potato cream soup, vegan chocolate cake, raspberry-pistachio tart. A 15 % service charge is added. <span class="lbl v">Menu</span> <span class="lbl p">Reserve</span></li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Family cost</dt><dd>Train €141.00 (paid 17 Oct) · Vienna taxi ~€25 · Budapest taxis ~HUF 8,000 · New York Café ~HUF 50,000</dd>
+<dt>Bookings</dt><dd>Railjet <span class="lbl v">Booked</span> · New York Café 18:00 <span class="lbl p">Pending</span> · update the Budapest arrival time (booking currently says 10:00–11:00) <span class="lbl p">Pending</span></dd>
+<dt>Luggage</dt><dd>Railjet racks are tight for 5 airline bags: be at the coach 21 sector by 11:15, board early and use the racks at the car end and between seat backs.</dd>
+</dl>
+<div class="planb"><strong>Train cancelled or delayed:</strong> trains run hourly (12:40 EuroCity, 13:40 Railjet); ask at the ÖBB Reisezentrum at Hbf. Missed through your own delay → the Sparschiene is train-bound, so buy a new ticket. <strong>Held outside Budapest:</strong> get off at Kelenföld and take a taxi (20–25 min) or the step-free M4. <strong>New York Café full:</strong> walk in for breakfast 07:00–09:00 on Wed or Thu, when the queue is shortest; tonight eat at Kőleves (300 m away, Tue 12–22).</div></div></div>
+<label class="nl" for="n-d6">Notes for Day 6</label><textarea id="n-d6" data-note="d6"></textarea>
+</section>
+<section class="day block" id="d7" aria-labelledby="h-d7" data-city="budapest">
+
+<div class="dayhead"><div class="daynum">7<small>DAY</small></div><div><div class="dt">Wednesday 2 December · Pest riverfront · overnight Budapest</div><h2 id="h-d7">Parliament, Basilica and the river at night</h2>
+<div class="chips"><span class="chip city-b">Budapest</span><span class="chip">Walking ≈ 5 km</span><span class="chip">Sunset 15:50</span><span class="chip">Top 5 · #5</span><span class="chip">2 markets</span></div></div></div>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">09:45</span><b>Taxi to Kossuth tér</b>: Parliament exterior. The interior tour is optional; book an English slot on the official site <span class="lbl p">Price not verified</span>. Then walk the flat embankment south to the <em>Shoes on the Danube Bank</em> memorial, a quiet, respectful stop.</li>
+<li><span class="t">11:30</span><b>St. Stephen’s Basilica</b> and the <b>Advent Bazilika</b> fair (opens 11:00).</li>
+<li><span class="t">12:30</span><b>Lunch, Indigo Pest</b>, Jókai u. 13 near Oktogon (~15 min walk or a short taxi). Weekday thali HUF 3,990 (12:00–16:00): paneer, dal, rice, naan, sabzi. Ask for no egg in the naan. <span class="lbl v">Hours</span></li>
+<li class="rest"><span class="t">13:45 – 16:00</span><b>Rest at the flat.</b> The thermal bath is planned for <a href="#d8">tomorrow afternoon</a>, not today: two hours of soaking would not fit before the 16:40 cruise.</li>
+<li><span class="t">16:40</span><b>Danube Legend cruise</b> from Dock 7, Vigadó tér: 1 h, one drink included, €25 adult, children 0–9 free. Winter departures run about every 20 min from 15:40 to 21:00. Blue hour past the lit Parliament. <span class="lbl v">Schedule</span> <span class="lbl p">Book</span></li>
+<li><span class="t">17:45</span><b>Vörösmarty Classic Xmas</b>, 5 min from the dock (Wed 11–21), then back to the Basilica for the façade light show (~from 17:30).</li>
+<li><span class="t">19:00</span><b>Dinner, Napfényes</b>, Curia u. 2 (fully vegan Hungarian, so everything is egg-free; bean goulash; kitchen to 20:30), 10 min from Vörösmarty. Taxi home.</li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Family cost</dt><dd>Cruise 4 × €25 = €100 · lunch ~HUF 20,000 · dinner ~HUF 25,000 · taxis ~HUF 8,000</dd>
+<dt>Bookings</dt><dd>Danube Legend <span class="lbl p">Pending</span> · Parliament interior (optional) <span class="lbl p">Pending</span></dd>
+<dt>Child, WC &amp; warmth</dt><dd>River wind is raw at dusk: hats, gloves, footmuff. Heated saloon on board. Use café WCs.</dd>
+</dl>
+<div class="planb"><strong>Cruise cancelled (fog/high water):</strong> tram 2 along the Pest bank at dusk is a cheap, lovely substitute. <strong>Rain:</strong> Basilica interior, then lunch and the cruise; skip the embankment.</div></div></div>
+<label class="nl" for="n-d7">Notes for Day 7</label><textarea id="n-d7" data-note="d7"></textarea>
+</section>
+<section class="day block" id="d8" aria-labelledby="h-d8" data-city="budapest">
+
+<div class="dayhead"><div class="daynum">8<small>DAY</small></div><div><div class="dt">Thursday 3 December · Buda Castle &amp; Market Hall · overnight Budapest</div><h2 id="h-d8">Views from the hill, paprika below</h2>
+<div class="chips"><span class="chip city-b">Budapest</span><span class="chip">Walking ≈ 4 km</span><span class="chip">Sunset 15:50</span><span class="chip">Early night</span></div></div></div>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">09:30</span><b>Taxi up to the Castle District</b>, which avoids the stairs. Matthias Church exterior and the Fisherman’s Bastion lower terraces (free views). Cobbles, so take the carrier.</li>
+<li><span class="t">11:15</span><b>Taxi down to the Great Market Hall</b> (Fővám tér) for paprika, embroidered linen and gifts.</li>
+<li><span class="t">12:30</span><b>Lunch, Govinda Vega Sarok</b>, Papnövelde u. 1 (Hare Krishna, lacto-vegetarian: no meat, fish, eggs or onion), 10 min walk. Hours are not published, so check Facebook. Backup: Napfényes, 5 min away. <span class="lbl e">Check hours</span></li>
+<li class="rest"><span class="t">13:45 – 15:30</span><b>Rest and pack.</b> Weigh the bags; passports, tickets and tax-free forms go in one hand bag. If the couple goes to the baths, the grandparents stay in with the toddler for the nap.</li>
+<li><span class="t">Optional 13:50 – 17:30</span><b>Couple’s afternoon: Széchenyi Thermal Bath</b> (14+ only, so the toddler stays with the grandparents). Collect the swim bag at the flat, walk 8 min to Deák Ferenc tér, then the yellow M1 to <em>Széchenyi fürdő</em> (10 min; covered by the 72 h card). Soak 14:15 – 16:45, with the outdoor pools at sunset (15:50), when the steam rises under the lights. Back at the flat ~17:30. Fast-track ticket with locker, Mon–Thu HUF 15,200 each. <a href="#baths">Full guide</a> <span class="lbl i">Optional</span> <span class="lbl p">Book</span></li>
+<li><span class="t">Optional 14:30</span><b>Dohány Street Synagogue</b>, only if you skip the baths: 3 min from the flat (Thu 10–16, last entry 15:00; HUF 14,500 adult incl. 45-min tour, under-6 free; cover shoulders and knees). <span class="lbl e">3rd-party, Oct 2026</span></li>
+<li><span class="t">18:00</span><b>Farewell dinner, Kőleves</b>, Kazinczy u. 37–41 (300 m; Thu 12–23). From the vegetarian section: zucchini-chickpea fritters (vegan), hummus with cauliflower (vegan). Ask about egg. <span class="lbl p">Reserve</span></li>
+<li><span class="t">20:00</span><b>Check tomorrow’s 08:30 EuroCity (EC 140)</b> in the ÖBB app and on MÁVINFORM (does it start at Keleti?). Pre-book a Főtaxi/Bolt XL for 07:40. Put the printed ÖBB tickets with the passports. Settle the apartment. Alarms at 06:30.</li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Family cost</dt><dd>Taxis ~HUF 10,000 · lunch ~HUF 12,000 · synagogue HUF 58,000 (optional) · thermal bath for two HUF 30,400 (optional) · dinner ~HUF 25,000</dd>
+<dt>Bookings</dt><dd>07:40 taxi to Keleti pre-booked tonight <span class="lbl p">Pending</span> · Kőleves <span class="lbl p">Pending</span> · Széchenyi fast-track ×2 (optional) <span class="lbl p">Pending</span></dd>
+<dt>Child, WC</dt><dd>Market Hall WCs are downstairs (paid, stairs). Castle cafés: take a break before the ride down.</dd>
+</dl>
+<div class="planb"><strong>Icy cobbles or wind:</strong> skip the Castle and view it from the Pest embankment; spend the morning at the Market Hall. <strong>Disruption warning for tomorrow</strong> (strike or works notice): buy a ticket for the 07:30 Railjet instead (see Day 9).</div></div></div>
+<label class="nl" for="n-d8">Notes for Day 8</label><textarea id="n-d8" data-note="d8"></textarea>
+</section>
+<section class="day block" id="d9" aria-labelledby="h-d9" data-city="budapest">
+
+<div class="dayhead"><div class="daynum">9<small>DAY</small></div><div><div class="dt">Friday 4 December · Budapest → Vienna Airport → Dubai · overnight in flight</div><h2 id="h-d9">West by rail</h2>
+<div class="chips"><span class="chip city-b">Budapest</span><span class="chip city-v">VIE</span><span class="chip">Train 08:30 → airport 11:57</span><span class="chip">Critical day</span></div></div></div>
+<p class="small"><strong>Why the train:</strong> it costs about a third of a private van (€100–140 vs €300–400), has no motorway or border-queue risk, the toddler can move about, and there’s a WC on board. The trade-off is handling the luggage at one change, at Wien Hbf, which is step-free with lifts.</p>
+<div class="daygrid"><div>
+<ol class="tl">
+<li><span class="t">06:30</span><b>Wake, dress warm, quick breakfast</b> (pack the train breakfast the night before; there may be no restaurant car). Leave the keys as instructed; check-out is by 10:00.</li>
+<li><span class="t">07:40</span><b>Pre-booked Főtaxi/Bolt XL → Budapest-Keleti</b>, 10–15 min, ~HUF 3,000–4,000 per car (two cars if there’s no XL). This is the only taxi of the day. With 5 big bags, don’t take the M2: lifts aren’t confirmed.</li>
+<li><span class="t">08:00</span><b>At Keleti</b>: find the platform on the board (shown as Wien / München), change the toddler in the station WC, and walk to <strong>coach 414</strong> early.</li>
+<li><span class="t">08:30 → 11:20</span><b>EuroCity EC 140 Budapest-Keleti → Wien Hbf.</b> <strong>Booked 17 Oct, €101.60</strong> for both trains to the airport. <strong>Coach 414</strong>, an open-plan car: windows 101 and 102, aisle 103, 104, 108 (big cases in the end racks). There are a few steps up into the train; the two younger adults lift the bags. No family zone and maybe no restaurant car. Toddler free with a seat. <span class="lbl v">Booked</span> <strong>Scenic side: RIGHT</strong> (north): the Danube crossing about 10 min after leaving Keleti gives the city view, then Danube glimpses near Komárom.</li>
+<li><span class="t">11:20 → 11:42</span><b>Change at Wien Hbf</b> (22 min, lifts to every platform) to <strong>Railjet RJX 19981</strong>, <strong>coach 31</strong> (family zone), seats 23–27. If the EuroCity is late, take the next airport train (~30 min); the ticket stays valid.</li>
+<li><span class="t">11:57</span><b>VIE: tax-free customs stamp first</b> (goods and passports to hand), then the Emirates bag drop (printed check-in 11:25).</li>
+<li><span class="t">~12:45</span><b>Lunch airside</b>; pack egg-free food as backup.</li>
+<li><span class="t">14:55</span><b>EK128 to Dubai</b> (arrives 23:25), then <b>EK510 04:20 → Delhi 08:55</b> on 5 Dec.</li>
+</ol></div>
+<div class="facts card warn"><dl>
+<dt>Ticket</dt><dd><strong>One ÖBB booking, Budapest-Keleti → Vienna Airport</strong>, 4 named adults + toddler, Sparschiene Komfort: valid only on these trains; free refund until 19 Nov, then 50% (min €15 per person) until the day before. <strong>Print it on A4</strong> (cross-border). <span class="lbl v">Booked 17 Oct</span></dd>
+<dt>Backups</dt><dd>07:30 Railjet → VIE ~10:50 (if a disruption warning comes the night before) · 09:30 → VIE ~12:50 (if the railway cancels the 08:30; they move you).</dd>
+<dt>Luggage plan</dt><dd>Each adult owns specific bags; one adult only does toddler + stroller. Put the Parndorf shopping in the checked bags, not loose.</dd>
+<dt>Family cost</dt><dd>Train €101.60 (paid 17 Oct) · taxi ~HUF 4,000–8,000</dd>
+</dl>
+<div class="planb"><strong>Triggers.</strong> 3 Dec 20:00: check the ÖBB app and MÁVINFORM. If the 08:30 is cancelled or listed as starting at Kelenföld, take a taxi to Kelenföld (~20 min, leave 07:30) or buy a ticket for the 07:30 Railjet. 4 Dec 07:50: taxi not here → Bolt on the spot. 08:30 cancelled by the railway → staff will put you on the 09:30 (VIE ~12:50, still enough for 14:55); <em>missed</em> through your own delay → Sparschiene is train-bound, so buy a new ticket for the 09:30 in the app. 11:42 at Hbf missed because the EuroCity is late → next airport train in ~30 min, same ticket. ETA at VIE past 12:45 → call Emirates. Major rail strike → taxi/van to VIE as a last resort (~€300+).</div></div></div>
+<label class="nl" for="n-d9">Notes for Day 9</label><textarea id="n-d9" data-note="d9"></textarea>
+</section>
+<section class="day block" id="d10" aria-labelledby="h-d10" data-city="budapest">
+
+<div class="dayhead"><div class="daynum home">Home</div><div><div class="dt">Saturday 5 December · Dubai → Delhi</div><h2 id="h-d10">Home by breakfast</h2></div></div>
+<p>EK510 leaves Dubai T3 at 04:20 and lands at Delhi T3 at 08:55. The Dubai layover is an overnight 4 h 55: stay airside and look for the quiet zones. Plan a gentle day at home.</p>
+<label class="nl" for="n-d10">Arrival notes</label><textarea id="n-d10" data-note="d10"></textarea>
+</section>
+<section class="block" id="baths" aria-labelledby="h-baths">
+<div class="kicker">Optional · two adults · Thursday 3 December, 13:50 – 17:30</div>
+<h2 id="h-baths">Budapest thermal bath</h2>
+<p class="small"><strong>Recommendation: Széchenyi Thermal Bath</strong>, City Park (Állatkerti krt. 9–11). It is Budapest’s largest and most-reviewed bath, run by the city-owned operator Budapest Spas, with lifeguards, a clear ticket system and three big outdoor pools that steam in December air. It suits a first visit, and a Thursday afternoon is the calmest time of the week. Every bath fed with medicinal thermal water, Széchenyi included, admits only guests aged 14 and over (a Hungarian rule since 1 Aug 2025, now strictly enforced), so this is a couple’s outing: the grandparents and the toddler stay at the flat for the nap. <span class="lbl v">14+ rule: operator</span> <span class="lbl i">Optional</span></p>
+
+<div class="tablewrap" tabindex="0" role="region" aria-label="Budapest thermal bath table — scroll for all columns"><table><thead><tr><th>Bath</th><th>Why go</th><th>On Thu 3 Dec</th><th>Two adults</th><th>Verdict</th></tr></thead><tbody>
+<tr><td data-label="Bath"><strong>Széchenyi</strong>, City Park</td><td data-label="Why go">Grand neo-baroque palace, 18 pools, including three outdoor pools at 26–38 °C. Most iconic, safest choice for first-timers.</td><td data-label="On Thu 3 Dec">Open all day, mixed. Women’s thermal section closes for renovation only from 7 Dec 2026 (after you leave).</td><td data-label="Two adults">Fast-track with locker HUF 30,400 · at the cashier HUF 26,400 <span class="lbl e">3rd-party, 2026</span></td><td data-label="Verdict"><span class="lbl v">Recommended</span></td></tr>
+<tr><td data-label="Bath"><strong>Rudas</strong>, Buda riverbank</td><td data-label="Why go">16th-century Ottoman dome and octagonal pool, plus a rooftop panorama pool over the Danube. More intimate.</td><td data-label="On Thu 3 Dec">Turkish bath men-only until 10:45, mixed 11:00–20:00. Wellness and rooftop are mixed all day. (Wed 2 Dec the Turkish bath is men-only all day.)</td><td data-label="Two adults">HUF 24,000 (Mon–Thu daily ticket, all zones) <span class="lbl v">Official 2026</span></td><td data-label="Verdict">Plan B</td></tr>
+<tr><td data-label="Bath"><strong>Lukács</strong>, Buda</td><td data-label="Why go">Quiet, local, good value, garden pool.</td><td data-label="On Thu 3 Dec">Open.</td><td data-label="Two adults">~HUF 10,000–11,000 <span class="lbl e">3rd-party</span></td><td data-label="Verdict">Pleasant, but less memorable</td></tr>
+<tr><td data-label="Bath"><strong>Gellért</strong></td><td data-label="Why go">The famous Art Nouveau bath.</td><td data-label="On Thu 3 Dec"><strong>Closed since 1 Oct 2025</strong> for renovation; reopening 2027–28 at the earliest.</td><td data-label="Two adults">—</td><td data-label="Verdict">Not possible</td></tr>
+</tbody></table></div>
+
+<div class="daygrid"><div>
+<h3>The afternoon, step by step</h3>
+<ol class="tl">
+<li><span class="t">Morning</span><b>Pack the swim bag before leaving for the Castle:</b> swimsuits, flip-flops, two towels, a warm hat each, a zip bag for the phone, a bag for wet things, a water bottle and a snack.</li>
+<li><span class="t">12:30</span><b>Light lunch at Govinda with everyone.</b> Eat at least an hour before soaking. Thermal water on a full stomach is uncomfortable.</li>
+<li><span class="t">13:30</span><b>Taxi home together.</b> Grandparents settle the toddler for the nap.</li>
+<li><span class="t">13:50</span><b>Walk 8 min to Deák Ferenc tér, then M1 to Széchenyi fürdő</b>. The little yellow line from 1896 is the oldest metro on the continent, 10 min and covered by the 72 h card. Exit at the bath’s main entrance, opposite the Circus. Taxi alternative: ~15 min, ~HUF 3,500.</li>
+<li><span class="t">14:15</span><b>Show the QR code at the fast-track gate</b> and receive wristbands (they open your locker; a lost one costs a fee). Change, shower, then start indoors.</li>
+<li><span class="t">14:30</span><b>Indoor thermal halls</b>: warm pools first (about 30–34 °C), then the 36–38 °C pools. 15–20 min at a time.</li>
+<li><span class="t">15:15 – 16:30</span><b>Outdoor pools at dusk.</b> Walk out in flip-flops and hats; sunset is 15:50, and the yellow palace lights up as the steam rises. Use the 38 °C thermal pool, not the 26 °C lap pool (that one requires a swim cap).</li>
+<li><span class="t">16:45</span><b>Out, dry hair fully, layer up.</b> Dry off, keep warm and take care on wet or icy paving.</li>
+<li><span class="t">17:30</span><b>Back at the flat</b>, then the 18:00 farewell dinner at Kőleves, 300 m away.</li>
+</ol></div>
+<div class="facts card"><dl>
+<dt>Tickets</dt><dd><strong>Online fast-track with locker, Mon–Thu HUF 15,200 each</strong>, bought only on the official site <a href="https://www.szechenyibath.hu/">szechenyibath.hu</a>. At the cashier: full day with locker HUF 13,200, with a private cabin HUF 14,200. <span class="lbl e">3rd-party, 2026</span> A locker is fine. Pay the cabin supplement only if you want a private changing room.</dd>
+<dt>Hours</dt><dd>Open daily. Your 14:15–16:45 slot sits well inside every published schedule (indoor pools close around 19:00–20:00, outdoor pools later). Check the date on the official site before buying. <span class="lbl e">Check on the day</span></dd>
+<dt>Bring</dt><dd>Swimsuits, flip-flops (icy wet paving outside), towels (buying them there costs ~HUF 6,900 each; ask the host whether flat towels may go), warm hats, a waterproof phone pouch, a water bottle. Leave passports and spare cards at the flat.</dd>
+<dt>Health</dt><dd>Hot mineral water is demanding: 15–20 min per hot pool, then rest and drink water. No alcohol before or during. Get out if you feel dizzy. If either of you is pregnant, or has heart or blood-pressure problems, ask a doctor before going.</dd>
+<dt>Etiquette</dt><dd>Mixed bathing in swimwear everywhere. Shower before the pools. Don’t photograph other bathers. Saunas are quiet zones.</dd>
+<dt>Food</dt><dd>The bath’s buffet has little reliable vegetarian food. Eat at Govinda first and carry fruit or nuts for afterwards.</dd>
+<dt>Scams</dt><dd>Ignore anyone selling tickets outside the gate. Buy only on the official site or at the bath’s own cashier.</dd>
+</dl></div></div>
+
+<div class="planb"><strong>Booking strategy:</strong> decide on the evening of Tue 1 Dec, once you know the weather and how everyone, especially the toddler, is coping. Then buy two fast-track tickets for Thu 3 Dec, entry ~14:15. Read the change and refund terms before paying. If you’d rather not prepay, walk up to the cashier: a December weekday afternoon queue is usually short. <strong>Plan B (queue, closure or a change of mood):</strong> Rudas, ~15 min by taxi across Elisabeth Bridge (Döbrentei tér 9). On Thursdays the Ottoman bath is mixed from 11:00, and the rooftop pool gives you the Danube at sunset. HUF 12,000 each at the cashier, open until 20:00. <strong>Snow or rain:</strong> still go. Steaming outdoor pools in falling snow are the best version of this. <strong>Toddler unsettled or someone unwell:</strong> skip it without regret and do the Dohány Synagogue or an early night instead.</div>
+<label class="nl" for="n-baths">Notes for the thermal bath</label><textarea id="n-baths" data-note="baths"></textarea>
+</section>
+<section class="block" id="transport" aria-labelledby="h-tr">
+
+<div class="kicker">Tickets, trains, two day trips and one early drive</div>
+<h2 id="h-tr">Transport</h2>
+<div class="grid g2">
+<div class="card"><h3>Vienna travel card <span class="lbl v">Wiener Linien 2026</span></h3><ul class="small"><li><strong>Buy: 4 × “7 Tage WIEN” digital, €25.20 each</strong>, in the WienMobil app. Each is named, so carry passports. It runs from the start you choose until 00:59 on the 8th day: start Fri 27 Nov and it covers everything to Tue 1 Dec.</li><li>Alternatives: 24 h €9.70 digital · single €3.00 digital / €3.20 paper. <strong>48 h and 72 h tickets were abolished on 1 Jan 2026.</strong></li><li>Toddler: under-6 free.</li><li>Not covered: the airport (CAT €14.90, or €2.30 add-on for the REX7/Railjet), Parndorf, Salzburg.</li><li>Arrival evening (Thu): use the van or the CAT.</li></ul><p class="small"><a href="https://www.wienerlinien.at/7-tage-wien">7 Tage WIEN</a> · <a href="https://www.cityairporttrain.com/en/tickets-offers/information-about-cat-tickets/">CAT</a></p></div>
+<div class="card"><h3>Budapest <span class="lbl v">BKK 2026</span></h3><ul class="small"><li><strong>72 h travelcard HUF 5,750 × 4</strong> (buy in BudapestGO, 1–4 Dec) — or just taxis: the flat is central and most days are walks plus 2–3 rides.</li><li>Single HUF 500 (HUF 700 from the driver). Under-6 free.</li><li>Budapest Card (72 h HUF 29,990) isn’t worth it for this plan.</li><li>Regulated taxi fare: HUF 1,300 base + 521/km. Use Főtaxi or Bolt; ask for XL.</li></ul><p class="small"><a href="https://bkk.hu/en/tickets-and-passes/prices/">BKK prices</a></p></div>
+<div class="card"><h3>1 Dec train Vienna → Budapest <span class="lbl v">Booked</span></h3><p class="small"><strong>RJX 61, Wien Hbf 11:40 → Budapest-Keleti 14:35</strong>, €141.00 on ÖBB (4 adults × €31.50 Sparschiene + €15 for 5 seats; toddler free). Coach 21, family zone, at a table: seats 18, 21, 22, 23, 28. No refund or exchange. During the Budapest works, arrivals at Keleti are ~15 min later than the normal timetable. <strong>Print on A4</strong> and carry passports. Details in the <a href="../train/">rail guide</a>.</p></div>
+<div class="card"><h3>28 Nov Parndorf bus</h3><p class="small"><a href="https://blaguss.com/en/bus-timetables/shopping-shuttle-parndorf">Blaguss shopping shuttle</a> from Opernring 3. Sat out 09:30 / 10:30 / 11:30; back 12:30 / 14:30 / 16:00 / 17:00 / 18:00. €26 adult return. <a href="https://parndorf.palisis.com/?book-direct=bg-1657&amp;locale=en">Book online</a>: non-refundable, no rebooking. Guest Services +43 2166 36 14 30. <span class="lbl v">16 Oct</span></p></div>
+<div class="card"><h3>29 Nov Wolfgangsee</h3><p class="small"><strong>WESTbahn</strong> (<a href="https://westbahn.at/en/">westbahn.at</a>) <span class="lbl v">Booked</span> Westbahnhof <strong>06:38 → Salzburg 09:08</strong> (train 902); back <strong>17:52 → 20:22</strong> (train 927). Coach 15, upper deck, both ways. €272.92 for the family. <strong>Bus</strong> Salzburg Hbf ↔ St. Gilgen: 150 (every ~30 min, ~49 min) or express 150X (Hbf 10:25 → St. Gilgen 11:09; back St. Gilgen 16:36 → Hbf 17:16), ~€6–9 per adult; check the <a href="https://salzburg-verkehr.at/">Salzburg Verkehr</a> app. <strong>Advent boat</strong>: <a href="https://www.wolfgangseer-advent.at/salzburg-Ag/2026_Fahrplan_WolfgangseeSchifffahrt_Advent.pdf">2026 timetable PDF</a> · <a href="https://ticketing.5schaetze.at/de/Products/Tickets/Category?cID=2003">tickets</a>. <span class="lbl v">Timetables</span></p></div>
+<div class="card warn"><h3>Airport runs</h3><p class="small"><strong>26 Nov VIE → flat:</strong> pre-book a van with a toddler seat (~€70–95), or the CAT bus to Marxergasse. <strong>4 Dec Budapest → VIE by train:</strong> one ÖBB booking <em>Budapest-Keleti → Vienna Airport</em> <span class="lbl v">Booked</span>: <strong>EC 140 08:30</strong> → Wien Hbf 11:20 (coach 414) → <strong>RJX 19981 11:42</strong> → VIE 11:57 (coach 31). €101.60. Van would be €300–400. Backup: 09:30 (VIE ~12:50). Details on <a href="#d9">Day 9</a>.</p></div>
+</div>
+</section>
+<section class="block" id="food" aria-labelledby="h-food">
+
+<div class="kicker">No meat · no fish · no eggs · dairy fine</div>
+<h2 id="h-food">Food, cafés &amp; phrases</h2>
+<p class="small">Treat this as a diet preference, not an allergy guarantee. The classic Viennese cafés are an <em>experience</em> first; their famous cakes (Sachertorte, Dobos, Kaiserschmarrn) contain egg, so each row below names what you can actually order. Allergen codes: Austria <strong>C = egg</strong>, Hungary <strong>3 = egg</strong>.</p>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Food, cafés &amp; phrases table — scroll for all columns"><table><thead><tr><th>Place</th><th>When in plan</th><th>Egg-free picks</th><th>Booking</th></tr></thead><tbody>
+<tr><td data-label="Place"><a href="https://www.landtmann.at/en/">Café Landtmann</a> · Universitätsring 4</td><td data-label="When in plan">Fri 27 dinner</td><td data-label="Egg-free picks">Apple strudel (A|G), vegan mango cake, vegan pumpkin soup, beetroot tartare. Best classic café for you. Mon–Sat 07:30–24, Sun –22.</td><td data-label="Booking"><span class="lbl p">Reserve</span> +43 1 24 100-120</td></tr>
+<tr><td data-label="Place"><a href="https://www.demel.com/en/pages/cafe">Demel</a> · Kohlmarkt 14</td><td data-label="When in plan">Fri 27 late morning</td><td data-label="Egg-free picks">Drinks; ask about the strudel; brie-and-fig baguette (vegetarian). Cakes contain egg. Daily 10–19.</td><td data-label="Booking"><span class="lbl i">No reservations</span></td></tr>
+<tr><td data-label="Place"><a href="https://reserve.molzait.com/?restaurant=khmcafe-66f6f520000e47c894&amp;experience=khm-reservation">Café im KHM</a> (cupola)</td><td data-label="When in plan">Fri 27 lunch</td><td data-label="Egg-free picks">Ask for the vegetarian dishes without egg. Kitchen 11–16:30; museum ticket needed.</td><td data-label="Booking"><span class="lbl p">Reserve</span></td></tr>
+<tr><td data-label="Place"><a href="https://www.sacher.com/en/restaurants/cafe-sacher-wien/">Café Sacher</a> · Philharmoniker Str. 4</td><td data-label="When in plan">Sat 28 15:15</td><td data-label="Egg-free picks">Vegan blueberry tartlet, vegan schnitzel, mushroom gnocchi (vegan option), burrata. No egg-free Sachertorte. Daily 07–23.</td><td data-label="Booking"><span class="lbl p">Reserve (Aleno)</span></td></tr>
+<tr><td data-label="Place"><a href="https://cafejelinek.steman.at/speisekarte">Café Jelinek</a> · Otto-Bauer-Gasse 5</td><td data-label="When in plan">Mon 30 breakfast</td><td data-label="Egg-free picks">Vegan breakfast €17.50, vegan cheese toast, vegetarian “Fit Plus”. Daily 09–22.</td><td data-label="Booking">Phone 01 597 41 13</td></tr>
+<tr><td data-label="Place"><a href="https://www.cafesperl.at/en/contact">Café Sperl</a> · Gumpendorfer Str. 11</td><td data-label="When in plan">Mon 30 afternoon</td><td data-label="Egg-free picks">Drinks; food unverified, so ask. Children’s corner. Mon–Sat 07–22, Sun 10–20.</td><td data-label="Booking">Phone +43 1 586 41 58</td></tr>
+<tr><td data-label="Place"><a href="https://cafecentral.wien/en/">Café Central</a> / <a href="https://decentral.wien/en">DECENTRAL</a></td><td data-label="When in plan">Mon 30 dusk</td><td data-label="Egg-free picks">Central is closed for renovation (reopening “winter 2026”); DECENTRAL pop-up at Freyung 3, daily 07:30–22.</td><td data-label="Booking"><span class="lbl p">Watch reopening</span></td></tr>
+<tr><td data-label="Place"><a href="https://www.figlmueller.at/en/baeckerstrasse/reservations/">Figlmüller Bäckerstraße</a> · Bäckerstraße 6</td><td data-label="When in plan">Mon 30 dinner</td><td data-label="Egg-free picks">Vegan “Planted” Wiener Schnitzel €22.90 (only here, not at Wollzeile), spinach salad, fries. Daily 11:30–23:30.</td><td data-label="Booking"><span class="lbl p">Reserve</span></td></tr>
+<tr><td data-label="Place"><a href="https://www.maxbenito.at/">Max &amp; Benito</a> · Wien Mitte The Mall (closest) · Rotenturmstr. 27</td><td data-label="When in plan">Any quick meal</td><td data-label="Egg-free picks">Burritos/bowls with grilled veg, tofu or chili sin carne; kids’ burrito. Mall: Mon–Fri 11:30–21:30, Sat/Sun 12–20:30.</td><td data-label="Booking">Walk-in / app</td></tr>
+<tr><td data-label="Place"><a href="https://www.elburro.at/">El Burro</a> · Margaretenstraße 9 (only branch)</td><td data-label="When in plan">Spare lunch</td><td data-label="Egg-free picks">“Sweets &amp; Beets” and the planted filling. Ask whether the kimchi has fish sauce, and about egg. Daily 11–22.</td><td data-label="Booking">Walk-in</td></tr>
+<tr><td data-label="Place"><a href="https://indus.restaurant/reservierung">Indus</a> · Radetzkystraße 20 (300 m)</td><td data-label="When in plan">Thu 26 arrival</td><td data-label="Egg-free picks">North Indian: dal, paneer. Hours unverified (no Sat lunch).</td><td data-label="Booking">+43 1 713 43 44</td></tr>
+<tr><td data-label="Place"><a href="https://www.velani.at/">Velani</a> · 100 % vegan Austrian</td><td data-label="When in plan">Spare meal</td><td data-label="Egg-free picks">Vegan schnitzel, Käsespätzle, Kaiserschmarrn. Closed Mon.</td><td data-label="Booking">Reserve</td></tr>
+<tr><td data-label="Place"><a href="https://www.swingkitchen.com/standorte/swing-kitchen-schwedenplatz/">Swing Kitchen</a> · Schwedenplatz</td><td data-label="When in plan">Backup</td><td data-label="Egg-free picks">100 % vegan burgers. Daily from 11.</td><td data-label="Booking">Walk-in</td></tr>
+<tr><td data-label="Place"><a href="https://newyorkcafe.hu/en/">New York Café</a> · Budapest</td><td data-label="When in plan">Tue 1 dinner</td><td data-label="Egg-free picks">Vegetable curry, arrabbiata, hummus-falafel, vegan chocolate cake. 15 % service.</td><td data-label="Booking"><span class="lbl p">Dinner only, after 18:00</span></td></tr>
+<tr><td data-label="Place"><a href="https://indigo-restaurant.hu/en">Indigo Pest</a> · Jókai u. 13</td><td data-label="When in plan">Wed 2 lunch</td><td data-label="Egg-free picks">Weekday thali HUF 3,990 (12–16).</td><td data-label="Booking">Reservours</td></tr>
+<tr><td data-label="Place"><a href="https://www.napfenyesetterem.hu/">Napfényes</a> · Curia u. 2</td><td data-label="When in plan">Wed 2 dinner</td><td data-label="Egg-free picks">Fully vegan Hungarian; bean goulash. Daily 11:30–21.</td><td data-label="Booking">Reservours</td></tr>
+<tr><td data-label="Place"><a href="https://www.govinda.hu/">Govinda Vega Sarok</a> · Papnövelde u. 1</td><td data-label="When in plan">Thu 3 lunch</td><td data-label="Egg-free picks">Lacto-vegetarian: no egg, no onion. Hours unverified.</td><td data-label="Booking">Walk-in</td></tr>
+<tr><td data-label="Place"><a href="https://kolevesvendeglo.hu/en/alacarte/">Kőleves</a> · Kazinczy u. 37–41</td><td data-label="When in plan">Thu 3 dinner</td><td data-label="Egg-free picks">Vegan zucchini-chickpea fritters, hummus with cauliflower. Closed Mon.</td><td data-label="Booking"><span class="lbl p">Reserve</span></td></tr>
+</tbody></table></div>
+<h3>Phrases</h3>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Food, cafés &amp; phrases table — scroll for all columns"><table class="phr"><thead><tr><th>English</th><th>German (Austria)</th><th>Hungarian</th></tr></thead><tbody>
+<tr><td data-label="English">We eat no meat, no fish and no eggs. Milk products are fine.</td><td data-label="German (Austria)">Wir essen kein Fleisch, keinen Fisch und keine Eier. Milchprodukte sind okay.</td><td data-label="Hungarian">Nem eszünk húst, halat és tojást. A tejtermék rendben van.</td></tr>
+<tr><td data-label="English">Does this contain egg?</td><td data-label="German (Austria)">Ist da Ei drin?</td><td data-label="Hungarian">Van benne tojás?</td></tr>
+<tr><td data-label="English">Without egg, please.</td><td data-label="German (Austria)">Ohne Ei, bitte.</td><td data-label="Hungarian">Tojás nélkül, kérem.</td></tr>
+<tr><td data-label="English">Is the soup made with meat stock?</td><td data-label="German (Austria)">Ist die Suppe mit Fleischbrühe?</td><td data-label="Hungarian">Húslevesalappal készül a leves?</td></tr>
+<tr><td data-label="English">Gelatine / lard?</td><td data-label="German (Austria)">Gelatine? Schmalz?</td><td data-label="Hungarian">Zselatin? Disznózsír?</td></tr>
+<tr><td data-label="English">A high chair, please.</td><td data-label="German (Austria)">Einen Kinderstuhl, bitte.</td><td data-label="Hungarian">Egy etetőszéket kérünk.</td></tr>
+<tr><td data-label="English">Thank you / Hello</td><td data-label="German (Austria)">Danke / Grüß Gott</td><td data-label="Hungarian">Köszönöm / Jó napot</td></tr>
+</tbody></table></div>
+</section>
+<section class="block" id="money" aria-labelledby="h-money">
+<div class="kicker">Euro, forint, data and refunds</div>
+<h2 id="h-money">Money, SIM &amp; tax-free</h2>
+<div class="grid g3">
+<div class="card"><h3>Euro &amp; forint</h3><ul class="small"><li><strong>Euro cash:</strong> carry about €300–500 from India, for markets, cup deposits and WCs. Check the current RBI cash limit with your forex dealer.</li><li><strong>Main card:</strong> a zero-markup card (e.g. Niyo Global) plus one backup credit card. BookMyForex cards charge 3.5 % when a euro balance is spent in forint.</li><li><strong>Forint:</strong> don’t buy it in India. Withdraw HUF 20,000–40,000 at a bank ATM (OTP, K&amp;H, Erste). <strong>Avoid Euronet ATMs.</strong></li><li><strong>Always choose to be charged in EUR/HUF</strong>, never INR (decline the conversion offer at the terminal).</li></ul></div>
+<div class="card"><h3>SIM &amp; eSIM</h3><ul class="small"><li><strong>Recommended:</strong> Airalo Europe unlimited, 10 days (~$35), on two phones. Install in India, switch on at landing. <span class="lbl v">16 Oct</span></li><li>Grandparents: an Indian roaming pack (Airtel ~₹2,997 / Jio ~₹2,799 for 10 days <span class="lbl e">Check app</span>), or Wi-Fi + a hotspot from a family phone.</li><li>Cheapest: HoT “smart” €5.90 / 10 GB from a HOFER supermarket in Vienna (passport registration; small surcharge in Hungary).</li><li>Keep Indian SIMs active for bank OTPs (receiving SMS is usually free).</li></ul></div>
+<div class="card"><h3>Tax-free &amp; tips</h3><ul class="small"><li>Austrian purchases ≥ €75.01 per store per day: ask for a tax-free form with your passport. <strong>Get it stamped at VIE customs before check-in on 4 Dec</strong>, with the goods unused.</li><li>Tipping in Austria: round up 5–10 % and say the total when paying.</li><li>Tipping in Hungary: if the bill shows <em>szervízdíj</em> (service charge, 10–15 %), don’t tip again; otherwise leave 10 %.</li></ul></div>
+</div>
+</section>
+<section class="block" id="weather" aria-labelledby="h-wx">
+
+<div class="kicker">Climate, not forecast</div>
+<h2 id="h-wx">Weather &amp; packing</h2>
+<div class="grid g2">
+<div class="card"><h3>What late November usually brings</h3><p class="small">Typical daytime 2–7 °C, nights around −2 to 2 °C, grey skies, drizzle or sleet. The Salzkammergut runs a few degrees colder, and snow is possible there. Daylight ~07:15–16:00. <span class="lbl e">Climate normal</span> Check the forecast on <strong>27 Nov</strong> for the lake day, and on <strong>3 Dec</strong> for the drive (<a href="https://www.geosphere.at/">GeoSphere Austria</a>, <a href="https://www.met.hu/en/">HungaroMet</a>).</p></div>
+<div class="card"><h3>Pack list</h3><ul class="small"><li>Thermal base layers, warm mid-layer, waterproof coat</li><li>Waterproof shoes with grip (cobbles, possible ice at the lake)</li><li>Hats, gloves, scarves; toddler snowsuit, stroller footmuff + rain cover</li><li>Baby carrier (St. Wolfgang lanes, Castle cobbles)</li><li>Egg-free snacks, a flask, reusable mugs for market punch</li><li>EU plug adapters (Type C/F), power bank</li><li>Foldable duffel for Parndorf shopping (the 25 kg limit applies on the way home)</li></ul></div>
+</div>
+</section>
+<section class="block" id="sources" aria-labelledby="h-src">
+<div class="kicker">Checked 30 September and 16 October 2026</div>
+<h2 id="h-src">Sources, labels &amp; privacy</h2>
+<ul class="small">
+<li>Vienna Christmas markets 2026: <a href="https://www.wien.info/de/weihnachtsmarkt">wien.info</a>, <a href="https://www.christkindlmarkt.at/en/">christkindlmarkt.at</a>, <a href="https://www.weihnachtsmarkt.at/markt-mtp">weihnachtsmarkt.at</a>, <a href="https://www.weihnachtsmarkt-schoenbrunn.at/en/">Schönbrunn market</a>; Weißgerber market: <a href="https://st-othmar.at">st-othmar.at</a> (2026 dates pending) <span class="lbl v">16 Oct</span></li>
+<li>Sights: <a href="https://www.stephanskirche.at/">St. Stephen’s</a>, <a href="https://www.peterskirche.at">Peterskirche</a>, <a href="https://www.onb.ac.at/museen/prunksaal/oeffnungszeiten">State Hall</a>, <a href="https://www.khm.at/besuch">KHM</a>, <a href="https://www.zoovienna.at/besuch-und-tickets/besucherinformation/">Schönbrunn Zoo</a>, <a href="https://wienerriesenrad.com">Riesenrad</a> <span class="lbl v">16 Oct</span></li>
+<li>Transport: <a href="https://www.wienerlinien.at/7-tage-wien">Wiener Linien</a>, <a href="https://www.wien.info/de/reiseinfos/anreise/flughafen-zentrum/wichtige-infos-fuer-flughafenreisende-2026-2027-1108794">airport works 2026–27</a>, <a href="https://bkk.hu/en/tickets-and-passes/prices/">BKK</a>, <a href="https://www.oebb.at/en/reiseplanung-services/vor-ihrer-reise/mit-kindern-unterwegs">ÖBB children</a>, Seat61 timetables <span class="lbl v">16 Oct</span></li>
+<li>Day trips: <a href="https://www.mcarthurglen.com/en/outlets/at/designer-outlet-parndorf/plan-your-visit/">McArthurGlen Parndorf</a>, <a href="https://blaguss.com/en/bus-timetables/shopping-shuttle-parndorf">Blaguss shuttle</a>, <a href="https://www.wolfgangseer-advent.at/">Wolfgangseer Advent</a>, <a href="https://www.5schaetze.at/de/schafbergbahn/events-und-erlebnisse/adventfahrten-der-schafbergbahn.html">Schafbergbahn Advent</a>, WESTbahn timetable 07.09–12.12.2026 <span class="lbl v">16 Oct</span></li>
+<li>Cafés &amp; restaurants: official sites and menus linked in <a href="#food">Food</a>. Indus, Govinda and Sperl food are <span class="lbl e">unverified</span>.</li>
+<li>Thermal baths (checked 18 Oct 2026): <a href="https://www.szechenyibath.hu/">Széchenyi Bath</a> (official; prices from <a href="https://szechenyibath.com/prices/">szechenyibath.com</a> and <a href="https://www.budapestbylocals.com/szechenyi-bath/">Budapest by Locals</a>, both 2026); 14+ rule: <a href="https://xpatloop.com/channels/2025/07/iconic-spas-in-budapest-ban-entry-to-under-14s.html">Xpatloop</a> and <a href="https://www.spasbudapest.com/bathing-of-children-under-the-age-of-14-is-not-permitted-in-medicinal-water-pools">Budapest Spas</a>; Rudas <a href="https://www.rudasfurdo.hu/en/opening-hours">hours</a> and <a href="https://www.rudasfurdo.hu/en/prices-2026">prices 2026</a> (official); Gellért closure: <a href="https://en.wikipedia.org/wiki/Gell%C3%A9rt_Baths">Wikipedia</a>, <a href="https://www.budapesttourist.com/posts/gellert-baths/">Budapest Tourist</a>.</li>
+<li>Budapest: <a href="https://adventbazilika.hu/en/opening-hours">Advent Bazilika</a>, <a href="https://vorosmartyclassicxmas.hu/en/opening-hours/">Vörösmarty</a>, <a href="https://legenda.hu/en/timetable">Legenda</a>, <a href="https://newyorkcafe.hu/en/">New York Café</a> <span class="lbl v">16 Oct</span> · Parliament prices <span class="lbl p">Pending</span></li>
+<li>Exchange rates: <a href="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml">ECB reference rates</a>, 30 Sep 2026. Apartment figures from your Booking.com confirmations.</li>
+
+</ul>
+<p class="small"><strong>Privacy:</strong> booking codes and personal documents are not included. Notes are stored in this browser or in a copy you download. Keep exported copies private.</p>
+</section>
+<footer><a href="../">Main book</a> · <a href="../#tracker">Booking &amp; action tracker</a> · <a href="../#budget">Budget</a> · <a href="../train/">Rail companion</a></footer>
+</main><script type="application/json" id="embedded-state">null</script>
+<script>(function(){
+"use strict";
+var APP="mittal-danube-opus", KEY="mittal-danube-opus-v1";
+var ST=["pending","requested","confirmed","done","na"];
+var LBL={pending:"Pending",requested:"Requested",confirmed:"Confirmed",done:"Done",na:"N/A"};
+var DEF_RATES={eur:108.8205,huf:366.2,cont:10};
+var docEl=document.documentElement; docEl.classList.add("js");
+var bar=document.getElementById("appbar"), sEl=document.getElementById("savestate");
+var storageOK=true, problems=[], timer=null, lastSaved=null, source="fresh";
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function isObj(o){return o!==null&&typeof o==="object"&&!Array.isArray(o);}
+function str(v){return typeof v==="string"?v.slice(0,20000):"";}
+function blank(){return {app:APP,v:1,savedAt:null,notes:{},track:{},budget:{},rates:{}};}
+function sanitize(o){
+  if(!isObj(o)||o.app!==APP) return null;
+  var s=blank(); s.savedAt=typeof o.savedAt==="string"?o.savedAt:null;
+  ["notes","track","rates"].forEach(function(k){ if(isObj(o[k])) Object.keys(o[k]).forEach(function(id){ if(typeof o[k][id]==="string") s[k][id]=str(o[k][id]); }); });
+  if(isObj(o.budget)) Object.keys(o.budget).forEach(function(id){ var b=o.budget[id]; if(isObj(b)) s.budget[id]={p:str(b.p),a:str(b.a)}; });
+  Object.keys(s.track).forEach(function(k){ if(ST.indexOf(s.track[k])<0) delete s.track[k]; });
+  return s;
+}
+function show(){
+  var t=problems.length?("Problem: "+problems.join(" · ")+" "):"";
+  if(storageOK){ t+= lastSaved?("Saved "+lastSaved.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})+""):"Auto-saved"; }
+  if(source==="embedded") t+=" · from this copy";
+  sEl.textContent=t; sEl.title=t;
+  bar.classList.toggle("err",problems.length>0);
+}
+/* remember original defaults once, so Reset works in exported copies too */
+$$("input,textarea").forEach(function(el){ if(!el.hasAttribute("data-def")) el.setAttribute("data-def", el.tagName==="TEXTAREA"?"":el.defaultValue); });
+
+/* ---- load ---- */
+var emb=null, loc=null;
+try{ var raw=document.getElementById("embedded-state").textContent.trim(); if(raw&&raw!=="null"){ emb=sanitize(JSON.parse(raw)); if(!emb) problems.push("The snapshot inside this file was unreadable and was ignored."); } }
+catch(e){ problems.push("The snapshot inside this file was unreadable and was ignored."); }
+try{
+  localStorage.setItem(KEY+"-probe","1"); localStorage.removeItem(KEY+"-probe");
+  var r=localStorage.getItem(KEY);
+  if(r){ try{ loc=sanitize(JSON.parse(r)); }catch(e){ loc=null; }
+    if(!loc){ problems.push("Saved edits in this browser were damaged; a backup was kept and the book started clean."); try{localStorage.setItem(KEY+"-damaged-"+Date.now(),r);}catch(e2){} } }
+}catch(e){ storageOK=false; problems.push("This browser is blocking storage — edits will NOT survive a reload. Use “Download copy with my edits” to keep them."); }
+var state=blank();
+if(loc&&emb){ if((emb.savedAt||"")>(loc.savedAt||"")){state=emb;source="embedded";}else{state=loc;source="browser";} }
+else if(emb){state=emb;source="embedded";} else if(loc){state=loc;source="browser";}
+
+function setStatus(btn,s){ if(ST.indexOf(s)<0) s=btn.getAttribute("data-default")||"pending"; btn.setAttribute("data-status",s); btn.textContent=LBL[s]; btn.setAttribute("aria-label","Status: "+LBL[s]+". Activate to change."); }
+function apply(s){
+  $$("[data-note]").forEach(function(el){ var k=el.getAttribute("data-note"); if(Object.prototype.hasOwnProperty.call(s.notes,k)) el.value=s.notes[k]; });
+  $$("button.st").forEach(function(b){ var k=b.getAttribute("data-track"); setStatus(b, s.track[k]||b.getAttribute("data-status")); });
+  $$("#budget-rows tr").forEach(function(tr){ var b=s.budget[tr.getAttribute("data-bid")]; if(!b) return; var i=tr.querySelectorAll("input"); i[0].value=b.p; i[1].value=b.a; });
+  $$("[data-rate]").forEach(function(el){ var k=el.getAttribute("data-rate"); if(Object.prototype.hasOwnProperty.call(s.rates,k)) el.value=s.rates[k]; });
+}
+function collect(){
+  var s=sanitize(state)||blank();
+  if(storageOK){
+    try{
+      var latestRaw=localStorage.getItem(KEY), latest=latestRaw&&sanitize(JSON.parse(latestRaw));
+      if(latest) s=latest;
+    }catch(e){
+      problems.push("Could not merge saved edits ("+(e&&e.name||"error")+"). Download a copy before leaving this page.");
+      storageOK=false;
+    }
+  }
+  $$("[data-note]").forEach(function(el){ s.notes[el.getAttribute("data-note")]=el.value; });
+  $$("button.st").forEach(function(b){ s.track[b.getAttribute("data-track")]=b.getAttribute("data-status"); });
+  $$("#budget-rows tr").forEach(function(tr){ var i=tr.querySelectorAll("input"); s.budget[tr.getAttribute("data-bid")]={p:i[0].value,a:i[1].value}; });
+  $$("[data-rate]").forEach(function(el){ s.rates[el.getAttribute("data-rate")]=el.value; });
+  return s;
+}
+function save(){
+  clearTimeout(timer); timer=null;
+  state=collect(); state.savedAt=new Date().toISOString();
+  if(!storageOK){ show(); return false; }
+  try{ localStorage.setItem(KEY,JSON.stringify(state)); lastSaved=new Date();
+    problems=problems.filter(function(p){return p.indexOf("Could not save")<0;}); }
+  catch(e){ if(problems.join().indexOf("Could not save")<0) problems.push("Could not save to this browser ("+(e&&e.name||"error")+"). Download a copy to keep edits."); }
+  show(); return true;
+}
+function later(){ clearTimeout(timer); timer=setTimeout(save,400); }
+
+/* ---- budget ---- */
+function num(v){ v=String(v).replace(/[,\s_]/g,"").trim(); if(v==="") return null; if(!/^\d+(\.\d+)?$/.test(v)) return NaN; var n=parseFloat(v); return Number.isFinite(n)?n:NaN; }
+function inr(n){ return "INR "+Math.round(n).toLocaleString("en-IN"); }
+function rate(k,min,max,msgs){ var el=document.getElementById("rate-"+k), n=num(el.value);
+  if(n===null||isNaN(n)||n<min||n>max){ el.setAttribute("aria-invalid","true"); msgs.push(el.previousElementSibling.textContent+" must be between "+min+" and "+max+" — using "+DEF_RATES[k]+" until fixed."); return DEF_RATES[k]; }
+  el.removeAttribute("aria-invalid"); return n; }
+function calc(){
+  if(!document.getElementById("budget-rows")) return;
+  var rm=[], eur=rate("eur",50,250,rm), huf=rate("huf",200,700,rm), cont=rate("cont",0,50,rm);
+  var hufInr=eur/huf; document.getElementById("huf-inr").textContent=hufInr.toFixed(4);
+  document.getElementById("rate-msg").textContent=rm.join(" ");
+  var toInr={EUR:eur,HUF:hufInr,INR:1}, sub=0, act=0, nAct=0, bad=0, paid=0, rows=$$("#budget-rows tr");
+  $$("#paid-rows tr[data-amt]").forEach(function(tr){ var v=parseFloat(tr.getAttribute("data-amt"))*toInr[tr.getAttribute("data-cur")]; paid+=v; tr.querySelectorAll("td.inr")[1].textContent=inr(v); });
+  document.getElementById("t-paid-row").textContent=inr(paid);
+  rows.forEach(function(tr){ var c=tr.getAttribute("data-cur"), i=tr.querySelectorAll("input"), cell=tr.querySelector("td.inr");
+    var p=num(i[0].value), a=num(i[1].value);
+    if(p===null||isNaN(p)){ i[0].setAttribute("aria-invalid","true"); bad++; cell.textContent="check"; }
+    else { i[0].removeAttribute("aria-invalid"); var v=p*toInr[c]; sub+=v; cell.textContent=inr(v); }
+    if(a!==null&&isNaN(a)){ i[1].setAttribute("aria-invalid","true"); bad++; }
+    else { i[1].removeAttribute("aria-invalid"); if(a!==null){ act+=a*toInr[c]; nAct++; } }
+  });
+  document.getElementById("budget-msg").textContent=bad?(bad+" budget value(s) are not valid numbers (use digits, e.g. 1150 or 100.80) and are left out of the totals."):"";
+  var c=sub*cont/100, rem=sub+c;
+  document.getElementById("t-sub").textContent=inr(sub);
+  document.getElementById("t-cont").textContent=inr(c)+" ("+cont+"%)";
+  document.getElementById("t-rem").textContent=inr(rem);
+  document.getElementById("t-paid").textContent=inr(paid);
+  document.getElementById("t-all").textContent=inr(paid+rem);
+  document.getElementById("t-pp").textContent=inr((paid+rem)/4);
+  document.getElementById("t-act").textContent=nAct?inr(act):"—";
+  document.getElementById("t-act-n").textContent=nAct+" of "+rows.length+" items recorded"+(nAct&&nAct<rows.length?" (blanks are not counted as spent)":"");
+}
+
+/* ---- export ---- */
+function exportCopy(){
+  save();
+  var live=$$("input,textarea"), clone=docEl.cloneNode(true), cl=$$("input,textarea",clone);
+  $$("a[href]",clone).forEach(function(a){
+    var href=a.getAttribute("href");
+    if(!href.startsWith("#")) a.setAttribute("href",new URL(href,document.baseURI).href);
+  });
+  live.forEach(function(el,i){ var c=cl[i]; if(!c) return; if(el.tagName==="TEXTAREA") c.textContent=el.value; else { c.setAttribute("value",el.value); c.removeAttribute("aria-invalid"); } });
+  clone.classList.remove("js");
+  clone.querySelector("#embedded-state").textContent=JSON.stringify(state).replace(/</g,"\\u003c").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029");
+  var html="<!DOCTYPE html>\n"+clone.outerHTML;
+  try{
+    var blob=new Blob([html],{type:"text/html;charset=utf-8"}), a=document.createElement("a");
+    a.href=URL.createObjectURL(blob); a.download="Vienna-Budapest-"+(document.body.classList.contains("detail-page")?"details":"travel-book")+"-"+state.savedAt.slice(0,10)+".html";
+    document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},1500);
+    sEl.textContent="Copy downloaded";
+  }catch(e){ problems.push("Download failed ("+e.name+")."); show(); }
+}
+
+/* ---- tracker sort ---- */
+(function(){ var tb=document.getElementById("trk-rows"); if(!tb) return; var ths=$$("#trk-table th");
+  function key(tr,c){ var td=tr.children[c];
+    if(c===3){ var b=td.querySelector("button.st"); return ST.indexOf(b.getAttribute("data-status")); }
+    if(td.hasAttribute("data-sort")) return td.getAttribute("data-sort");
+    return td.textContent.trim().toLowerCase(); }
+  ths.forEach(function(th,c){ th.querySelector("button").addEventListener("click",function(){
+    var dir=th.getAttribute("aria-sort")==="ascending"?-1:1;
+    ths.forEach(function(h){ h.setAttribute("aria-sort","none"); }); th.setAttribute("aria-sort",dir>0?"ascending":"descending");
+    var rs=Array.prototype.slice.call(tb.children);
+    rs.sort(function(a,b){ var x=key(a,c), y=key(b,c), r=(typeof x==="number")?x-y:(x<y?-1:x>y?1:0);
+      if(r===0){ var dx=key(a,0), dy=key(b,0); r=dx<dy?-1:dx>dy?1:0; return r; } return r*dir; });
+    rs.forEach(function(r){ tb.appendChild(r); }); }); });
+})();
+/* ---- wire up ---- */
+apply(state); calc();
+$$("button.st").forEach(function(b){ b.addEventListener("click",function(){ var i=ST.indexOf(b.getAttribute("data-status")); setStatus(b,ST[(i+1)%ST.length]); save(); }); });
+document.addEventListener("input",function(e){ var t=e.target; if(t.matches("[data-rate], #budget-rows input")) calc(); if(t.matches("input,textarea")) later(); });
+document.addEventListener("change",function(e){ if(e.target.matches("input,textarea")) save(); });
+window.addEventListener("pagehide",function(){ if(timer) save(); });
+document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden"&&timer) save(); });
+document.getElementById("btn-export").addEventListener("click",exportCopy);
+document.getElementById("btn-print").addEventListener("click",function(){ window.print(); });
+window.addEventListener("beforeprint",function(){ $$("details").forEach(function(d){ d.open=true; }); });
+var resetButton=document.getElementById("btn-reset");
+if(resetButton) resetButton.addEventListener("click",function(){
+  if(!window.confirm("Reset ALL notes, contacts, tracker statuses and budget figures in this browser to the book’s defaults? This cannot be undone (download a copy first if unsure).")) return;
+  $$("input,textarea").forEach(function(el){ el.value=el.getAttribute("data-def")||""; });
+  $$("button.st").forEach(function(b){ setStatus(b,b.getAttribute("data-default")); });
+  calc(); save(); sEl.textContent="Reset done";
+});
+window.addEventListener("storage",function(e){
+    if(e.key!==KEY||timer) return;
+    try{
+      var latest=e.newValue&&sanitize(JSON.parse(e.newValue));
+      if(!latest){ problems.push("Saved edits changed to an unreadable value in another tab. Download a copy before leaving."); show(); return; }
+      state=latest; apply(state); calc(); sEl.textContent="Edits updated from another tab";
+    }catch(error){ problems.push("Could not read edits from another tab ("+error.name+")."); show(); }
+  });
+  if(!storageOK||problems.length) show(); else { sEl.textContent=source==="browser"?"Edits restored":(source==="embedded"?"Loaded from this copy":"Auto-saved"); }
+})();
+</script></body></html>
