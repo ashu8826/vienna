@@ -10,38 +10,40 @@
 :root{color-scheme:light;--paper:#faf8f5;--card:#fff;--ink:#1b1b1d;--muted:#65625e;--line:#e7e2da;--soft:#f2eee8;--vienna:#a3413a;--vienna-soft:#f7e9e6;--budapest:#2d6a53;--budapest-soft:#e4f0ea;--warn:#8a5a00;--warn-soft:#fbf1dc;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
-.page{max-width:780px;margin:auto;padding:56px 24px 80px;display:grid;gap:40px}
+.page{max-width:800px;margin:auto;display:grid;gap:40px}
 h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}p{margin:0}
 a{color:inherit;text-underline-offset:3px}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--vienna);outline-offset:3px}
 .back-link{font-size:14px;justify-self:start}
 .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.cover{display:grid;gap:14px}
-.cover h1{font-size:clamp(40px,8vw,64px);line-height:1;letter-spacing:-.015em}
+.cover{display:grid;gap:14px}.cover h1{font-size:clamp(40px,8vw,64px);line-height:1;letter-spacing:-.015em}
 .lede{font-size:18px;color:var(--muted);max-width:36em}
-.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line)}.chip.ok{background:var(--budapest-soft);color:var(--budapest);border-color:transparent;font-weight:600}
 .jump{display:flex;flex-wrap:wrap;gap:8px}.jump a{text-decoration:none;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--card)}
-section{display:grid;gap:16px}
+section{display:grid;gap:16px;scroll-margin-top:16px}
 .block-head{display:flex;align-items:baseline;gap:14px}.block-head h2{font-size:30px;line-height:1.15}
 .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:12px;min-width:0}
-.warn{background:var(--warn-soft);border-color:transparent}.warn h3{color:var(--warn);font-size:22px}
-ol.fix{margin:0;padding-left:1.2em;display:grid;gap:10px}
+.warn{background:var(--warn-soft);border-color:transparent}
+ul.checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ul.checks label{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;cursor:pointer}
+ul.checks input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--warn)}
+ul.checks input:checked+span{color:var(--muted);text-decoration:line-through}
 .muted{color:var(--muted);font-size:14.5px}.muted strong{color:var(--ink)}
 dl.kv{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:8px 18px;margin:0}
 dl.kv dt{color:var(--muted);font-size:14px}dl.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+ol.steps{margin:0;padding-left:1.2em;display:grid;gap:6px}
 .tablewrap{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
 table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 thead th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted);background:var(--soft);white-space:nowrap}
-tbody tr:last-child td{border-bottom:0}td.nw{white-space:nowrap}td.num{text-align:right;white-space:nowrap}tr.total td{font-weight:700}
-td.id{font-weight:700}
-.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted);white-space:nowrap}.tag.pub{background:var(--budapest-soft);color:var(--budapest)}
+tbody tr:last-child td{border-bottom:0}td.nw{white-space:nowrap}td.num{text-align:right;white-space:nowrap}tr.total td{font-weight:700}td.id{font-weight:700}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted);white-space:nowrap;letter-spacing:0;text-transform:none;margin-left:6px}.tag.pub{background:var(--budapest-soft);color:var(--budapest)}
 .ride{--c:var(--vienna);--c-soft:var(--vienna-soft);background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:12px;overflow:hidden;scroll-margin-top:16px}
 .ride[data-city="budapest"]{--c:var(--budapest);--c-soft:var(--budapest-soft)}
 .ride-head{background:var(--c-soft);padding:14px 20px;display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;justify-content:space-between}
-.ride-head h3{font-size:24px;color:var(--c)}.ride-head span{font-weight:600;font-size:14px}
+.ride-head h3{font-size:24px;color:var(--c)}.ride-head>span{font-weight:600;font-size:14px}
 .ride-body{padding:18px 20px;display:grid;gap:16px}
 .ends{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.end{background:var(--soft);border-radius:10px;padding:12px 14px;display:grid;gap:2px;min-width:0}
+.end{background:var(--soft);border-radius:10px;padding:12px 14px;display:grid;gap:2px;min-width:0;align-content:start}
 .end .t{font:400 28px/1.1 var(--serif);color:var(--c);font-variant-numeric:tabular-nums}
 .end .place{font-weight:600}.end .addr{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
 .stats{display:flex;flex-wrap:wrap;gap:8px}.stat{font-size:13.5px;padding:4px 10px;border-radius:8px;border:1px solid var(--line);font-variant-numeric:tabular-nums}.stat b{font-weight:600}
@@ -50,13 +52,12 @@ td.id{font-weight:700}
 button{font:600 14px var(--sans);padding:8px 16px;border-radius:999px;border:1px solid var(--c,var(--ink));background:var(--card);color:var(--c,var(--ink));cursor:pointer;min-height:44px}
 button:hover{background:var(--c-soft,var(--soft))}
 .copied{font-size:13px;color:var(--muted)}
-label.done{display:flex;gap:10px;align-items:center;font-weight:600;cursor:pointer;border-top:1px solid var(--line);padding-top:14px;min-height:44px}
-label.done input{width:22px;height:22px;accent-color:var(--c)}
 .mono{font-family:var(--mono);font-size:.92em}
-.changed{font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--warn-soft);color:var(--warn);white-space:nowrap;letter-spacing:0;text-transform:none}
 footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:20px}
-@media(max-width:600px){.page{padding:40px 16px 64px;gap:32px}.ends{grid-template-columns:1fr}dl.kv{grid-template-columns:1fr;gap:2px}dl.kv dd{margin-bottom:8px}.block-head h2{font-size:26px}}
-@media print{.back-link,.jump,.row,label.done{display:none!important}.ride{break-inside:avoid}body{background:#fff}}
+@media(max-width:600px){.page{gap:32px}.ends{grid-template-columns:1fr}dl.kv{grid-template-columns:1fr;gap:2px}dl.kv dd{margin-bottom:8px}.block-head h2{font-size:26px}}
+@media print{.back-link,.jump,.row{display:none!important}.ride{break-inside:avoid}body{background:#fff}}
+.page{padding:56px 24px 80px}
+@media(max-width:600px){.page{padding:40px 16px 64px}}
 </style>
 </head>
 <body>
@@ -66,41 +67,54 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px sol
 <header class="cover">
   <p class="label">The Mittal family · Winter 2026</p>
   <h1>Transfers</h1>
-  <p class="lede">Six private minivan rides with a toddler seat, all on Welcome Pickups so they sit in one app. Rides A to D carry the luggage between cities; E and F are the Wolfgangsee day trip.</p>
-  <div class="chips"><span class="chip">4 adults + 1 toddler (18 months, 10 kg)</span><span class="chip">6 suitcases + 1 stroller</span><span class="chip">Estimated total €260–360</span><span class="chip">Status: to book</span></div>
-  <nav class="jump" aria-label="Rides"><a href="#ride-a">A · 26 Nov</a><a href="#ride-e">E · 29 Nov</a><a href="#ride-f">F · 29 Nov</a><a href="#ride-b">B · 1 Dec</a><a href="#ride-c">C · 1 Dec</a><a href="#ride-d">D · 4 Dec</a></nav>
+  <p class="lede">Four private rides with a child seat are booked for the luggage days. The Wolfgangsee day on 29 November goes by metro.</p>
+  <div class="chips"><span class="chip ok">4 rides booked</span><span class="chip">4 adults + 1 toddler (18 months, 10 kg)</span><span class="chip">6 suitcases + 1 stroller</span><span class="chip">Paid £185.95 (≈ €222)</span></div>
+  <nav class="jump" aria-label="On this page"><a href="#fix">Fix before you travel</a><a href="#ride-a">A · 26 Nov</a><a href="#metro-29">29 Nov · metro</a><a href="#ride-b">B · 1 Dec</a><a href="#ride-c">C · 1 Dec</a><a href="#ride-d">D · 4 Dec</a></nav>
 </header>
 
+<section id="fix" aria-labelledby="fix-h">
+  <div class="block-head"><span class="label">01</span><h2 id="fix-h">Fix these in the bookings</h2></div>
+  <div class="box warn">
+    <p>The confirmations have a few details that do not match your family or your flats. Each one takes a minute in “Edit time, date, or location”, “Edit note” or the Help Center on the confirmation. Tick them off as you go.</p>
+    <ul class="checks">
+      <li><label for="fix-1"><input type="checkbox" id="fix-1"><span><strong>Ride A, drop-off address.</strong> It shows only “Spacious apartment in prime location, 1030 Vienna”, with no street. Use “Edit time, date, or location” and set it to the flat’s full street address from your Booking.com stay confirmation.</span></label></li>
+      <li><label for="fix-2"><input type="checkbox" id="fix-2"><span><strong>Rides B, C and D, passengers.</strong> They show “Maximum 4 passengers”; you are 5 with the toddler (ride A already shows 5). Change it to 5, or ask Talixo and Welcome Pickups in the Help Center to confirm 4 adults plus a toddler in the child seat.</span></label></li>
+      <li><label for="fix-3"><input type="checkbox" id="fix-3"><span><strong>Rides C and D, Budapest address.</strong> They show “Fusion Apartments in Downtown Budapest, 1077”. Your flat is <strong>Síp utca 7, 1075 Budapest</strong>. Edit both legs of the round trip.</span></label></li>
+      <li><label for="fix-4"><input type="checkbox" id="fix-4"><span><strong>All four, driver note.</strong> The note says only “Child car seats: 1”. Paste the note from each ride card below, so the driver knows about the six suitcases and the toddler’s weight.</span></label></li>
+      <li><label for="fix-5"><input type="checkbox" id="fix-5"><span><strong>Rides A and B, luggage.</strong> Both are executive people carriers. Ask Sixt Ride and Talixo to confirm that six large suitcases and a stroller fit with five passengers.</span></label></li>
+      <li><label for="fix-6"><input type="checkbox" id="fix-6"><span><strong>Budapest host.</strong> The stay booking still says “arrival between 10:00 and 11:00” and 4 adults. Message Fusion Apartments through Booking.com: you arrive at about 15:00 from Keleti, and please add the toddler and a cot.</span></label></li>
+    </ul>
+  </div>
+</section>
+
 <section aria-labelledby="glance-h">
-  <div class="block-head"><span class="label">01</span><h2 id="glance-h">The six rides at a glance</h2></div>
+  <div class="block-head"><span class="label">02</span><h2 id="glance-h">The four booked rides</h2></div>
   <div class="tablewrap">
     <table>
-      <thead><tr><th>Ride</th><th>Date</th><th>From → To</th><th>Pickup</th><th>Drop-off</th><th>Road distance</th><th>Drive</th></tr></thead>
+      <thead><tr><th>Ride</th><th>Date</th><th>From → To</th><th>Pickup</th><th>Drop-off</th><th>Operator · vehicle</th><th>Driver waits</th><th>Free cancel</th></tr></thead>
       <tbody>
-        <tr><td class="id">A</td><td class="nw">Thu 26 Nov</td><td>Vienna Airport T3 → Vienna flat</td><td class="nw">19:30</td><td class="nw">~20:05</td><td class="num">18.4 km</td><td class="nw">20–30 min</td></tr>
-        <tr><td class="id">E</td><td class="nw">Sun 29 Nov</td><td>Vienna flat → Wien Westbahnhof</td><td class="nw">06:05</td><td class="nw">~06:20</td><td class="num">6.6 km</td><td class="nw">12–15 min</td></tr>
-        <tr><td class="id">F</td><td class="nw">Sun 29 Nov</td><td>Wien Westbahnhof → Vienna flat</td><td class="nw">20:30</td><td class="nw">~20:50</td><td class="num">6.6 km</td><td class="nw">12–18 min</td></tr>
-        <tr><td class="id">B</td><td class="nw">Tue 1 Dec</td><td>Vienna flat → Wien Hauptbahnhof</td><td class="nw">10:15</td><td class="nw">~10:35</td><td class="num">4.4 km</td><td class="nw">12–20 min</td></tr>
-        <tr><td class="id">C</td><td class="nw">Tue 1 Dec</td><td>Budapest-Keleti → Síp utca 7</td><td class="nw">14:45</td><td class="nw">~15:05</td><td class="num">1.8 km</td><td class="nw">8–15 min</td></tr>
-        <tr><td class="id">D</td><td class="nw">Fri 4 Dec</td><td>Síp utca 7 → Budapest-Keleti</td><td class="nw">07:30</td><td class="nw">~07:55</td><td class="num">3.8 km</td><td class="nw">12–20 min</td></tr>
+        <tr><td class="id">A</td><td class="nw">Thu 26 Nov</td><td>Vienna Airport T3 → Vienna flat</td><td>When EK125 lands (18:50)</td><td class="nw">~20:00</td><td>Sixt Ride · executive people carrier</td><td>45 min after landing</td><td class="nw">2 h before</td></tr>
+        <tr><td class="id">B</td><td class="nw">Tue 1 Dec</td><td>Vienna flat → Wien Hauptbahnhof</td><td class="nw">10:30</td><td class="nw">10:44</td><td>Talixo · executive people carrier</td><td class="nw">15 min</td><td class="nw">3 h before</td></tr>
+        <tr><td class="id">C</td><td class="nw">Tue 1 Dec</td><td>Budapest-Keleti → Síp utca 7</td><td class="nw">14:45</td><td class="nw">14:51</td><td>Welcome Pickups · large people carrier</td><td class="nw">15 min</td><td class="nw">24 h before</td></tr>
+        <tr><td class="id">D</td><td class="nw">Fri 4 Dec</td><td>Síp utca 7 → Budapest-Keleti</td><td class="nw">07:30</td><td class="nw">~07:45</td><td>Welcome Pickups · large people carrier</td><td class="nw">15 min</td><td class="nw">24 h before</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="muted">Road distances are OpenStreetMap driving routes. Drop-off times include time to load the bags and fit the child seat (about 10 minutes with six cases, less on the day trip). Ride D is longer than ride C because of one-way streets in the Jewish Quarter.</p>
+  <p class="muted">Every ride includes one child seat. Drop-off times for B and C are the operators’ estimates; A and D are ours, allowing for passport control and Friday rush hour. Manage each ride from its confirmation email.</p>
 </section>
 
 <section aria-labelledby="booked-h">
-  <div class="block-head"><span class="label">02</span><h2 id="booked-h">Booked flights and trains</h2></div>
+  <div class="block-head"><span class="label">03</span><h2 id="booked-h">Booked flights and trains</h2></div>
   <div class="tablewrap">
     <table>
       <thead><tr><th>Date</th><th>Journey</th><th>Leaves</th><th>Arrives</th><th>Coach, seats, notes</th><th>Linked ride</th></tr></thead>
       <tbody>
         <tr><td class="nw">Thu 26 Nov</td><td>EK511 · Delhi T3 → Dubai T3</td><td class="nw">10:35</td><td class="nw">13:00</td><td>2 h 40 min connection in Dubai</td><td>—</td></tr>
-        <tr><td class="nw">Thu 26 Nov</td><td>EK125 · Dubai T3 → Vienna T3</td><td class="nw">15:40</td><td class="nw">18:50</td><td>Passport control and bags before meeting the driver</td><td class="nw">A, pickup 19:30</td></tr>
-        <tr><td class="nw">Sun 29 Nov</td><td>WESTbahn 902 · Wien Westbahnhof → Salzburg Hbf</td><td class="nw">06:38</td><td class="nw">09:08</td><td>Coach 15, upper deck</td><td class="nw">E, pickup 06:05</td></tr>
-        <tr><td class="nw">Sun 29 Nov</td><td>WESTbahn 927 · Salzburg Hbf → Wien Westbahnhof</td><td class="nw">17:52</td><td class="nw">20:22</td><td>Seats 524B, 524C, 524D, 525C, 525D</td><td class="nw">F, pickup 20:30</td></tr>
-        <tr><td class="nw">Tue 1 Dec</td><td>RJX 61 · Wien Hbf → Budapest-Keleti</td><td class="nw">11:40</td><td class="nw">14:35</td><td>Coach 21, seats 18, 21, 22, 23, 28. Wien Hbf platforms 3–12</td><td class="nw">B drop 10:35 · C pickup 14:45</td></tr>
-        <tr><td class="nw">Fri 4 Dec</td><td>EC 140 · Budapest-Keleti → Wien Hbf</td><td class="nw">08:30</td><td class="nw">11:20</td><td>Coach 414</td><td class="nw">D drop 07:55</td></tr>
+        <tr><td class="nw">Thu 26 Nov</td><td>EK125 · Dubai T3 → Vienna T3</td><td class="nw">15:40</td><td class="nw">18:50</td><td>Passport control and bags before meeting the driver</td><td class="nw">A, driver waits to ~19:35</td></tr>
+        <tr><td class="nw">Sun 29 Nov</td><td>WESTbahn 902 · Wien Westbahnhof → Salzburg Hbf</td><td class="nw">06:38</td><td class="nw">09:08</td><td>Coach 15, upper deck</td><td class="nw">U3 metro, leave flat 05:35</td></tr>
+        <tr><td class="nw">Sun 29 Nov</td><td>WESTbahn 927 · Salzburg Hbf → Wien Westbahnhof</td><td class="nw">17:52</td><td class="nw">20:22</td><td>Seats 524B, 524C, 524D, 525C, 525D</td><td class="nw">U3 metro, home ~21:00</td></tr>
+        <tr><td class="nw">Tue 1 Dec</td><td>RJX 61 · Wien Hbf → Budapest-Keleti</td><td class="nw">11:40</td><td class="nw">14:35</td><td>Coach 21, seats 18, 21, 22, 23, 28. Wien Hbf platforms 3–12</td><td class="nw">B drop 10:44 · C pickup 14:45</td></tr>
+        <tr><td class="nw">Fri 4 Dec</td><td>EC 140 · Budapest-Keleti → Wien Hbf</td><td class="nw">08:30</td><td class="nw">11:20</td><td>Coach 414</td><td class="nw">D drop ~07:45</td></tr>
         <tr><td class="nw">Fri 4 Dec</td><td>RJX 19981 · Wien Hbf → Vienna Airport</td><td class="nw">11:42</td><td class="nw">11:57</td><td>Coach 31. Only 22 minutes to change at Wien Hbf</td><td>—</td></tr>
         <tr><td class="nw">Fri 4 Dec</td><td>EK128 · Vienna T3 → Dubai T3</td><td class="nw">14:55</td><td class="nw">23:25</td><td>Check-in 11:25 (printed on ticket). Tax-free stamp before bag drop</td><td>—</td></tr>
         <tr><td class="nw">Sat 5 Dec</td><td>EK510 · Dubai T3 → Delhi T3</td><td class="nw">04:20</td><td class="nw">08:55</td><td>4 h 55 min connection in Dubai</td><td>—</td></tr>
@@ -110,217 +124,166 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px sol
   <p class="muted">Times come from the Emirates e-tickets, ÖBB tickets and WESTbahn tickets, all local. Check the operators’ apps on the day for changes. More on the trains in the <a href="../train/">rail companion</a>.</p>
 </section>
 
-<section aria-labelledby="book-h">
-  <div class="block-head"><span class="label">03</span><h2 id="book-h">How to book</h2></div>
-  <div class="box warn">
-    <h3>Before you book</h3>
-    <ol class="fix">
-      <li><strong>Vienna flat:</strong> 5th floor with a lift, self check-in. The host sends the details on 26 Nov. Have mobile data working when you land so the message arrives, and screenshot the instructions before you leave the airport. Use the house number from your Booking.com confirmation on rides A, B, E and F.</li>
-      <li><strong>Budapest flat:</strong> the booking still says “arrival between 10:00 and 11:00” and 4 adults. Message Fusion Apartments through Booking.com: you arrive around 15:05 from Keleti, and please add the toddler and a cot.</li>
-    </ol>
-  </div>
-  <div class="box">
-    <h3>Enter the same details on every booking</h3>
-    <dl class="kv">
-      <dt>Where</dt><dd><a href="https://www.welcomepickups.com/">welcomepickups.com</a> or the Welcome Pickups app. Use one account for all six rides. Backup if they cannot confirm the seat: Sixt Ride, XL class.</dd>
-      <dt>Vehicle</dt><dd><strong>Minivan, 8 seats</strong> (Mercedes V-Class or Vito long, or similar). With five people seated, the spare third-row seats take the overflow bags.</dd>
-      <dt>Passengers</dt><dd>5 (4 adults, 1 child). Count the toddler, because the seat takes a place.</dd>
-      <dt>Luggage</dt><dd><strong>Rides A to D: 6 large suitcases + 1 folding stroller.</strong> Enter all six as large and ask the operator to confirm in writing that they fit. If not, upgrade that ride to a minibus rather than splitting the family across two cars. <strong>Rides E and F:</strong> no suitcases, only the stroller and day bags. Still book a minivan, because five people plus a child seat will not fit a sedan.</dd>
-      <dt>Child seat</dt><dd>1 × <strong>child seat for 9–18 kg</strong>. In the note, say “18 months, 10 kg”. Not a booster. An infant carrier (up to 13 kg) also works at 10 kg if the head stays below the top of the shell.</dd>
-      <dt>Name sign</dt><dd>MITTAL, with the lead name as on your bookings</dd>
-      <dt>Phone</dt><dd>An Indian mobile with WhatsApp. Airalo eSIMs are usually data-only with no number, so drivers will reach you on WhatsApp over data.</dd>
-      <dt>Before paying</dt><dd>Read the cancellation terms and any child-seat charge on the checkout screen, then save each confirmation to two phones.</dd>
-    </dl>
-  </div>
-</section>
-
 <section aria-labelledby="rides-h">
   <div class="block-head"><span class="label">04</span><h2 id="rides-h">Ride by ride</h2></div>
 
   <article class="ride" data-city="vienna" id="ride-a">
-    <div class="ride-head"><h3>A · Thu 26 Nov</h3><span>Airport arrival, Vienna</span></div>
+    <div class="ride-head"><h3>A · Thu 26 Nov</h3><span>Airport arrival, Vienna <span class="tag pub">Booked</span></span></div>
     <div class="ride-body">
       <div class="ends">
-        <div class="end"><span class="label">Pickup</span><span class="t">19:30</span><span class="place">Vienna International Airport (VIE), Terminal 3 arrivals</span><span class="addr">1300 Schwechat</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">20:05</span><span class="place">Vienna flat</span><span class="addr">Kolonitzgasse, 1030 Wien (Landstraße). House number in your Booking.com confirmation.</span></div>
+        <div class="end"><span class="label">Pickup</span><span class="t">18:50</span><span class="place">When EK125 lands · Vienna Airport (VIE), Terminal 3 arrivals</span><span class="addr">1300 Schwechat</span></div>
+        <div class="end"><span class="label">Drop-off, about</span><span class="t">20:00</span><span class="place">Vienna flat</span><span class="addr">Kolonitzgasse, 1030 Wien (Landstraße). 5th floor, lift.</span></div>
       </div>
-      <div class="stats"><span class="stat"><b>18.4 km</b> by road</span><span class="stat"><b>20–30 min</b> on the A4 motorway</span><span class="stat"><b>€72</b> published minivan fare</span></div>
+      <div class="stats"><span class="stat"><b>18.4 km</b> by road</span><span class="stat"><b>About 21 min</b> drive</span><span class="stat"><b>£54.00</b> paid</span></div>
       <dl class="kv">
-        <dt>Your flight</dt><dd>EK125 leaves Dubai T3 at 15:40, lands Vienna T3 at 18:50. Enter the flight number so the driver tracks it.</dd>
-        <dt>Why 19:30</dt><dd>Airport pickups include 60 minutes of free waiting from the pickup time. Starting at 19:30 covers the non-EU passport queue and six bags until 20:30.</dd>
-        <dt>Meeting point</dt><dd>Arrivals hall, driver holding a MITTAL sign</dd>
-        <dt>At the flat</dt><dd>5th floor with a lift, self check-in (details sent on the day, open until 23:00). Older Vienna lifts are often small, so send the grandparents and toddler up first with one adult, then bring the six cases up in two or three trips. Dinner: Indus, Radetzkystraße 20, about 300 m away.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> The CAT bus (€14.90 per adult) stops 600 m from the flat, which is too far at night with six cases and a toddler. A taxi from the rank may not have a child seat or room for the bags.</dd>
+        <dt>Operator</dt><dd>Sixt Ride · executive people carrier · up to 5 passengers · 1 child seat</dd>
+        
+        <dt>Driver waits</dt><dd>The driver tracks EK125 and waits <strong>45 minutes after landing</strong>: until about 19:35 if you land on time. If passport control or the bags run late, message the driver. Their details appear in the confirmation before the trip.</dd>
+        <dt>Meeting point</dt><dd>After passport control and baggage claim, go to Arrivals. The driver holds a sign with your name.</dd>
+        <dt>Free cancellation</dt><dd>Up to 2 hours before the pickup</dd>
+        <dt>At the flat</dt><dd>5th floor with a lift, self check-in (details sent on the day; arrivals until 23:00). Have mobile data on when you land so the message arrives. Send the grandparents and toddler up first with one adult, then bring the six cases up in two or three lift trips. Dinner: Indus, Radetzkystraße 20, about 300 m away.</dd>
+        <dt>Fix in booking</dt><dd>Drop-off street address · driver note · confirm six suitcases fit</dd>
       </dl>
       <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-a">Family of 5: 4 adults and an 18-month-old (10 kg). Please bring a child seat for 9–18 kg. Luggage: 6 large suitcases and a folding stroller. We arrive on EK125 from Dubai with non-EU passports, so passport control may take a while. Please wait in the arrivals hall with a name sign: MITTAL.</p>
+        <p class="label">Driver note · paste with “Edit note”</p>
+        <p id="note-a">Family of 5: 4 adults and an 18-month-old (10 kg). Child seat for 9–18 kg booked. Luggage: 6 large suitcases and a folding stroller. We arrive on EK125 from Dubai with non-EU passports, so passport control may take a while; we will message you if we are not out by 19:35. Drop-off: Kolonitzgasse, 1030 Wien.</p>
         <div class="row"><button type="button" data-copy="note-a" id="copy-a">Copy note</button><span class="copied" aria-live="polite"></span></div>
       </div>
-      <p class="muted"><strong>If it goes wrong:</strong> message the driver from the app. With no van at all, use the taxi rank outside arrivals and ask for a Großraumtaxi (large taxi), or take the CAT bus to Marxergasse (4 × €14.90, toddler free).</p>
-      <label class="done" for="done-a"><input type="checkbox" id="done-a"> Booked</label>
+      <p class="muted"><strong>If it goes wrong:</strong> message the driver or call Sixt Ride from the confirmation. With no car at all, use the taxi rank outside arrivals and ask for a Großraumtaxi (large taxi), or take the CAT bus to Marxergasse (4 × €14.90, toddler free), about 600 m from the flat.</p>
     </div>
   </article>
 
-  <article class="ride" data-city="vienna" id="ride-e">
-    <div class="ride-head"><h3>E · Sun 29 Nov</h3><span>Flat to Westbahnhof, Wolfgangsee day</span></div>
+  <article class="ride" data-city="vienna" id="metro-29">
+    <div class="ride-head"><h3>Sun 29 Nov · by metro</h3><span>Wolfgangsee day · no ride booked</span></div>
     <div class="ride-body">
       <div class="ends">
-        <div class="end"><span class="label">Pickup</span><span class="t">06:05</span><span class="place">Vienna flat, at the street door</span><span class="addr">Kolonitzgasse, 1030 Wien</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">06:20</span><span class="place">Wien Westbahnhof, main entrance</span><span class="addr">Europaplatz 2, 1150 Wien</span></div>
+        <div class="end"><span class="label">Leave the flat</span><span class="t">05:35</span><span class="place">Vienna flat</span><span class="addr">Kolonitzgasse, 1030 Wien</span></div>
+        <div class="end"><span class="label">On the platform by</span><span class="t">06:20</span><span class="place">Wien Westbahnhof, WESTbahn</span><span class="addr">Europaplatz 2, 1150 Wien</span></div>
       </div>
-      <div class="stats"><span class="stat"><b>6.6 km</b> by road</span><span class="stat"><b>12–15 min</b> on quiet Sunday roads</span><span class="stat"><b>€40–60</b> estimate</span></div>
+      <div class="stats"><span class="stat"><b>650 m</b> walk, about 10 min</span><span class="stat"><b>U3</b>, 7 stops, about 12 min</span><span class="stat"><b>No extra cost</b> with your 7-day Vienna cards; toddler free</span></div>
       <dl class="kv">
-        <dt>Your train</dt><dd>WESTbahn 902 leaves Wien Westbahnhof at 06:38, arrives Salzburg Hbf at 09:08. Coach 15, upper deck. Board by about 06:25.</dd>
-        <dt>Why 06:05</dt><dd>You reach the station about 18 minutes before departure, enough to find coach 15 and get upstairs with the stroller folded. Address pickups get only 15 minutes of free waiting, so be downstairs at 06:00. Few drivers are about at 06:00 on a Sunday, which is the main reason to pre-book this one.</dd>
-        <dt>Luggage</dt><dd>No suitcases. Folding stroller, day bags, toddler snowsuit.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> The U3 runs direct from Landstraße (Wien Mitte) to Westbahnhof in about 15 minutes, and your Vienna travel cards cover it. But it means a 10-minute walk in the dark at about 0 °C with grandparents and a toddler, and less margin for the train.</dd>
+        <dt>Your trains</dt><dd>WESTbahn 902 leaves Wien Westbahnhof at 06:38 (coach 15, upper deck). WESTbahn 927 brings you back, arriving 20:22.</dd>
+        <dt>Morning</dt><dd><ol class="steps">
+          <li><b>05:35</b> Lift down from the 5th floor and walk about 650 m to <b>Landstraße (Wien Mitte)</b> U-Bahn station, about 10 minutes with the stroller.</li>
+          <li><b>~05:50</b> Lift down to the U3 platform. Take the <b>U3 towards Ottakring</b>.</li>
+          <li>Seven stops, about 12 minutes: Stubentor, Stephansplatz, Herrengasse, Volkstheater, Neubaugasse, Zieglergasse, <b>Westbahnhof</b>. Early on a Sunday the U3 runs about every 10–15 minutes.</li>
+          <li><b>~06:10</b> At Westbahnhof, follow the signs to the station hall. There is a direct step-free link from the U3.</li>
+          <li><b>06:20</b> On the WESTbahn platform at coach 15. Fold the stroller and go up to the upper deck.</li>
+        </ol></dd>
+        <dt>Evening</dt><dd><ol class="steps">
+          <li><b>20:22</b> Off WESTbahn 927. Come down from the upper deck and follow the U3 signs to the lift.</li>
+          <li>Take the <b>U3 towards Simmering</b>, seven stops to <b>Landstraße (Wien Mitte)</b>, about 12 minutes. On Sunday evening trains run about every 7–10 minutes.</li>
+          <li>Walk about 650 m home. Home around 21:00.</li>
+        </ol></dd>
+        <dt>Why 05:35</dt><dd>At this hour you may wait up to 15 minutes for a U3. Leaving at 05:35 still puts you on the platform by 06:20 if you just miss one. On Saturday evening, check the exact U3 times in WienMobil and aim for a train that reaches Westbahnhof by 06:15.</dd>
+        <dt>With a toddler</dt><dd>Use the lifts, not the escalators, with the stroller and the grandparents. All Vienna U-Bahn stations have lifts; at Westbahnhof they are being renewed during 2026, but at least one of each pair stays in service. It is dark and around 0 °C at 05:35: snowsuit and stroller cover.</dd>
+        <dt>Tickets</dt><dd>Your four 7-day Vienna cards (valid from 27 Nov) cover the U-Bahn. Children under 6 ride free. Open the tickets in WienMobil before you leave the flat.</dd>
       </dl>
-      <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-e">Early Sunday pickup for the 06:38 WESTbahn from Wien Westbahnhof, so please be on time. Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg needed. No suitcases, only a folding stroller and day bags. Drop-off at the Westbahnhof main entrance on Europaplatz, please.</p>
-        <div class="row"><button type="button" data-copy="note-e" id="copy-e">Copy note</button><span class="copied" aria-live="polite"></span></div>
-      </div>
-      <p class="muted"><strong>If it goes wrong:</strong> no car by 06:12, call Taxi 40100 on <span class="mono">+43 1 40100</span> for a Großraumtaxi or order Uber XL. Last resort: walk to Landstraße (Wien Mitte) and take the U3 direct to Westbahnhof.</p>
-      <label class="done" for="done-e"><input type="checkbox" id="done-e"> Booked</label>
-    </div>
-  </article>
-
-  <article class="ride" data-city="vienna" id="ride-f">
-    <div class="ride-head"><h3>F · Sun 29 Nov</h3><span>Westbahnhof back to the flat</span></div>
-    <div class="ride-body">
-      <div class="ends">
-        <div class="end"><span class="label">Pickup</span><span class="t">20:30</span><span class="place">Wien Westbahnhof</span><span class="addr">Europaplatz 2, 1150 Wien · meeting point as in your confirmation</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">20:50</span><span class="place">Vienna flat</span><span class="addr">Kolonitzgasse, 1030 Wien</span></div>
-      </div>
-      <div class="stats"><span class="stat"><b>6.6 km</b> by road</span><span class="stat"><b>12–18 min</b> on a Sunday evening</span><span class="stat"><b>€40–60</b> estimate</span></div>
-      <dl class="kv">
-        <dt>Your train</dt><dd>WESTbahn 927 leaves Salzburg Hbf at 17:52, arrives Wien Westbahnhof at 20:22. Seats 524B, 524C, 524D, 525C, 525D. Enter the train number so the driver knows if it runs late.</dd>
-        <dt>Why 20:30</dt><dd>It leaves eight minutes to come down from the upper deck with a sleepy toddler. Station pickups include 30 minutes of free waiting, to 21:00. If you change trains in Salzburg, update the pickup in the app.</dd>
-        <dt>Luggage</dt><dd>No suitcases. Folding stroller and day bags.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> After a 14-hour day the toddler will probably be asleep, and a seat already fitted means you can move them straight in. The U3 to Landstraße plus the walk home takes about 30 minutes.</dd>
-      </dl>
-      <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-f">Please meet us off WESTbahn 927 from Salzburg, due 20:22 at Wien Westbahnhof. Family of 5 with an 18-month-old (10 kg) who may be asleep: child seat for 9–18 kg needed. No suitcases, only a folding stroller and day bags. Please wait with a name sign: MITTAL.</p>
-        <div class="row"><button type="button" data-copy="note-f" id="copy-f">Copy note</button><span class="copied" aria-live="polite"></span></div>
-      </div>
-      <p class="muted"><strong>If it goes wrong:</strong> use the taxi rank on Europaplatz and ask for a Großraumtaxi, or take the U3 to Landstraße and walk or take tram O home (about 20:50).</p>
-      <label class="done" for="done-f"><input type="checkbox" id="done-f"> Booked</label>
+      <p class="muted"><strong>If it goes wrong:</strong> if you miss the U3 or a lift is out of order, call Taxi 40100 on <span class="mono">+43 1 40100</span> or order Uber XL to Westbahnhof (about 12 minutes; no child seat guaranteed). In the evening, if the toddler is asleep or everyone is tired, take a large taxi from the rank on Europaplatz.</p>
     </div>
   </article>
 
   <article class="ride" data-city="vienna" id="ride-b">
-    <div class="ride-head"><h3>B · Tue 1 Dec</h3><span>Flat to Wien Hauptbahnhof</span></div>
+    <div class="ride-head"><h3>B · Tue 1 Dec</h3><span>Flat to Wien Hauptbahnhof <span class="tag pub">Booked</span></span></div>
     <div class="ride-body">
       <div class="ends">
-        <div class="end"><span class="label">Pickup</span><span class="t">10:15</span><span class="place">Vienna flat, at the street door</span><span class="addr">Kolonitzgasse, 1030 Wien</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">10:35</span><span class="place">Wien Hauptbahnhof, main entrance</span><span class="addr">Am Hauptbahnhof 1, 1100 Wien (Südtiroler Platz side)</span></div>
+        <div class="end"><span class="label">Pickup</span><span class="t">10:30</span><span class="place">Vienna flat, at the street door</span><span class="addr">Kolonitzgasse, 1030 Wien</span></div>
+        <div class="end"><span class="label">Drop-off, about</span><span class="t">10:44</span><span class="place">Wien Hauptbahnhof</span><span class="addr">Am Hauptbahnhof 1, 1100 Wien</span></div>
       </div>
-      <div class="stats"><span class="stat"><b>4.4 km</b> by road</span><span class="stat"><b>12–20 min</b> via the Gürtel</span><span class="stat"><b>€40–60</b> estimate</span></div>
+      <div class="stats"><span class="stat"><b>4.4 km</b> by road</span><span class="stat"><b>About 14 min</b> drive</span><span class="stat"><b>£44.31</b> paid</span></div>
       <dl class="kv">
-        <dt>Your train</dt><dd>Railjet RJX 61 leaves Wien Hbf (platforms 3–12) at 11:40, arrives Budapest-Keleti at 14:35. Coach 21, seats 18, 21, 22, 23, 28. Be at the coach 21 sector by 11:15.</dd>
-        <dt>Why 10:15</dt><dd>Check-out is at 10:00. Address pickups get only 15 minutes of free waiting, so be downstairs with the bags. From the 5th floor, start taking the cases down in the lift at about 09:50; it may take two or three trips. You reach the station with about an hour to spare, which gives time for the lifts with six cases.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> Tram O runs direct to the station in about 15 minutes, but not with six suitcases and a stroller.</dd>
+        <dt>Operator</dt><dd>Talixo · executive people carrier · 1 child seat. The booking shows a maximum of 4 passengers: fix this.</dd>
+        
+        <dt>Driver waits</dt><dd>15 minutes from 10:30</dd>
+        <dt>Free cancellation</dt><dd>Up to 3 hours before the pickup</dd>
+        <dt>Your train</dt><dd>Railjet RJX 61 leaves Wien Hbf (platforms 3–12) at 11:40, arrives Budapest-Keleti at 14:35. Coach 21, seats 18, 21, 22, 23, 28. Be at the coach 21 sector by 11:15: from a 10:44 drop-off that leaves about 30 minutes for the lifts with six cases.</dd>
+        <dt>Check-out</dt><dd>Check-out is at 10:00 but the car comes at 10:30. Ask the Vienna host if you can stay until 10:25; otherwise wait at the building entrance with the bags. From the 5th floor the cases take two or three lift trips.</dd>
+        <dt>Fix in booking</dt><dd>Passengers to 5 · driver note · confirm six suitcases fit</dd>
       </dl>
       <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-b">Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg needed. 6 large suitcases and a stroller. We are catching the 11:40 Railjet to Budapest, so please be on time. Drop-off at the main entrance of Wien Hauptbahnhof, please.</p>
+        <p class="label">Driver note · paste with “Edit note”</p>
+        <p id="note-b">Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg booked. 6 large suitcases and a stroller. We are catching the 11:40 Railjet to Budapest, so please be on time. Drop-off at the main entrance of Wien Hauptbahnhof, please.</p>
         <div class="row"><button type="button" data-copy="note-b" id="copy-b">Copy note</button><span class="copied" aria-live="polite"></span></div>
       </div>
-      <p class="muted"><strong>If it goes wrong:</strong> no car by 10:25, call Taxi 40100 on <span class="mono">+43 1 40100</span> and ask for a Großraumtaxi, or order Uber XL. The ride is short and the train leaves at 11:40.</p>
-      <label class="done" for="done-b"><input type="checkbox" id="done-b"> Booked</label>
+      <p class="muted"><strong>If it goes wrong:</strong> no car by 10:40, call Talixo from the confirmation, then Taxi 40100 on <span class="mono">+43 1 40100</span> for a Großraumtaxi, or order Uber XL. The ride is about 14 minutes and the train leaves at 11:40.</p>
     </div>
   </article>
 
   <article class="ride" data-city="budapest" id="ride-c">
-    <div class="ride-head"><h3>C · Tue 1 Dec</h3><span>Keleti to the Budapest flat</span></div>
+    <div class="ride-head"><h3>C · Tue 1 Dec</h3><span>Keleti to the Budapest flat <span class="tag pub">Booked</span></span></div>
     <div class="ride-body">
       <div class="ends">
-        <div class="end"><span class="label">Pickup</span><span class="t">14:45</span><span class="place">Budapest-Keleti railway station</span><span class="addr">Kerepesi út 2–6, 1087 Budapest · meeting point as in your confirmation</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">15:05</span><span class="place">Fusion Apartments</span><span class="addr">Síp utca 7, 1075 Budapest (Jewish Quarter, next to the Dohány Street Synagogue)</span></div>
+        <div class="end"><span class="label">Pickup</span><span class="t">14:45</span><span class="place">Budapest-Keleti railway station</span><span class="addr">Kerepesi út 2–4, 1087 Budapest</span></div>
+        <div class="end"><span class="label">Drop-off, about</span><span class="t">14:51</span><span class="place">Fusion Apartments</span><span class="addr">Síp utca 7, 1075 Budapest (Jewish Quarter, next to the Dohány Street Synagogue)</span></div>
       </div>
-      <div class="stats"><span class="stat"><b>1.8 km</b> by road</span><span class="stat"><b>8–15 min</b> via Rákóczi út</span><span class="stat"><b>€35–55</b> estimate</span></div>
+      <div class="stats"><span class="stat"><b>1.8 km</b> by road</span><span class="stat"><b>About 6 min</b> drive; allow 10–15 in traffic</span><span class="stat"><b>£43.82</b> paid (half of the round trip)</span></div>
       <dl class="kv">
-        <dt>Your train</dt><dd>RJX 61 leaves Wien Hbf at 11:40, arrives Budapest-Keleti at 14:35 (coach 21)</dd>
-        <dt>Why 14:45</dt><dd>It gives ten minutes to unload six cases and walk to the concourse. Station pickups include 30 minutes of free waiting, to 15:15. Railjets on this route often run 10–20 minutes late, so update the driver in the app if yours does.</dd>
+        <dt>Operator</dt><dd>Welcome Pickups · large people carrier · 1 child seat. Booked as one round trip with ride D. The booking shows a maximum of 4 passengers and the wrong postcode (1077): fix both.</dd>
+        
+        <dt>Driver waits</dt><dd>15 minutes from 14:45, so until 15:00. The booking has no train tracking: if RJX 61 runs late, message the driver.</dd>
+        <dt>Free cancellation</dt><dd>Up to 24 hours before the pickup</dd>
+        <dt>Your train</dt><dd>RJX 61 leaves Wien Hbf at 11:40, arrives Budapest-Keleti at 14:35 (coach 21). Ten minutes to unload six cases and reach the meeting point.</dd>
         <dt>At the flat</dt><dd>Check-in opens at 15:00. Síp utca is narrow, so the driver may stop briefly at the door. Unload fast.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> Bolt XL seats 6 but has no toddler seat, and ordinary taxis would mean two cars. The M2 metro is not step-free.</dd>
+        <dt>Fix in booking</dt><dd>Address to Síp utca 7, 1075 · passengers to 5 · driver note</dd>
       </dl>
       <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-c">We arrive on Railjet RJX 61 from Wien Hauptbahnhof, due 14:35 at Keleti. Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg needed. 6 large suitcases and a stroller. Please meet us with a name sign: MITTAL.</p>
+        <p class="label">Driver note · paste with “Edit note”</p>
+        <p id="note-c">We arrive on Railjet RJX 61 from Vienna, due 14:35 at Keleti; we will message you if it is late. Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg booked. 6 large suitcases and a stroller. Drop-off: Síp utca 7, 1075 Budapest. Please meet us with a name sign: MITTAL.</p>
         <div class="row"><button type="button" data-copy="note-c" id="copy-c">Copy note</button><span class="copied" aria-live="polite"></span></div>
       </div>
-      <p class="muted"><strong>If it goes wrong:</strong> the official taxi rank is off platform 6 (Lotz Hall exit). Or use Bolt XL, or Főtaxi on <span class="mono">+36 1 222 2222</span> (about HUF 3,000–4,000 per car; two cars if no large one). Ignore anyone offering a taxi inside the station.</p>
-      <label class="done" for="done-c"><input type="checkbox" id="done-c"> Booked</label>
+      <p class="muted"><strong>If it goes wrong:</strong> call Welcome Pickups from the confirmation. Otherwise the official taxi rank is off platform 6 (Lotz Hall exit), or use Bolt XL, or Főtaxi on <span class="mono">+36 1 222 2222</span> (about HUF 3,000–4,000 per car; two cars if no large one). Ignore anyone offering a taxi inside the station.</p>
     </div>
   </article>
 
   <article class="ride" data-city="budapest" id="ride-d">
-    <div class="ride-head"><h3>D · Fri 4 Dec</h3><span>Flat to Keleti, going home</span></div>
+    <div class="ride-head"><h3>D · Fri 4 Dec</h3><span>Flat to Keleti, going home <span class="tag pub">Booked</span></span></div>
     <div class="ride-body">
       <div class="ends">
-        <div class="end"><span class="label">Pickup <span class="changed">Earlier: was 07:40</span></span><span class="t">07:30</span><span class="place">Fusion Apartments, at the street door</span><span class="addr">Síp utca 7, 1075 Budapest</span></div>
-        <div class="end"><span class="label">Drop-off, about</span><span class="t">07:55</span><span class="place">Budapest-Keleti railway station</span><span class="addr">Kerepesi út 2–6, 1087 Budapest, main entrance</span></div>
+        <div class="end"><span class="label">Pickup</span><span class="t">07:30</span><span class="place">Fusion Apartments, at the street door</span><span class="addr">Síp utca 7, 1075 Budapest</span></div>
+        <div class="end"><span class="label">Drop-off, about</span><span class="t">07:45</span><span class="place">Budapest-Keleti railway station</span><span class="addr">Kerepesi út 2–4, 1087 Budapest</span></div>
       </div>
-      <div class="stats"><span class="stat"><b>3.8 km</b> by road</span><span class="stat"><b>12–20 min</b> in Friday rush hour</span><span class="stat"><b>€35–55</b> estimate</span></div>
+      <div class="stats"><span class="stat"><b>3.8 km</b> by road (one-way streets)</span><span class="stat"><b>12–20 min</b> in Friday rush hour</span><span class="stat"><b>£43.82</b> paid (half of the round trip)</span></div>
       <dl class="kv">
+        <dt>Operator</dt><dd>Welcome Pickups · large people carrier · 1 child seat (return leg of the round trip with ride C)</dd>
+        
+        <dt>Driver waits</dt><dd>15 minutes from 07:30. Be at the door with the bags.</dd>
+        <dt>Free cancellation</dt><dd>Up to 24 hours before, so until 07:30 on Thu 3 Dec</dd>
         <dt>Your trains</dt><dd>EuroCity EC 140 leaves Budapest-Keleti at 08:30, arrives Wien Hbf at 11:20 (coach 414). RJX 19981 leaves Wien Hbf at 11:42, arrives Vienna Airport at 11:57 (coach 31). Then EK128 leaves Vienna at 14:55, check-in 11:25.</dd>
-        <dt>Why 07:30</dt><dd>It is rush hour, the route is longer this way because of one-way streets, and six cases take time to load. With a flight at the end of the day, ten extra minutes is cheap insurance. You still reach Keleti about 35 minutes before departure. Address pickups get only 15 minutes of free waiting, so be at the door.</dd>
-        <dt>Best way</dt><dd><strong>Pre-booked minivan.</strong> This is the one ride where a no-show would hurt, so it is worth a confirmed booking rather than hailing on the day.</dd>
+        <dt>Timing</dt><dd>You reach Keleti about 45 minutes before departure, which covers rush-hour traffic and loading six cases.</dd>
+        <dt>Fix in booking</dt><dd>Address to Síp utca 7, 1075 · passengers to 5 · driver note</dd>
       </dl>
       <div class="note">
-        <p class="label">Note for the driver</p>
-        <p id="note-d">Early train: EC 140 leaves Keleti at 08:30 and connects to a flight, so please be on time. Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg needed. 6 large suitcases and a stroller.</p>
+        <p class="label">Driver note · paste with “Edit note”</p>
+        <p id="note-d">Pickup at Síp utca 7, 1075 Budapest. Early train: EC 140 leaves Keleti at 08:30 and connects to a flight, so please be on time. Family of 5 with an 18-month-old (10 kg): child seat for 9–18 kg booked. 6 large suitcases and a stroller.</p>
         <div class="row"><button type="button" data-copy="note-d" id="copy-d">Copy note</button><span class="copied" aria-live="polite"></span></div>
       </div>
-      <p class="muted"><strong>The evening before (3 Dec, 20:00):</strong> check the 08:30 in the ÖBB app and MÁVINFORM. If it is listed as starting at Kelenföld, change this ride in the app to Budapest-Kelenföld with a 07:20 pickup (about 6 km across the river, 20–25 minutes). <strong>On the day:</strong> no car by 07:40, order a Bolt on the spot or call Főtaxi.</p>
-      <label class="done" for="done-d"><input type="checkbox" id="done-d"> Booked</label>
+      <p class="muted"><strong>The evening before (3 Dec, 20:00):</strong> check the 08:30 in the ÖBB app and MÁVINFORM. If it is listed as starting at Kelenföld, change this ride to Budapest-Kelenföld with a 07:20 pickup (about 6 km, 20–25 minutes). That is after the free-cancellation window, so edit it in the confirmation or call Welcome Pickups. <strong>On the day:</strong> no car by 07:40, call Welcome Pickups, then order a Bolt on the spot or call Főtaxi.</p>
     </div>
   </article>
 </section>
 
 <section aria-labelledby="cost-h">
-  <div class="block-head"><span class="label">05</span><h2 id="cost-h">What it should cost</h2></div>
+  <div class="block-head"><span class="label">05</span><h2 id="cost-h">What you paid</h2></div>
   <div class="tablewrap">
     <table>
-      <thead><tr><th>Ride</th><th>Minivan price</th><th>Basis</th></tr></thead>
+      <thead><tr><th>Ride</th><th>Operator</th><th>Paid</th><th>≈ Euro</th></tr></thead>
       <tbody>
-        <tr><td>A · VIE to the Vienna flat</td><td class="num">€72</td><td><span class="tag pub">Published city rate</span></td></tr>
-        <tr><td>E · Vienna flat to Westbahnhof</td><td class="num">€40–60</td><td><span class="tag">Estimate</span></td></tr>
-        <tr><td>F · Westbahnhof to the Vienna flat</td><td class="num">€40–60</td><td><span class="tag">Estimate</span></td></tr>
-        <tr><td>B · Vienna flat to Wien Hbf</td><td class="num">€40–60</td><td><span class="tag">Estimate</span></td></tr>
-        <tr><td>C · Keleti to Síp utca 7</td><td class="num">€35–55</td><td><span class="tag">Estimate</span></td></tr>
-        <tr><td>D · Síp utca 7 to Keleti</td><td class="num">€35–55</td><td><span class="tag">Estimate</span></td></tr>
-        <tr class="total"><td>Total</td><td class="num">€260–360</td><td></td></tr>
+        <tr><td>A · VIE to the Vienna flat</td><td>Sixt Ride</td><td class="num">£54.00</td><td class="num">€64.49</td></tr>
+        <tr><td>B · Vienna flat to Wien Hbf</td><td>Talixo</td><td class="num">£44.31</td><td class="num">€52.92</td></tr>
+        <tr><td>C + D · Keleti ↔ Síp utca 7, round trip</td><td>Welcome Pickups</td><td class="num">£87.64</td><td class="num">€104.66</td></tr>
+        <tr class="total"><td>Total, including taxes</td><td></td><td class="num">£185.95</td><td class="num">€222.07</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="muted">Welcome Pickups does not publish prices for short station rides, so every ride except A shows its price only at checkout. If one comes in above about €60, compare it with Sixt Ride XL before paying. A minibus, if the six cases do not fit a minivan, costs more (around €160 for the airport ride).</p>
-</section>
-
-<section aria-labelledby="why-h">
-  <div class="block-head"><span class="label">06</span><h2 id="why-h">Why Welcome Pickups</h2></div>
-  <div class="tablewrap">
-    <table>
-      <thead><tr><th>Option</th><th>Total</th><th>Trade-off</th></tr></thead>
-      <tbody>
-        <tr><td class="id">Welcome Pickups, all six</td><td class="num">€260–360</td><td>One app in both cities, fixed price, child seat on request, flight tracking, an hour of free waiting at the airport, 4.9/5 on Trustpilot</td></tr>
-        <tr><td>Sixt Ride XL</td><td class="num">Quote</td><td>Strongest child-seat guarantee and premium cars; likely costs more</td></tr>
-        <tr><td>Local taxis (40100, Főtaxi, Bolt)</td><td class="num">€140–180</td><td>Cheaper, but no guaranteed child seat or large car; Budapest may need two cars</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="muted">Taxis in Austria are exempt from the child-seat rule, and the Hungarian rule for taxis is unclear. ÖAMTC still advises pre-booking a seat. With an 18-month-old, ask for the seat on every ride.</p>
+  <p class="muted">Euro amounts use the ECB reference rate of 20 Nov 2026 (£1 = €1.1942). Your card statement shows the amount actually charged. The 29 Nov metro is covered by your Vienna travel cards.</p>
 </section>
 
 <footer>
-  <p>Vienna &amp; Budapest · 26 November – 5 December 2026. Nothing on this page has been booked or paid. Exact house numbers, host contacts and booking references stay in your private confirmations.</p>
-  <p>Sources: <a href="https://www.welcomepickups.com/vienna/airport-transfer/">Welcome Pickups Vienna rates</a> · <a href="https://support.welcomepickups.com/en/articles/2892857-complimentary-waiting-time-policy">Welcome Pickups waiting time</a> · <a href="https://www.sixt.com/ride/taxi/child-car-seat/">Sixt Ride child seats</a> · <a href="https://www.oeamtc.at/thema/kindersicherheit/kindersitze-im-taxi-sicher-unterwegs-mit-kindern-im-taxi-17153168">ÖAMTC on child seats in taxis</a> · <a href="https://www.seat61.com/stations/budapest-keleti.htm">Seat61 Budapest-Keleti</a> · <a href="https://www.wien.info/en/travel-info/arrival-departure/taxi-360908">wien.info taxis</a></p>
+  <p>Vienna &amp; Budapest · 26 November – 5 December 2026. Booking references, house numbers and host contacts stay in your private confirmations.</p>
+  <p>Sources: your Sixt Ride, Talixo and Welcome Pickups confirmations · Emirates, ÖBB and WESTbahn tickets · <a href="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml">ECB reference rates</a> · <a href="https://www.wien.info/de/wien-westbahnhof-126274">wien.info Westbahnhof</a> · <a href="https://www.seat61.com/stations/budapest-keleti.htm">Seat61 Budapest-Keleti</a></p>
 </footer>
-</main>
 
+</main>
 <script>
 (function(){
   document.querySelectorAll('button[data-copy]').forEach(function(btn){
@@ -333,18 +296,14 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px sol
         var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
         status.textContent = 'Selected. Copy it with your keyboard or long-press.';
       }
-      try{
-        navigator.clipboard.writeText(text).then(function(){ status.textContent = 'Copied'; }, selectIt);
-      }catch(e){ selectIt(); }
+      try{ navigator.clipboard.writeText(text).then(function(){ status.textContent = 'Copied'; }, selectIt); }
+      catch(e){ selectIt(); }
     });
   });
-  ['a','b','c','d','e','f'].forEach(function(k){
-    var box = document.getElementById('done-' + k);
-    var key = 'transfer-booked-' + k;
+  document.querySelectorAll('ul.checks input[type=checkbox]').forEach(function(box){
+    var key = 'transfer-' + box.id;
     try{ box.checked = localStorage.getItem(key) === '1'; }catch(e){}
-    box.addEventListener('change', function(){
-      try{ localStorage.setItem(key, box.checked ? '1' : '0'); }catch(e){}
-    });
+    box.addEventListener('change', function(){ try{ localStorage.setItem(key, box.checked ? '1' : '0'); }catch(e){} });
   });
 })();
 </script>
