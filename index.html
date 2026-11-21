@@ -52,8 +52,13 @@ ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
 .detail-page a,.detail-page td{overflow-wrap:anywhere}.detail-page .card h3{font-size:21px}
 .detail-page .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px}
 .back-link{display:inline-block;margin-bottom:32px;font-size:14px}.detail-nav{margin:24px 0}
+.pages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pages a{display:grid;gap:6px;height:100%;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:16px 18px;text-decoration:none}
+.pages a:hover{border-color:var(--muted)}.pages strong{font:400 22px/1.2 var(--serif)}.pages span{font-size:14px;color:var(--muted)}
+.pages em{font-style:normal;font-size:13px;font-weight:600;color:var(--vienna)}.pages .new{font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--budapest-soft);color:var(--budapest);margin-left:6px;vertical-align:middle;font-family:var(--sans)}
 @media(max-width:600px){
   .g2,.g3,.totals{grid-template-columns:minmax(0,1fr)}
+  .pages{grid-template-columns:minmax(0,1fr)}
   .detail-page .dayhead{grid-template-columns:52px minmax(0,1fr);gap:12px}.detail-page .daynum{font-size:36px}
   #trk-table thead,#trk-table thead tr{display:block}
   #trk-table thead tr{display:flex;flex-wrap:wrap;gap:8px;padding:8px}
@@ -88,7 +93,7 @@ ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
   <p class="lede">A winter journey from Delhi: imperial streets, Advent lights, a lake in the mountains and two cities along the Danube.</p>
   <dl class="meta"><div><dt class="label">Dates</dt><dd>26 Nov – 5 Dec 2026</dd></div><div><dt class="label">Travellers</dt><dd>4 adults + 1 toddler</dd></div><div><dt class="label">Our pace</dt><dd>Easy days, room to rest</dd></div></dl>
 </header>
-<nav class="daynav detail-nav" aria-label="Book sections"><a href="#itinerary">Itinerary</a><a href="#tracker">Booking &amp; action tracker</a><a href="#budget">Budget</a><a href="details/">Detailed guide →</a></nav>
+<nav class="daynav detail-nav" aria-label="Book sections"><a href="#itinerary">Itinerary</a><a href="#tracker">Booking &amp; action tracker</a><a href="#budget">Budget</a><a href="#pages">All pages</a><a href="details/">Detailed guide →</a><a href="train/">Rail companion →</a><a href="transfers/">Transfers →</a></nav>
 <div class="book-tools" id="appbar"><p id="savestate" role="status" aria-live="polite">Edits need JavaScript. The guide is still readable without it.</p><button type="button" class="btn" id="btn-export">Save copy</button><button type="button" class="btn" id="btn-print">Print</button></div>
 <div class="route" aria-label="Trip route">
   <div class="stop v"><strong>Vienna</strong><span>26 Nov – 1 Dec · 5 nights</span></div>
@@ -97,12 +102,23 @@ ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
 </div>
 <div class="stats"><div><b>10</b><span>calendar days</span></div><div><b>8</b><span>nights in Europe</span></div><div><b>2</b><span>countries</span></div><div><b>1</b><span>little traveller</span></div></div>
 
+<section class="block" id="pages" aria-labelledby="h-pages">
+  <div class="block-head"><span class="label">Index</span><h2 id="h-pages">Pages in this book</h2></div>
+  <p class="intro">This page is the overview, tracker and budget. Each linked page goes deeper on one part of the trip.</p>
+  <ul class="pages">
+    <li><a href="details/"><strong>Detailed travel guide</strong><span>Day-by-day itinerary with times, food stops and rest breaks, plus the thermal bath, transport, money, SIM, tax-free, weather and packing.</span><em>Open the detailed guide →</em></a></li>
+    <li><a href="train/"><strong>Rail companion</strong><span>All five booked trains with coaches and seats, station tips, and what to do if a train is late or cancelled.</span><em>Open the rail companion →</em></a></li>
+    <li><a href="transfers/"><strong>Transfers<span class="new">New</span></strong><span>Six minivan rides with a toddler seat: pickup and drop-off times, addresses, distances, driver notes, costs and backups.</span><em>Open transfers →</em></a></li>
+    <li><a href="previous/"><strong>Original guide archive</strong><span>The first version of this guide, kept as a backup.</span><em>Open the archive →</em></a></li>
+  </ul>
+</section>
+
 <section class="block" id="essentials">
   <div class="block-head"><span class="label">01</span><h2>Before you go</h2></div>
   <div class="callout"><p><strong>All times are local.</strong> Sightseeing times are suggestions; flights and trains are the booked schedule. Recheck operators’ apps for changes.</p><p><strong>4 December:</strong> Budapest → Wien Hbf → Vienna Airport is booked, but the 22-minute change at Wien Hbf and the flight connection leave little room for disruption. See the <a href="train/">rail companion</a> and arrange a practical backup before departure.</p></div>
   <div class="two-col">
-    <div class="card"><h3>Vienna</h3><p>Austria · euro (€) · German<br>Base: Landstraße, 26 Nov – 1 Dec</p><p>Trams, U-Bahn and taxis. Airport arrival transfer still to arrange.</p></div>
-    <div class="card"><h3>Budapest</h3><p>Hungary · forint (HUF) · Hungarian<br>Base: central Pest, 1 – 4 Dec</p><p>Metro, trams and taxis. Check station transfers and stroller access.</p></div>
+    <div class="card"><h3>Vienna</h3><p>Austria · euro (€) · German<br>Base: Landstraße, 26 Nov – 1 Dec</p><p>Trams, U-Bahn and taxis. Airport, station and day-trip rides are planned on the <a href="transfers/">transfers page</a> (to book).</p></div>
+    <div class="card"><h3>Budapest</h3><p>Hungary · forint (HUF) · Hungarian<br>Base: central Pest, 1 – 4 Dec</p><p>Metro, trams and taxis. Both station rides are on the <a href="transfers/">transfers page</a>. The M2 metro is not step-free.</p></div>
   </div>
   <div class="chips"><span class="chip">Emergency 112</span><span class="chip">CET · UTC+1</span><span class="chip">Type C/F plugs</span><span class="chip">Vegetarian · no egg, meat or fish</span></div>
 </section>
@@ -220,6 +236,7 @@ ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
     <li><span class="what">Stay</span><div class="detail"><b>Budapest · Fusion Apartments</b><span>1–4 Dec · check the current reservation and add toddler if needed</span></div><span class="status">Booked in earlier guide · verify</span></li>
     <li><span class="what">Train</span><div class="detail"><b>Budapest-Keleti → Vienna Airport</b><span>4 Dec · EC 140 08:30 → 11:20; RJX 19981 11:42 → 11:57</span></div><span class="status">Booked</span></li>
     <li><span class="what">Flights</span><div class="detail"><b>Vienna → Dubai → Delhi</b><span>4 Dec · EK128 14:55 → 23:25; 5 Dec · EK510 04:20 → 08:55</span></div><span class="status">Ticketed</span></li>
+    <li><span class="what">Transfers</span><div class="detail"><b>Six minivan rides with a toddler seat · Welcome Pickups</b><span>26 Nov – 4 Dec · airport, stations, Wolfgangsee day. <a href="transfers/">Open transfers →</a></span></div><span class="status">To book</span></li>
   </ul>
   <p class="intro" style="margin-top:16px">Keep booking references, exact addresses and access instructions in your private confirmations, not this public page. <a href="train/">Open the detailed train book →</a></p>
 </section>
@@ -335,6 +352,7 @@ ol.tl li.rest{background:var(--soft);padding:16px;border-radius:10px}
   <p class="intro">Check live information before travel. External links need an internet connection.</p>
   <ul class="simple-list">
     <li><a href="train/">Your rail companion</a> · booked trains, seats, stations and contingencies</li>
+    <li><a href="transfers/">Transfers</a> · six minivan rides with a toddler seat: times, addresses, distances and driver notes</li>
     <li><a href="details/">Detailed travel guide</a> · full itinerary, thermal bath, transport, food, money, SIM, tax-free, weather and packing</li>
     <li><a href="previous/">Original guide archive</a> · retained as a backup</li>
     <li><a href="https://www.oebb.at/en/">ÖBB</a> · <a href="https://westbahn.at/en/">WESTbahn</a> · <a href="https://salzburg-verkehr.at/">Salzburg Verkehr</a></li>
